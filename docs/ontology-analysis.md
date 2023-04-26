@@ -1,4 +1,4 @@
-# Ontology comparision based on some selection criteria
+# Ontology comparison based on some selection criteria
 
 
 
