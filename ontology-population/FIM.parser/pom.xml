@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>FIM.parser</groupId>
+  <artifactId>FIM.parser</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+     <maven.compiler.source>1.8</maven.compiler.source>
+     <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  
+  <dependencies>
+	  	<!-- JAXB API -->
+	    <dependency>
+	        <groupId>javax.xml.bind</groupId>
+	        <artifactId>jaxb-api</artifactId>
+	        <version>2.3.1</version>
+	    </dependency>
+	
+	    <!-- JAXB RI -->
+	    <dependency>
+	        <groupId>com.sun.xml.bind</groupId>
+	        <artifactId>jaxb-impl</artifactId>
+	        <version>2.3.4</version>
+	    </dependency>
+	    
+	    <!--  junit -->
+	    <dependency>
+	        <groupId>junit</groupId>
+	        <artifactId>junit</artifactId>
+	        <version>4.11</version>
+	        <scope>test</scope>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-csv</artifactId>
+		    <version>1.10.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-text</artifactId>
+			<version>1.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.opennlp</groupId>
+			<artifactId>opennlp-tools</artifactId>
+			<version>1.9.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>apache-jena-libs</artifactId>
+			<version>4.1.0</version>
+			<type>pom</type>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.googlecode.json-simple</groupId>
+		    <artifactId>json-simple</artifactId>
+		    <version>1.1.1</version>
+		</dependency>
+		
+		<!--
+			Toml4j einbindung für das ConfigFile, MIT License
+			https://github.com/mwanji/toml4j
+		-->
+		<dependency>
+ 			<groupId>com.moandjiezana.toml</groupId>
+  			<artifactId>toml4j</artifactId>
+  			<version>0.7.2</version>
+		</dependency>
+		
+		<!-- Lombock, weil ich Faul wie scheiße bin-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.26</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+  </dependencies>
+  
+</project>

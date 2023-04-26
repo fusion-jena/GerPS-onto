@@ -1,0 +1,107 @@
+# hier werden allgemeine Pfade des Programms definiert
+[ParserConfig]
+XProzessPath		=	"../xml.files/Anzeige zur Beschäftigung einer schwangeren oder stillenden Frau bearbeiten.xml"
+XDatenfeldPath		=	"../xml.files/S00000094V1.0_xdf2.xml"
+OntologyPath 		=	"../ontology/gerPS-Onto.rdf"
+outputPath			=	"../ontology/gerPS-Onto-populated.rdf"
+#nothing for rdf/xml
+RDFLanguage			= 	"RDF/XML"
+#Codelists for XDatenfeld
+codelisten			= 	["../xml.files/C00000020_genericode.xml","../xml.files/C00000021_genericode.xml","../xml.files/C60000006_genericode.xml","../xml.files/C60000020_genericode.xml"]
+
+
+# Klassen und Properties für XProzess Datei
+[XProzess]
+baseURL = "https://w3id.org/GerPS-onto/ontology#"
+dataFieldIndividual = "https://w3id.org/GerPS-onto/ontology#"
+process = "https://w3id.org/GerPS-onto/ontology#Prozess"
+sub_process = "https://w3id.org/GerPS-onto/ontology#Prozessschritt"
+service = "https://w3id.org/GerPS-onto/ontology#Leistung"
+agent = "https://w3id.org/GerPS-onto/ontology#Akteur"
+Hauptakteur = "https://w3id.org/GerPS-onto/ontology#Hauptakteur"
+Mitwirkende = "https://w3id.org/GerPS-onto/ontology#Mitwirkende"
+Ergebnissempfaenger = "https://w3id.org/GerPS-onto/ontology#Ergebnissempfänger"
+rag = "https://w3id.org/GerPS-onto/ontology#RAG"
+data_fields = "https://w3id.org/GerPS-onto/ontology#Datenfelder"
+basis = "https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage"
+has_process = "https://w3id.org/GerPS-onto/ontology#hat_prozess"
+has_sub_process = "https://w3id.org/GerPS-onto/ontology#hat_prozessschritt"
+is_running = "https://w3id.org/GerPS-onto/ontology#fuehrt_aus"
+based_on = "https://w3id.org/GerPS-onto/ontology#basiert_auf"
+participates = "https://w3id.org/GerPS-onto/ontology#beteiligt_sich_an"
+has_resource = "https://w3id.org/GerPS-onto/ontology#hat_ressource"
+has_type = "https://w3id.org/GerPS-onto/ontology#hat_typ"
+tauscht_aus_mit = "https://w3id.org/GerPS-onto/ontology#tauscht_aus_mit"
+trades_with = "https://w3id.org/GerPS-onto/ontology#tauscht_aus_mit"
+data_field_id = "https://w3id.org/GerPS-onto/ontology#hat_datenfeldID"
+leika_id = "https://w3id.org/GerPS-onto/ontology#hat_leikaID"
+id = "http://BPMNbasedOntology#id"
+name = "http://BPMNbasedOntology#name"
+
+# Klassen und Properties für das Parsen von zugehöriger XDatenfeldDatei
+[XDatenfeld]
+baseURL = "https://w3id.org/GerPS-onto/ontology#"
+Stammschemata = "https://w3id.org/GerPS-onto/ontology#Stammschemata"
+Struktur = "https://w3id.org/GerPS-onto/ontology#Struktur"
+Datenfeld = "https://w3id.org/GerPS-onto/ontology#Datenfeld"
+Datenfeldgruppe = "https://w3id.org/GerPS-onto/ontology#Datenfeldgruppe"
+Regel = "https://w3id.org/GerPS-onto/ontology#Regel" 
+hat_Regel = "https://w3id.org/GerPS-onto/ontology#hat_regel"
+hat_enthaelt = "https://w3id.org/GerPS-onto/ontology#enthaelt"
+name = "http://BPMNbasedOntology#name"
+id = "https://w3id.org/GerPS-onto/ontology#hat_datenfeldID"
+
+# Klassen für strukturelles Parsen von XProzess
+[BPMN]
+baseURL = "https://w3id.org/GerPS-onto/ontology#"
+SubProcess = "http://BPMNbasedOntology#SubProcess"
+task = "http://BPMNbasedOntology#Task"
+Callactivity = "http://BPMNbasedOntology#CallActivity"
+ExclusiveGateway = "http://BPMNbasedOntology#ExclusiveGateway"
+InclusiveGateway = "http://BPMNbasedOntology#InclusiveGateway"
+ParallelGateway = "http://BPMNbasedOntology#ParallelGateway"
+SequenceFlow = "http://BPMNbasedOntology#SequenceFlow"
+id = "http://BPMNbasedOntology#id"
+name = "http://BPMNbasedOntology#name"
+attachedTo = "http://BPMNbasedOntology#is_attachedToRef"
+sourceRef = "http://BPMNbasedOntology#has_sourceRef"
+targetRef = "http://BPMNbasedOntology#has_targetRef"
+
+# Hier wird das Mapping definiert
+[Mapping]
+
+# Hier werden die Klassen im Key-Value-Prinzip durch die sameAs Property Verknüpft
+[Mapping.sameAs]
+[[Mapping.sameAs.entry]]
+key     =   "https://w3id.org/GerPS-onto/ontology#Hauptakteur"
+value   =   "https://semiceu.github.io/CPOV/releases/2.00/#Public%20Organisation"
+[[Mapping.sameAs.entry]]
+key     =   "https://w3id.org/GerPS-onto/ontology#Ergebnissempfänger"
+value   =   "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Legal%20Entity"
+[[Mapping.sameAs.entry]]
+key     =   "https://w3id.org/GerPS-onto/ontology#Leistung"
+value   =   "https://semiceu.github.io/CPSV-AP/releases/3.1.0/#Public%20Service"
+[[Mapping.sameAs.entry]]
+key     =   "https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage"
+value   =   "http://publications.europa.eu/resource/cellar/917d16b5-28f6-11e8-b5fe-01aa75ed71a1.0001.01/DOC_1#LegalResource"
+
+# Hier werden die Klassen im Key-Value-Prinzip durch die subClassOf-Property Verknüpft
+[Mapping.subClassOf]
+[[Mapping.subClassOf.entry]]
+key     =    "http://BPMNbasedOntology#Agent"
+value   =    "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Agent"
+[[Mapping.subClassOf.entry]]
+key     =   "https://w3id.org/GerPS-onto/ontology#Mitwirkende"
+value   =   "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Formal%20Organization"
+[[Mapping.subClassOf.entry]]
+key     =   "https://w3id.org/GerPS-onto/ontology#Datenfelder"
+value   =   "https://semiceu.github.io/CPSV-AP/releases/3.1.0/#Evidence"
+[[Mapping.subClassOf.entry]]
+key     =   "https://w3id.org/GerPS-onto/ontology#Dokument"
+value   =   "https://semiceu.github.io/CPSV-AP/releases/3.1.0/#Evidence"
+[[Mapping.subClassOf.entry]]
+key     =   "https://w3id.org/GerPS-onto/ontology#Prozess"
+value   =   "https://semiceu.github.io/CPSV-AP/releases/3.0.0/#Rule"
+
+# Hier werden die Klassen im Key-Value-Prinzip durch die subClassOf-Property Verknüpft (umgekehrt) verknüft
+[Mapping.superClassOf]
