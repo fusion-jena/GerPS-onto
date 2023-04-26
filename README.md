@@ -1,4 +1,3 @@
-[![DOI](https://zenodo.org/badge/520801122.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/fusion-jena/GerPS-onto/blob/master/LICENSE)
 
 # GerPS-onto: An ontology for German public service processes
