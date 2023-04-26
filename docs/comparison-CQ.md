@@ -6,5 +6,5 @@
 | ----------- | ----------- |
 | CQ3: Which *process steps* are necessary to perform a *service*?    | Which sub-activities is an activity decomposed?  |
 | CQ4: What is the first/last *process step* of a *process*? | What is the first/last activity of a given process?    |
+| CQ7: Which *resources/data fields/documents* are required to perform a *service*?| Which resources are required by an activity?   |
 | CQ10: Which *actor(s)/main actor(s)/result receiver(s)/contributor(s)* execute(s) which *processes*?  | Who should/can perform a given activity?       |
-| CQ7: Which *resources/data fields/documents* are required to perform a *service*?| WWhich resources are required by an activity?   |
