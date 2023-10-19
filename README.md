@@ -16,7 +16,7 @@ The ontology is exemplary populated with instances from a specific [German publi
 
 ## Paper pre-version
 
-[Feddoul, Leila, Maximilian Raupach, Felicitas Löffler, Samira Babalou, Jonas Hoyer, Marianne Mauch, and Birgitta König-Ries. "On which legal regulations is a public service based? Fostering transparency in public administration by using knowledge graphs." INFORMATIK 2023,IT-Kompetenzen 2023, Berlin, Germany, September 26–29, 2023, pp. 1035-1040.](https://nextcloud.gi.de/s/onnyxKSQoFHdqar)
+[Leila Feddoul, Maximilian Raupach, Felicitas Löffler, Samira Babalou, Jonas Hoyer, Marianne Mauch, and Birgitta König-Ries. "On which legal regulations is a public service based? Fostering transparency in public administration by using knowledge graphs." INFORMATIK 2023,IT-Kompetenzen 2023, Berlin, Germany, September 26–29, 2023, pp. 1035-1040.](https://nextcloud.gi.de/s/onnyxKSQoFHdqar)
 
 ## License
 
