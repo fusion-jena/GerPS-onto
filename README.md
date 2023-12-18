@@ -14,9 +14,21 @@ The ontology was automatically populated with an exemplary German public service
 The code for population with instances is available [here](https://github.com/fusion-jena/GerPS-onto/tree/main/ontology-population).
 The ontology is exemplary populated with instances from a specific [German public service](https://fimportal.de/detail/L/99006028261000) and publicly available on [Zenodo](https://doi.org/10.5281/zenodo.7866314).
 
-## Paper pre-version
-
-[Leila Feddoul, Maximilian Raupach, Felicitas Löffler, Samira Babalou, Jonas Hoyer, Marianne Mauch, and Birgitta König-Ries. "On which legal regulations is a public service based? Fostering transparency in public administration by using knowledge graphs." INFORMATIK 2023,IT-Kompetenzen 2023, Berlin, Germany, September 26–29, 2023, pp. 1035-1040.](https://nextcloud.gi.de/s/onnyxKSQoFHdqar)
+## Citation
+```
+@incollection{incollection,
+author = "Feddoul, Leila and Raupach, Maximilian and Löffler, Felicitas and Babalou, Samira and Hoyer, Jonas and Mauch, Marianne and König-Ries, Birgitta",
+title = "On which legal regulations is a public service based? Fostering transparency in public administration by using knowledge graphs",
+year = 2023,
+doi = "10.18420/inf2023_115",
+booktitle = "INFORMATIK 2023 - Designing Futures: Zukünfte gestalten",
+publisher = "Gesellschaft für Informatik e.V.",
+address = "Bonn",
+pissn = "1617-5468",
+isbn = "978-3-88579-731-9",
+pages = "1035--1040",
+}
+```
 
 ## License
 
