@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
@@ -31,6 +32,7 @@ import uni.jena.bpmn.parser.BPMNParser;
 import uni.jena.fim.xprocess.v2.core.Aktivitaetengruppe;
 import uni.jena.fim.xprocess.v2.core.AlleInhalteExport0303;
 import uni.jena.fim.xprocess.v2.core.Datei;
+import uni.jena.fim.xprocess.v2.core.Daten;
 import uni.jena.fim.xprocess.v2.core.Handlungsgrundlage;
 import uni.jena.fim.xprocess.v2.core.Prozess;
 import uni.jena.fim.xprocess.v2.core.Prozessklasse;
@@ -84,18 +86,19 @@ public class XProzess {
 		bpmnParser = new BPMNParser(m,tmpFile,leikaID);
 
 		String name = this.xprocess.getProzessbibliothek().getProzess().get(0).getName();
-		
-		Resource result = m.createResource(this.config.baseURL+leikaID, this.config.getServiceResource(m));
-		
-		result.addLiteral(this.config.getHasLeikaID(m), leikaID);
-		result.addLiteral(this.config.getName(m), name);
-		result.addProperty(RDFS.label, name);
+	
+		Resource service = m.createResource(this.config.baseURL+leikaID, this.config.getServiceResource(m));
+	
+		service.addLiteral(this.config.getHasLeikaID(m), leikaID);
+		service.addLiteral(this.config.getName(m), name);
+		service.addProperty(RDFS.label, name);
 		
 		Property hasProcess = this.config.getHasProcess(m);
-		
+		int i = 0;
 		for(Prozess proz : this.xprocess.getProzessbibliothek().getProzess()) {
-			Resource processes = getProcesses(m,result,proz);
-			result.addProperty(hasProcess, processes);
+			Resource processes = getProcesses(m,proz,i);
+			service.addProperty(hasProcess, processes);
+			i++;
 		}
 		
 		bpmnParser.parse();
@@ -104,7 +107,7 @@ public class XProzess {
 		tmpFile.delete();
 		bpmnParser = null;
 		
-		return result;
+		return service;
 	}
 
 	public StringBuilder getProzessmodelldateiContent() throws IOException {
@@ -135,29 +138,31 @@ public class XProzess {
 		return f;
 	}
 	
-	private Resource getProcesses(Model m,Resource serviceResource, Prozess prozess) {
-		String name = prozess.getName();
+	private Resource getProcesses(Model m, Prozess prozess, int i) {
+		String name = prozess.getName();		
+	
+		String processUUID = UUID.nameUUIDFromBytes((this.leikaID+name+i).getBytes()).toString();
 		
-		Resource result = m.createResource(this.config.getBaseURL() + "process_" + this.leikaID+"_"+UUID.randomUUID(), this.config.getProcessResource(m));
-		result.addProperty(this.config.getName(m), name);
-		result.addProperty(RDFS.label, name);
-		result.addProperty(this.config.getHasLeikaID(m), leikaID);
+		Resource process = m.createResource(this.config.getBaseURL() + "process_" + this.leikaID + "_" + processUUID, this.config.getProcessResource(m));
+		process.addProperty(this.config.getName(m), name);
+		process.addProperty(RDFS.label, name);
+		process.addProperty(this.config.getID(m), leikaID);
 		
-		Property executes = this.config.getExecutes(m);
 		
-		ArrayList<Resource> teilnehmer = bpmnParser.getTeilnehmer(this.config, m, prozess.getId());
+		Property provoQA = this.config.getprovoQA(m);
+		ArrayList<Resource> associations = bpmnParser.getTeilnehmer(this.config, m, prozess.getId());
 		
-		for(Resource tn: teilnehmer) {
-			tn.addProperty(executes, result);
+		for(Resource association: associations) {
+			process.addProperty(provoQA, association);
 		}
 		
 		Property hasProcessStep = this.config.getHasSubProcessStep(m);
 		for(Aktivitaetengruppe task : prozess.getProzessstrukturbeschreibung().getStrukturbeschreibungFIM().getAktivitaetengruppe()) {
 			Resource taskResource = getSubProzess(m, task);
-			result.addProperty(hasProcessStep, taskResource);
+			process.addProperty(hasProcessStep, taskResource);
 		}	
 		
-		return result;
+		return process;
 	}
 	
 	private Resource getSubProzess(Model m, Aktivitaetengruppe task) {
@@ -168,25 +173,42 @@ public class XProzess {
 		Resource rag = this.config.getAktivitätengruppe(m,codeActivityGroupe);
 		rag.addProperty(this.config.hasID(m), codeActivityGroupe);
 		
-		Resource result = m.createResource(this.config.baseURL + this.leikaID + idTask, this.config.getSubProzess(m));
-		result.addProperty(this.config.getHasType(m), rag);
+		Resource subProcess = m.createResource(this.config.baseURL + this.leikaID + idTask, this.config.getSubProzess(m));
+		subProcess.addProperty(this.config.getHasType(m), rag);
 		
-		result.addProperty(this.config.getName(m), nameTask);
-		result.addProperty(RDFS.label, nameTask);
+		subProcess.addProperty(this.config.getName(m), nameTask);
+		subProcess.addProperty(RDFS.label, nameTask);
 		
 		//result.addProperty(this.config.getID(m), idTask);
+		if(task.getEingehendeDaten() != null) {
+			for(Daten formularDaten : task.getEingehendeDaten()) {
+				Resource usedFormular = getUsedFormular(m,formularDaten);
+				
+				subProcess.addProperty(this.config.getHasResource(m), usedFormular);
+			}
+		}
 		
 		for(Handlungsgrundlage handlungsgrundlage : task.getHandlungsgrundlage()) {
 			Resource hglRessource = getHandlungsgrundlage(m, handlungsgrundlage);
 			
-			result.addProperty(this.config.getHasBasis(m), hglRessource);
+			subProcess.addProperty(this.config.getHasBasis(m), hglRessource);
 		}
 		
-		result.addProperty(this.config.getHasResource(m), this.config.createDataFieldIndividual(m, this.getDatenfeldID(0)));
+		subProcess.addProperty(this.config.getHasResource(m), this.config.createDataFieldIndividual(m, this.getDatenfeldID(0)));
 		
-		return result;
+		return subProcess;
 	}
 
+	private Resource getUsedFormular(Model m, Daten daten) {
+		String formularsteckbriefID = daten.getFormularverweis().getFormularsteckbriefID();
+		Resource usedFormular = m.createResource(this.config.getBaseURL()+formularsteckbriefID, 
+											  	  this.config.getDatenfeldClass(m));
+		
+		usedFormular.addLiteral(this.config.getHasDataFieldID(m), formularsteckbriefID);
+		
+		return usedFormular;
+	}
+	
 	private Resource getHandlungsgrundlage(Model m, Handlungsgrundlage handlungsgrundlage) {
 		String name = handlungsgrundlage.getName();
 		String uri = handlungsgrundlage.getUri();

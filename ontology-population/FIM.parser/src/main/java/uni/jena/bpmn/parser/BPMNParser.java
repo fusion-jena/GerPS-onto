@@ -20,6 +20,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
@@ -109,7 +110,7 @@ public class BPMNParser {
 			seq.writeOnto(this.model);
 		}
 		
-		//this.model.write(new FileOutputStream(new File("../ontology/result.ttl")), "ttl");
+		this.model.write(new FileOutputStream(new File("../ontology/result.ttl")), "ttl");
 		
 		
 		//model.write(System.out, "ttl");
@@ -337,12 +338,14 @@ public class BPMNParser {
     	return content.toString();
     }
 
-	public ArrayList<Resource> getTeilnehmer(XProzessConfig config, Model m, String leika) {		
-		ArrayList<Resource> tnList = new ArrayList<>();
+	public ArrayList<Resource> getTeilnehmer(XProzessConfig config, Model m, String leika) {	
+		ArrayList<Resource> associationList = new ArrayList<>();
 		NodeList participants = doc.getElementsByTagName("participant");
 		HashMap<String, Integer> countOfActions = new HashMap<>();
 		HashMap<String, Element> processElements = new HashMap<>();
 
+		
+		
 		
 		NodeList processes = doc.getElementsByTagName("process");
 		for(int j = 0 ; j < participants.getLength(); j++) {
@@ -356,20 +359,29 @@ public class BPMNParser {
 		
 		for(int i = 0 ; i < participants.getLength(); i++) {
 			Element participant = (Element)participants.item(i);
-			
+
 			String id = participant.getAttribute("id");
 			String name = participant.getAttribute("name");
 			String processRef = participant.getAttribute("processRef");
 			
+			Resource Association = config.createAssociationIndividual(m, "QA" + leika + id);
+			Property hadRole = config.getprovoHadRole(m);
+			Property agent = config.getprovoAgent(m);
+			
 			Resource teilnehmer = m.createResource(config.getBaseURL()+id);
+
 			teilnehmer.addProperty(RDFS.label, name);
 			teilnehmer.addProperty(config.getName(m), name);
 			//teilnehmer.addProperty(config.getExecutes(m), m.getResource(config.getBaseURL()+ leika + "_" + processRef));
+
+			Association.addProperty(agent, teilnehmer);
 			
 			int length = countOfActions.get(processRef);
 			
 			if(length == 0) {
-				teilnehmer.addProperty(RDF.type, config.getTeilnehmerClass(m, "1"));
+				//teilnehmer.addProperty(RDF.type, config.getTeilnehmerClass(m, "1"));
+				Resource teilnehmerClass = config.getTeilnehmerClass(m, "1");
+				Association.addProperty(hadRole, teilnehmerClass);
 			}else {
 				boolean notBiggest = false;
 				
@@ -378,26 +390,31 @@ public class BPMNParser {
 				}
 				
 				if(notBiggest) {
-					teilnehmer.addProperty(RDF.type, config.getTeilnehmerClass(m, "3"));
+					//teilnehmer.addProperty(RDF.type, config.getTeilnehmerClass(m, "3"));
+					Resource teilnehmerClass = config.getTeilnehmerClass(m, "3");
+					Association.addProperty(hadRole, teilnehmerClass);
+
 				}else {
-					teilnehmer.addProperty(RDF.type, config.getTeilnehmerClass(m, "2"));
+					//teilnehmer.addProperty(RDF.type, config.getTeilnehmerClass(m, "2"));
+					Resource teilnehmerClass = config.getTeilnehmerClass(m, "2");
+					Association.addProperty(hadRole, teilnehmerClass);
 				}
-				
 			}
 			
-			Element process = processElements.get(processRef);
-			addElementsTeilnehmer(config, m, teilnehmer, process, "subProcess");
-			addElementsTeilnehmer(config, m, teilnehmer, process, "task");
-			addElementsTeilnehmer(config, m, teilnehmer, process, "callActivity");
-
 			
-			tnList.add(teilnehmer);
+			Element process = processElements.get(processRef);
+			addElementsTeilnehmer(config, m, teilnehmer, process, "subProcess", Association);
+			addElementsTeilnehmer(config, m, teilnehmer, process, "task", Association);
+			addElementsTeilnehmer(config, m, teilnehmer, process, "callActivity", Association);
+
+			associationList.add(Association);
 		}
 		
-		return tnList;
+		return associationList;
 	}
 
-	private void addElementsTeilnehmer(XProzessConfig config, Model m, Resource teilnehmer, Element process, String elementType) {
+	private boolean addElementsTeilnehmer(XProzessConfig config, Model m, Resource teilnehmer, Element process, String elementType, Resource Association) {
+		boolean addedAssociation = false;
 		NodeList childNodes = process.getElementsByTagName(elementType);
 		for(int j = 0; j < childNodes.getLength(); j++) {
 			Element child = (Element)childNodes.item(j);
@@ -405,10 +422,16 @@ public class BPMNParser {
 			if((action = m.getResource(config.getBaseURL() + this.LeikaID + child.getAttribute("id"))) == null) {
 				action = m.createResource(config.getBaseURL() + this.LeikaID + child.getAttribute("id"));
 			}
+		
+			Property qa = config.getprovoQA(m);
+			action.addProperty(qa, Association);
 			
-			teilnehmer.addProperty(config.participatesIn(m), action);
-				
+			addedAssociation = true;
+			
+			//teilnehmer.addProperty(config.participatesIn(m), action);
 		}
+		
+		return addedAssociation;
 	}
 	
 	

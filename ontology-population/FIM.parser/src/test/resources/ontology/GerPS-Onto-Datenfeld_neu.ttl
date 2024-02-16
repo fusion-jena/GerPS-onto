@@ -1,0 +1,636 @@
+@prefix : <https://w3id.org/GerPS-onto/FIMDatenfelder#> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/GerPS-onto/FIMDatenfelder#> .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder#> rdf:type owl:Ontology ;
+                                               owl:versionIRI <https://w3id.org/GerPS-onto/FIMDatenfelder/0.8> ;
+                                               owl:imports <http://elite.polito.it/ontologies/eupont.owl> ,
+                                                           <https://w3id.org/GerPS-onto/ontology#> ;
+                                               terms:creator "Maximilian Raupach" ;
+                                               terms:description "This Ontology show represents the XDatenfeld Format." ;
+                                               terms:license """MIT License
+
+Copyright (c) 2023 Maximilian Raupach
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the \"Software\"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE."""@en ;
+                                               terms:title "Gerps-Onto FIM Datenfelder"@de ;
+                                               owl:versionInfo 0.8 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JP000001
+:JP000001 rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :J000002
+                                      :J000005
+                                    )
+                      ] ;
+          rdfs:range :J000003 ;
+          terms:description "A property, that connects a `Stammdatenschemata` or `Structure` with a `Structure`."@en ;
+          rdfs:label "contains"@en ,
+                     "enthaelt"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JP000002
+:JP000002 rdf:type owl:ObjectProperty ;
+          rdfs:domain :J000018 ;
+          rdfs:range :J000009 ;
+          rdfs:comment "Connects a `LogicOperation` with its left `Condition`."@en ;
+          rdfs:label "has left"@en ,
+                     "hat linken Knoten"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JP000003
+:JP000003 rdf:type owl:ObjectProperty ;
+          rdfs:domain :J000018 ;
+          rdfs:range :J000009 ;
+          rdfs:comment "Connects a `LogicOperation` with its right `Condition`."@en ;
+          rdfs:label "has right"@en ,
+                     "hat rechten Knoten"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JP000004
+:JP000004 rdf:type owl:ObjectProperty ,
+                   owl:TransitiveProperty ;
+          rdfs:domain :J000008 ;
+          rdfs:range :J000008 ;
+          rdfs:comment "A property, that connects a `SequenceAction` with its `Actions`."@en ;
+          rdfs:label "has next action"@en ,
+                     "hat Folgeaktion"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JP000005
+:JP000005 rdf:type owl:ObjectProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :J000002
+                                      :J000003
+                                    )
+                      ] ;
+          rdfs:range :J000001 ;
+          rdfs:comment "A Property, that connects a `Stammdatenschemata` or `Structure` with a `Rule`."@en ;
+          rdfs:label "has rule"@en ,
+                     "hat Regel"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JP000006
+:JP000006 rdf:type owl:ObjectProperty ;
+          rdfs:domain :J000021 ;
+          rdfs:range :J000004 ;
+          rdfs:comment "Shows the TargetDatafield of an `Statement`."@en ;
+          rdfs:label "has target datafield"@en ,
+                     "hat Zieldatenfeld"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JP000008
+:JP000008 rdf:type owl:ObjectProperty ;
+          rdfs:domain :J000008 ;
+          rdfs:range :J000003 ;
+          rdfs:comment "Shows the target structure of an `StructureAction`."@en ;
+          rdfs:label "has target Element"@en ,
+                     "hat Zielelement"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JP000009
+:JP000009 rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :J000003 ;
+          rdfs:range :J000028 ;
+          rdfs:comment "Identifier of a `FIM Rule`."@en ;
+          rdfs:label "hasIdentificaton"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#basiert_auf
+<https://w3id.org/GerPS-onto/ontology#basiert_auf> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://BPMNbasedOntology#name
+<http://BPMNbasedOntology#name> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000001
+:JD000001 rdf:type owl:DatatypeProperty ;
+          rdfs:domain :J000001 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The Description of a FIM Rule"@en ;
+          rdfs:label "has description"@en ,
+                     "hat Beschreibung"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000002
+:JD000002 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdf:type owl:FunctionalProperty ;
+          rdfs:domain :J000003 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The Helptext for a User of an input Form."@en ;
+          rdfs:label "hasHelpTextInput"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000003
+:JD000003 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :J000003 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The Helptext for a USer of the output Form."@en ;
+          rdfs:label "hasHelpTextOutput"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000004
+:JD000004 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :J000004 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Type of a `Datafield`."@en ;
+          rdfs:label "hasFieldtype"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000005
+:JD000005 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :J000004 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Input Datatype of a `Datafield`."@en ;
+          rdfs:label "hasDatatype"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000006
+:JD000006 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :J000004 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Descripes formating rules of the `Datafield`."@en ;
+          rdfs:label "hasClarification"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000007
+:JD000007 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :J000003 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Translation of a given content for the `Element`."@en ;
+          rdfs:label "hasContent"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000008
+:JD000008 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :J000004 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Prefilling of a `Datafield`."@en ;
+          rdfs:label "hasPrefilling"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000009
+:JD000009 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :J000004 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The Referenz to a `Codeliste`."@en ;
+          rdfs:label "hasCodelistReference"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000010
+:JD000010 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :J000004 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "" ;
+          rdfs:label "hasMediaType"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000011
+:JD000011 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :J000004 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The maximum size of a Media that will be uploaded ."@en ;
+          rdfs:label "hasMaxSize"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000012
+:JD000012 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdf:type owl:FunctionalProperty ;
+          rdfs:domain :J000028 ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The Version of a `Identification`."@en ;
+          rdfs:label "hasVersion"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#JD000014
+:JD000014 rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :J000002 ;
+          rdfs:range xsd:string ;
+          rdfs:label "hasAuthor"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#hat_datenfeldID
+<https://w3id.org/GerPS-onto/ontology#hat_datenfeldID> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://elite.polito.it/ontologies/eupont.owl#Rule
+<http://elite.polito.it/ontologies/eupont.owl#Rule> rdf:type owl:Class .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000001
+:J000001 rdf:type owl:Class ;
+         rdfs:subClassOf <http://elite.polito.it/ontologies/eupont.owl#Rule> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://elite.polito.it/ontologies/eupont.owl#hasTrigger> ;
+                           owl:allValuesFrom :J000007
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://elite.polito.it/ontologies/eupont.owl#nominalAction> ;
+                           owl:allValuesFrom :J000008
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000001 ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID> ;
+                           owl:allValuesFrom xsd:string
+                         ] ;
+         rdfs:comment "This is a Rule in FIM-Datenfelder. It describes the relation between elements of its Stammdatenschemata."@en ;
+         rdfs:label "FIMRule"@en ,
+                    "Regel"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000002
+:J000002 rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/GerPS-onto/ontology#Datenfelder> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JP000001 ;
+                           owl:someValuesFrom :J000001
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/GerPS-onto/ontology#basiert_auf> ;
+                           owl:allValuesFrom <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://BPMNbasedOntology#name> ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID> ;
+                           owl:allValuesFrom xsd:string
+                         ] ;
+         rdfs:comment "This is a Summary of all `Datafield`,`DatafieldGroups` and `Rules`."@en ;
+         rdfs:label "Stammdatenschemata"@de ,
+                    "master data schemes"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000003
+:J000003 rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/GerPS-onto/ontology#Datenfelder> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JP000009 ;
+                           owl:allValuesFrom :J000028
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/GerPS-onto/ontology#basiert_auf> ;
+                           owl:allValuesFrom <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://BPMNbasedOntology#name> ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000002 ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000003 ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000007 ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID> ;
+                           owl:allValuesFrom xsd:string
+                         ] ;
+         rdfs:comment "This a a Part of a `Stammdatenschemata` in FIM. It can be a `Datenfeld` or a `Datenfeldgruppe`."@en ;
+         rdfs:label "element"@de ,
+                    "element"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000004
+:J000004 rdf:type owl:Class ;
+         rdfs:subClassOf :J000003 ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000004 ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000005 ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000006 ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000008 ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000009 ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000010 ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000011 ;
+                           owl:allValuesFrom xsd:string
+                         ] ;
+         rdfs:comment "This is a Field that can hold information."@en ;
+         rdfs:label "Datenfeld"@de ,
+                    "datafield"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000005
+:J000005 rdf:type owl:Class ;
+         rdfs:subClassOf :J000003 ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JP000001 ;
+                           owl:allValuesFrom :J000003
+                         ] ;
+         rdfs:comment "this is a Groupe of Datafield. It also contains rules that describes the relations between `datafields`."@en ;
+         rdfs:label "Datenfeldgruppe"@de ,
+                    "datafieldgroupe"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000006
+:J000006 rdf:type owl:Class ;
+         rdfs:subClassOf <http://elite.polito.it/ontologies/eupont.owl#InstantiatedAction> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://elite.polito.it/ontologies/eupont.owl#nominalAction> ;
+                           owl:allValuesFrom :J000008
+                         ] ;
+         rdfs:comment "This is a Subclass of `InstantiatedAction` from EUPOnt. It holds a List of `Action` that should be performed, when the Trigger is `True`."@en ;
+         rdfs:label "Sequenzeaktion"@de ,
+                    "sequence action"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000007
+:J000007 rdf:type owl:Class ;
+         rdfs:subClassOf <http://elite.polito.it/ontologies/eupont.owl#InstantiatedTrigger> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger> ;
+                           owl:allValuesFrom :J000009
+                         ] ;
+         rdfs:comment "This is a Trigger, that can hold a full `Condition`, including some `logicOperator`."@en ;
+         rdfs:label "Komplexer Trigger"@de ,
+                    "complex trigger"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000008
+:J000008 rdf:type owl:Class ;
+         rdfs:subClassOf <http://elite.polito.it/ontologies/eupont.owl#Action> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JP000008 ;
+                           owl:allValuesFrom :J000003
+                         ] ;
+         terms:description "This is a `Action`, that can be performed on a `Structure` from FIM-Datenfeld."@en ;
+         rdfs:label "Elementaction"@en ,
+                    "Elementaktion"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000009
+:J000009 rdf:type owl:Class ;
+         rdfs:subClassOf <http://elite.polito.it/ontologies/eupont.owl#Trigger> ;
+         rdfs:comment "This is a Condition, that holds `logicOperators`and Statements."@en ;
+         rdfs:label "Bedingung"@de ,
+                    "condition"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000011
+:J000011 rdf:type owl:Class ;
+         rdfs:subClassOf :J000008 ;
+         terms:description "This is a `Action`, that can turn off or on a `Structure` mandatory property."@en ;
+         rdfs:label "Pflichtaktion"@de ,
+                    "Requried Action"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000012
+:J000012 rdf:type owl:Class ;
+         rdfs:subClassOf :J000011 ;
+         terms:description "This is a `Action`, that can turn off a `Structure` mandatory property."@en ;
+         rdfs:label "Pflicht ausstellen"@de ,
+                    "turn required off"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000014
+:J000014 rdf:type owl:Class ;
+         rdfs:subClassOf :J000011 ;
+         terms:description "This is a `Action`, that can turn on a `Structure` mandatory property."@en ;
+         rdfs:label "Pflicht einschalten"@de ,
+                    "turn required on"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000015
+:J000015 rdf:type owl:Class ;
+         rdfs:subClassOf :J000008 ;
+         terms:description "This is a `Action`, that can turn off or on a `Structure` visibility property."@en ;
+         rdfs:label "Sichtbarkeitsaktion"@de ,
+                    "visibility action"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000016
+:J000016 rdf:type owl:Class ;
+         rdfs:subClassOf :J000015 ;
+         terms:description "This is a `Action`, that can turn off a `Structure` visibility property."@en ;
+         rdfs:label "Sichtbarkeit anschalten"@de ,
+                    "turn visibility on"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000017
+:J000017 rdf:type owl:Class ;
+         rdfs:subClassOf :J000015 ;
+         terms:description "This is a `Action`, that can turn on a `Structure` visibility property."@en ;
+         rdfs:label "Sichtbarkeit ausschalten"@de ,
+                    "turn visibility on"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000018
+:J000018 rdf:type owl:Class ;
+         rdfs:subClassOf :J000009 ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JP000002 ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :J000009
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JP000003 ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :J000009
+                         ] ;
+         rdfs:comment "This is an Upperclass for LogicOperations in `Rules` in `XDatenfeld`. It contains all LogicOperations in these Rules."@en ;
+         rdfs:label "Logikoperator"@de ,
+                    "logic operator"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000019
+:J000019 rdf:type owl:Class ;
+         rdfs:subClassOf :J000018 ;
+         rdfs:comment "This is a SubClass of `LogicOperator`, it represents the AND-Operator."@en ;
+         rdfs:label "and"@en ,
+                    "und"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000020
+:J000020 rdf:type owl:Class ;
+         rdfs:subClassOf :J000018 ;
+         rdfs:comment "This is a SubClass of `LogicOperator`, it represents the OR-Operator."@en ;
+         rdfs:label "oder"@de ,
+                    "or"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000021
+:J000021 rdf:type owl:Class ;
+         rdfs:subClassOf :J000009 ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JP000006 ;
+                           owl:allValuesFrom :J000004
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://elite.polito.it/ontologies/eupont.owl#value> ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ;
+         rdfs:comment "This is a Statement about `Datenfelder`."@en ;
+         rdfs:label "Statement"@de ,
+                    "statement"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000022
+:J000022 rdf:type owl:Class ;
+         rdfs:subClassOf :J000021 ;
+         rdfs:comment "This is a SubClass of `Statement`, that refers that the value of a `Datenfeld` equals a static Value."@en ;
+         rdfs:label "Gleichheit"@de ,
+                    "equals"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000023
+:J000023 rdf:type owl:Class ;
+         rdfs:subClassOf :J000021 ;
+         rdfs:comment "This is a SubClass of `Statement`, that refers that the value of a `Datenfeld` not equals a static Value."@en ;
+         rdfs:label "Ungleichheit"@de ,
+                    "not equals"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000024
+:J000024 rdf:type owl:Class ;
+         rdfs:subClassOf :J000021 ;
+         rdfs:comment "This is a SubClass of `Statement`, that refers that the value of a `Datenfeld` greater than a static Value."@en ;
+         rdfs:label "greater than statement"@en ,
+                    "größer als Statement"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000025
+:J000025 rdf:type owl:Class ;
+         rdfs:subClassOf :J000021 ;
+         rdfs:comment "This is a SubClass of  `Statement`, that refers that the value of a `Datenfeld` greater equals a static Value."@en ;
+         rdfs:label "greater Equals Statement"@en ,
+                    "größer gleich Statement"@de .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000026
+:J000026 rdf:type owl:Class ;
+         rdfs:subClassOf :J000021 ;
+         rdfs:comment "This is a SubClass of `Statement`, that refers that the value of a `Datenfeld` lower than a static Value."@en ;
+         rdfs:label "gleich als"@de ,
+                    "lower than"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000027
+:J000027 rdf:type owl:Class ;
+         rdfs:subClassOf :J000021 ;
+         rdfs:comment "This is a SubClass of `Statement`, that refers that the value of a `Datenfeld` lower equals a static Value."@en ;
+         rdfs:label "kleiner gleich"@de ,
+                    "lower Equals"@en .
+
+
+###  https://w3id.org/GerPS-onto/FIMDatenfelder#J000028
+:J000028 rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://BPMNbasedOntology#id> ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :JD000012 ;
+                           owl:allValuesFrom xsd:string
+                         ] ;
+         rdfs:comment "The Indetification of a `FIM Rule`."@en ;
+         rdfs:label "Identification"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#Datenfelder
+<https://w3id.org/GerPS-onto/ontology#Datenfelder> rdf:type owl:Class .
+
+
+###  https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

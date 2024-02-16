@@ -21,6 +21,9 @@ public class XProzessConfig {
 	String rag;
 	String data_fields;
 	String basis;
+	String provoRole;
+	String provoAssociation;
+	
 	
 	// Object Properties
 	String has_process;
@@ -32,15 +35,27 @@ public class XProzessConfig {
 	String has_type;
 	String tauscht_aus_mit;
 	String trades_with;
+	String has_process_participants;
+	String provoQA;
+	String provoHadRole;
+	String provoAgent;
 	
 	// Data Properties
 	String data_field_id;
 	String leika_id;
 	String id;
 	String name;
-		
+
+	public Property getHasDataFieldID(Model m) {
+		return m.getProperty(data_field_id);
+	}
+	
 	public Resource createDataFieldIndividual(Model m, String ID) {
 		return m.createResource(this.dataFieldIndividual + ID, this.getDatenfeldClass(m));
+	}
+	
+	public Resource createAssociationIndividual(Model m, String ID) {
+		return m.createResource(this.dataFieldIndividual + ID, this.getprovoAssociation(m));
 	}
 	
 	public String getBaseURL() {
@@ -141,5 +156,21 @@ public class XProzessConfig {
 
 	public Resource getDatenfeldClass(Model m) {
 		return m.getResource(this.data_fields);
+	}
+	
+	public Property getprovoAgent(Model m) {
+		return m.getProperty(this.provoAgent);
+	}
+	public Resource getprovoRole(Model m) {
+		return m.getResource(this.provoRole);
+	}
+	public Resource getprovoAssociation(Model m) {
+		return m.getResource(this.provoAssociation);
+	}
+	public Property getprovoQA(Model m) {
+		return m.getProperty(this.provoQA);
+	}
+	public Property getprovoHadRole(Model m) {
+		return m.getProperty(this.provoHadRole);
 	}
 }

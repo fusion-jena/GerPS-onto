@@ -30,7 +30,7 @@ public class CodelistHeading {
 		}
 	}
 	
-	public Collection<String> getAllKeyRefs(){
+	public ArrayList<String> getAllKeyRefs(){
 		ArrayList<String> result = new ArrayList<>(); 
 		
 		for (CollumnKey key : this.keys) {

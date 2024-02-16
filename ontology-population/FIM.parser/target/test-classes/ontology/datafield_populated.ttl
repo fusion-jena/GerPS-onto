@@ -1,0 +1,1572 @@
+@prefix :      <https://w3id.org/GerPS-onto/FIMDatenfelder#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix ns:    <http://creativecommons.org/ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000240#17>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "ITU E.123" .
+
+:J000009  rdf:type       owl:Class ;
+        rdfs:comment     "This is a Condition, that holds `logicOperators`and Statements."@en ;
+        rdfs:label       "condition"@en , "Bedingung"@de ;
+        rdfs:subClassOf  <http://elite.polito.it/ontologies/eupont.owl#Trigger> .
+
+:F60000247  rdf:type  :J000004 ;
+        rdfs:label  "Ort" ;
+        <http://BPMNbasedOntology#name>
+                "Ort" ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"50\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000247#5> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000247#27> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000247#10> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000247#32> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000247" .
+
+:JP000005  rdf:type        owl:ObjectProperty ;
+        rdfs:domain        :J000003 , :J000002 ;
+        rdfs:label         "hat Regel"@de , "has rule"@en ;
+        rdfs:range         :J000001 ;
+        terms:description  "A Property, that connects a `Stammdatenschemata` or `Structure` with a `Rule`."@en .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000601#41>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 3 MuSchG; § 5 MuSchG" .
+
+:R00000042  rdf:type  :J000001 ;
+        rdfs:label  "Voraussichtlicher Entbindungstermin" ;
+        <http://BPMNbasedOntology#name>
+                "Voraussichtlicher Entbindungstermin" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00000042#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00000042#J000007_0> ;
+        :JD000001   "Wenn im Datenfeld F00000462 der Wert 001 angegeben wurde, dann soll F00000467 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R00000042" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000023#J000023_0>
+        rdf:type   :J000023 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "\"\"" ;
+        :JP000006  :F60000231 ;
+        :JP000007  :R60000023 .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000241#18>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "ITU E.123" .
+
+:G00001399  rdf:type  :J000005 ;
+        rdfs:label  "Kommunikation (Einverständnis E-Mail)" ;
+        <http://BPMNbasedOntology#name>
+                "Kommunikation (Einverständnis E-Mail)" ;
+        :JD000002   "Geben Sie mindestens eine Art der Kommunikationsmöglichkeit an." ;
+        :JD000003   "" ;
+        :JP000001   :F60000240 , :F00002408 , :F60000242 , :F60000241 ;
+        :JP000005   :R10001165 , :R00001166 , :R00001165 ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G00001399" .
+
+:JD000010  rdf:type         owl:DatatypeProperty ;
+        rdfs:comment        "" ;
+        rdfs:domain         :J000004 ;
+        rdfs:label          "hasMediaType"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+:J000017  rdf:type         owl:Class ;
+        rdfs:label         "turn visibility on"@en , "Sichtbarkeit ausschalten"@de ;
+        rdfs:subClassOf    :J000015 ;
+        terms:description  "This is a `Action`, that can turn on a `Structure` visibility property."@en .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000020#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R60000020 ;
+        :JP000008  :DFG .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000242#19>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "RFC 5322; RFC 5321" .
+
+:DFG    rdf:type  :J000005 .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R10001165#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R10001165 ;
+        :JP000008  :F60000240 .
+
+:G60000083  rdf:type  :J000005 ;
+        rdfs:label  "Geburtsdatum (teilbekannt)" ;
+        <http://BPMNbasedOntology#name>
+                "Geburtsdatum (teilbekannt)" ;
+        :JD000002   "Geben Sie das Geburtsdatum so an, wie auf den Ausweisdokumenten hinterlegt. Nur falls der Tag oder der Monat der Geburt unbekannt sind, dürfen diese weggelassen werden." ;
+        :JD000003   "Falls der Tag oder der Monat der Geburt unbekannt sind, können diese leer sein." ;
+        :JP000001   :F60000233 , :F60000232 , :F60000231 ;
+        :JP000005   :R60000023 ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G60000083#23> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G60000083" .
+
+:R60000023  rdf:type  :J000001 ;
+        rdfs:label  "MonatLeer" ;
+        <http://BPMNbasedOntology#name>
+                "MonatLeer" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000023#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000023#J000007_0> ;
+        :JD000001   "Wenn im Datenfeld F60000231 nicht der Wert \"\" angegeben wurde, dann soll F60000232 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R60000023" .
+
+:J000025  rdf:type       owl:Class ;
+        rdfs:comment     "This is a SubClass of  `Statement`, that refers that the value of a `Datenfeld` greater equals a static Value."@en ;
+        rdfs:label       "größer gleich Statement"@de , "greater Equals Statement"@en ;
+        rdfs:subClassOf  :J000021 .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001166#J000023_0>
+        rdf:type   :J000023 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "\"\"" ;
+        :JP000006  :F60000242 ;
+        :JP000007  :R00001166 .
+
+:J000004  rdf:type       owl:Class ;
+        rdfs:comment     "This is a Field that can hold information."@en ;
+        rdfs:label       "Datenfeld"@de , "datafield"@en ;
+        rdfs:subClassOf  :J000003 ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000011
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000006
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000008
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000004
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000009
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000010
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000005
+                         ] .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001223#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001223#J000014_0> .
+
+:F60000263  rdf:type  :J000004 ;
+        rdfs:label  "Abfrage Anschrift Inland oder Ausland" ;
+        <http://BPMNbasedOntology#name>
+                "Abfrage Anschrift Inland oder Ausland" ;
+        :JD000002   "Geben Sie an, ob sich die Anschrift im Inland oder im Ausland befindet." ;
+        :JD000004   "select" ;
+        :JD000005   "text" ;
+        :JD000006   "" ;
+        :JD000009   "urn:de:fim:codeliste:anschrift-inland-oder-ausland" ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000263" .
+
+:F60000242  rdf:type  :J000004 ;
+        rdfs:label  "E-Mail" ;
+        <http://BPMNbasedOntology#name>
+                "E-Mail" ;
+        :JD000002   "Geben Sie eine E-Mail-Adresse an, z.B. Max.Mustermann@email.de" ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"6\",\"pattern\":\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{1,63}$\",\"maxLength\":\"254\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000242#19> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000242" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R20001224#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R20001224#J000014_0> .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001223#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001223#J000022_0> .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R20001224#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R20001224#J000022_0> .
+
+:G60000091  rdf:type  :J000005 ;
+        rdfs:label  "Anschrift Ausland" ;
+        <http://BPMNbasedOntology#name>
+                "Anschrift Ausland" ;
+        :JD000002   "" ;
+        :JD000003   "" ;
+        :JP000001   :G60000092 , :F60000261 ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G60000091#33> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G60000091" .
+
+:JD000005  rdf:type         owl:DatatypeProperty ;
+        rdfs:comment        "Input Datatype of a `Datafield`."@en ;
+        rdfs:domain         :J000004 ;
+        rdfs:label          "hasDatatype"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+:J000012  rdf:type         owl:Class ;
+        rdfs:label         "turn required off"@en , "Pflicht ausstellen"@de ;
+        rdfs:subClassOf    :J000011 ;
+        terms:description  "This is a `Action`, that can turn off a `Structure` mandatory property."@en .
+
+terms:license  rdf:type  owl:AnnotationProperty .
+
+:JP000008  rdf:type        owl:ObjectProperty ;
+        rdfs:domain        :J000008 ;
+        rdfs:label         "hat Zielelement"@de , "has target Element"@en ;
+        rdfs:range         :J000003 ;
+        terms:description  "Shows the target structure of an `StructureAction`."@en .
+
+:F60000229  rdf:type  :J000004 ;
+        rdfs:label  "Doktorgrade" ;
+        <http://BPMNbasedOntology#name>
+                "Doktorgrade" ;
+        :JD000002   "Geben Sie anerkannte Doktorgrade an. Zulässig sind: „Dr.“, „Dr.hc.“ und „Dr.eh.“. Wollen Sie mehrere Doktorgrade angeben, trennen Sie diese durch ein Leerzeichen." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"3\",\"maxLength\":\"119\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000229#16> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000229" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00000042#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R00000042 ;
+        :JP000008  :F00000467 .
+
+:J000020  rdf:type       owl:Class ;
+        rdfs:comment     "This is a SubClass of `LogicOperator`, it represents the OR-Operator."@en ;
+        rdfs:label       "or"@en , "oder"@de ;
+        rdfs:subClassOf  :J000018 .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000247#5>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 (2) Nr. 9 PAuswG vom 21.6.2019; Anhang 3 Abschnitt 1 (Wohnort) PAuswV vom 28.9.2017; Tabelle 11 BSI TR-03123, Version 1.5.1;  Xinneres.Meldeanschrift.Wohnort Version 8; XOEV.Kernkomponente.Anschrift.ort vom 31.01.2020" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000464#43>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 6 MuSchG; § 27 (1) MuSchG; § 10 ArbZG" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001165#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R00001165 ;
+        :JP000008  :F60000242 .
+
+:F00002483  rdf:type  :J000004 ;
+        rdfs:label  "E-Mail Personalangelegenheit" ;
+        <http://BPMNbasedOntology#name>
+                "E-Mail Personalangelegenheit" ;
+        :JD000002   "Geben Sie, wenn möglich, die E-Mail-Adresse in Ihrer Organisation an, welche sich um Personalangelegenheiten kümmert (Sammelpostfach). Geben Sie nur dann eine personenbezogene E-Mail-Adresse an, wenn es in Ihrer Organisation keine explizite Sammeladresse für Personalangelegenheiten gibt." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"6\",\"pattern\":\"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{1,63}$\",\"maxLength\":\"254\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00002483#13> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F00002483" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G60000091#33>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "Xinneres.Auslandsanschrift.Druckbild Version 8" .
+
+:F00000464  rdf:type  :J000004 ;
+        rdfs:label  "Sonn- und Feiertagsarbeit (Mutterschutz)" ;
+        <http://BPMNbasedOntology#name>
+                "Sonn- und Feiertagsarbeit (Mutterschutz)" ;
+        :JD000002   "Geben Sie an, ob beabsichtigt ist, die schwangere oder stillende Person bei Sonn- und Feiertagsarbeit einzusetzen." ;
+        :JD000003   "Angabe, ob beabsichtigt ist, die schwangere oder stillende Person bei Sonn- und Feiertagsarbeit einzusetzen." ;
+        :JD000004   "input" ;
+        :JD000005   "bool" ;
+        :JD000006   "" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000464#43> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F00000464" .
+
+:G60000086  rdf:type  :J000005 ;
+        rdfs:label  "Anschrift Inland Straßenanschrift" ;
+        <http://BPMNbasedOntology#name>
+                "Anschrift Inland Straßenanschrift" ;
+        :JD000002   "Geben Sie die Anschrift mit Straße, Hausnummer, Postleitzahl und Ort an. Eine Angabe eines Postfachs ist nicht möglich." ;
+        :JD000003   "" ;
+        :JP000001   :F60000243 , :F60000244 , :F60000246 , :F60000247 , :F60000248 ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G60000086" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000465#44>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 MuSchG; § 27 (1) MuSchG; § 28 MuSchG" .
+
+:J000028  rdf:type       owl:Class ;
+        rdfs:comment     "The Indetification of a `FIM Rule`."@en ;
+        rdfs:label       "Identification"@en ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000012
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     <http://BPMNbasedOntology#id>
+                         ] .
+
+:S00000094  rdf:type  :J000002 ;
+        rdfs:label  "Benachrichtigung über die Beschäftigung einer schwangeren oder stillenden Frau" ;
+        <http://BPMNbasedOntology#name>
+                "Benachrichtigung über die Beschäftigung einer schwangeren oder stillenden Frau" ;
+        :JD000014   "Bundesredaktion" ;
+        :JP000001   :F00000601 , :F00000463 , :G00000258 , :G00000255 , :G00000253 ;
+        :JP000005   :R00000849 ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "S00000094" .
+
+:J000007  rdf:type       owl:Class ;
+        rdfs:comment     "This is a Trigger, that can hold a full `Condition`, including some `logicOperator`."@en ;
+        rdfs:label       "complex trigger"@en , "Komplexer Trigger"@de ;
+        rdfs:subClassOf  <http://elite.polito.it/ontologies/eupont.owl#InstantiatedTrigger> ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  :J000009 ;
+                           owl:onProperty     <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                         ] .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00000044#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R00000044 ;
+        :JP000008  :F00000468 .
+
+:JP000003  rdf:type        owl:ObjectProperty ;
+        rdfs:domain        :J000018 ;
+        rdfs:label         "hat rechten Knoten"@de , "has right"@en ;
+        rdfs:range         :J000009 ;
+        terms:description  "Connects a `LogicOperation` with its right `Condition`."@en .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000246#31>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Meldeanschrift.postleitzahl Version 8" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000227#21>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 (2) Nr. 1 PAuswG vom 21.6.2019; Anhang 3 PAuswV vom 28.9.2017; Tabelle 9 BSI TR-03123 Version 1.5.1; XOEV.Kernkomponente.NameNatuerlichePerson.familienname vom 31.01.2020" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000467#38>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 15 MuSchG" .
+
+:R10001165  rdf:type  :J000001 ;
+        rdfs:label  "MindestEineAngabe" ;
+        <http://BPMNbasedOntology#name>
+                "MindestEineAngabe" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R10001165#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R10001165#J000007_0> ;
+        :JD000001   " Wenn im Datenfeld F60000242 der Wert \"\" angegeben wurde, dann soll F60000240 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R10001165" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000466#45>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 11 (6) Nr. 3 MuSchG; § 12 (5) Nr. 3 MuSchG; § 27 (1) MuSchG" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00011223#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R00011223 ;
+        :JP000008  :F60000240 .
+
+<http://elite.polito.it/ontologies/eupont.owl#Rule>
+        rdf:type  owl:Class .
+
+:F00000601  rdf:type  :J000004 ;
+        rdfs:label  "Beschäftigungsverhältnis Frau Sonstiges" ;
+        <http://BPMNbasedOntology#name>
+                "Beschäftigungsverhältnis Frau Sonstiges" ;
+        :JD000002   "Geben Sie an, in welchem sonstigen Beschäftigungsverhältnis die schwangere oder stillende Person steht." ;
+        :JD000003   "Detailangabe, in welchem sonstigen Beschäftigungsverhältnis die schwangere oder stillende Person steht." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000601#41> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F00000601" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000247#32>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 (2) Nr. 9 PAuswG vom 21.6.2019; Anhang 3 Abschnitt 1 (Wohnort) PAuswV vom 28.9.2017; Tabelle 11 BSI TR-03123, Version 1.5.1;  Xinneres.Meldeanschrift.Wohnort Version 8; XOEV.Kernkomponente.Anschrift.ort vom 31.01.2020" .
+
+:JD000008  rdf:type         owl:DatatypeProperty ;
+        rdfs:comment        "Prefilling of a `Datafield`."@en ;
+        rdfs:domain         :J000004 ;
+        rdfs:label          "hasPrefilling"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+:J000015  rdf:type         owl:Class ;
+        rdfs:label         "visibility action"@en , "Sichtbarkeitsaktion"@de ;
+        rdfs:subClassOf    :J000008 ;
+        terms:description  "This is a `Action`, that can turn off or on a `Structure` visibility property."@en .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000228#22>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 (2) Nr. 2 PAuswG vom 21.6.2019; Anhang 3 PAuswV vom 28.9.2017; \r\nTabelle 9 BSI TR-03123 Version 1.5.1; XOEV.Kernkomponente.NameNatuerlichePerson.vorname vom 31.08.2020" .
+
+:F60000232  rdf:type  :J000004 ;
+        rdfs:label  "Monat" ;
+        <http://BPMNbasedOntology#name>
+                "Monat" ;
+        :JD000004   "input" ;
+        :JD000005   "num_int" ;
+        :JD000006   "{\"minValue\":\"1\",\"maxValue\":\"12\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000232" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000021#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R60000021 ;
+        :JP000008  :DFG .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001223#J000022_0>
+        rdf:type   :J000022 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "\"\"" ;
+        :JP000006  :F60000240 ;
+        :JP000007  :R00001223 .
+
+<https://w3id.org/GerPS-onto/ontology#basiert_auf>
+        rdf:type  owl:ObjectProperty .
+
+:R60000021  rdf:type  :J000001 ;
+        rdfs:label  "Anschrift Ausland" ;
+        <http://BPMNbasedOntology#name>
+                "Anschrift Ausland" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000021#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000021#J000007_0> ;
+        :JD000001   "Wenn im Datenfeld F60000263 der Wert 002 angegeben wurde, dann soll G60000091 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R60000021" .
+
+:J000023  rdf:type       owl:Class ;
+        rdfs:comment     "This is a SubClass of `Statement`, that refers that the value of a `Datenfeld` not equals a static Value."@en ;
+        rdfs:label       "not equals"@en , "Ungleichheit"@de ;
+        rdfs:subClassOf  :J000021 .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R20001224#J000022_0>
+        rdf:type   :J000022 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "\"\"" ;
+        :JP000006  :F00002408 ;
+        :JP000007  :R20001224 .
+
+:J000002  rdf:type       owl:Class ;
+        rdfs:comment     "This is a Summary of all `Datafield`,`DatafieldGroups` and `Rules`."@en ;
+        rdfs:label       "master data schemes"@en , "Stammdatenschemata"@de ;
+        rdfs:subClassOf  <https://w3id.org/GerPS-onto/ontology#Datenfelder> ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     <http://BPMNbasedOntology#name>
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+                           owl:onProperty     <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                         ] ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      :JP000001 ;
+                           owl:someValuesFrom  :J000001
+                         ] .
+
+:F60000261  rdf:type  :J000004 ;
+        rdfs:label  "Staat" ;
+        <http://BPMNbasedOntology#name>
+                "Staat" ;
+        :JD000002   "Geben Sie den Namen des Staates bzw. des Landes an, Beispiel Deutschland." ;
+        :JD000003   "Dieses Feld enthält den Namen des Staates." ;
+        :JD000004   "select" ;
+        :JD000005   "text" ;
+        :JD000006   "" ;
+        :JD000009   "urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000261#34> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000261" .
+
+:F60000240  rdf:type  :J000004 ;
+        rdfs:label  "Telefon" ;
+        <http://BPMNbasedOntology#name>
+                "Telefon" ;
+        :JD000002   "Geben Sie bei Telefonnummern innerhalb Deutschlands zuerst die Ortsvorwahl bzw. Mobilnetzvorwahl in Klammern, gefolgt von der Rufnummer an, Beispiel (0211) 12345678.\r\nGeben Sie bei Telefonnummern außerhalb Deutschlands zuerst den Internationalen Ländercode mit vorgestelltem Plus, gefolgt von der Ortsvorwahl bzw. Mobilnetzvorwahl ohne der führenden Null, gefolgt von der Rufnummer an, Beispiel +49 211 123456789." ;
+        :JD000003   "Telefonnummer mit Vorwahl und gegebenenfalls Ländervorwahl." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"23\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000240#11> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000240#17> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000240" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000246#26>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Meldeanschrift.postleitzahl Version 8" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001224#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001224#J000014_0> .
+
+:F00000467  rdf:type  :J000004 ;
+        rdfs:label  "Voraussichtlicher Entbindungstermin" ;
+        <http://BPMNbasedOntology#name>
+                "Voraussichtlicher Entbindungstermin" ;
+        :JD000002   "Der voraussichtliche Entbindungstermin darf nicht in der Vergangenheit liegen und darf maximal 9 Monate in der Zukunft liegen." ;
+        :JD000004   "input" ;
+        :JD000005   "date" ;
+        :JD000006   "" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000467#38> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F00000467" .
+
+:F60000319  rdf:type  :J000004 ;
+        rdfs:label  "Eingetragener Name / Organisationsname" ;
+        <http://BPMNbasedOntology#name>
+                "Eingetragener Name / Organisationsname" ;
+        :JD000002   "Geben Sie den im Handelsregister, im Genossenschaftsregister, im Vereinsregister oder im Stiftungsverzeichnis eingetragenen Name mit Rechtsform an, soweit eine Eintragung vorliegt." ;
+        :JD000003   "Im Handelsregister, im Genossenschaftsregister, im Vereinsregister oder im Stiftungsverzeichnis eingetragener Name mit Rechtsform." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"1000\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000319#1> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000319" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000244#3>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Meldeanschrift.hausnummer Version 8" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G00000258#42>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§§ 5-6, 11-12, 27-28 MuSchG; § 10 ArbZG" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000247#27>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 (2) Nr. 9 PAuswG vom 21.6.2019; Anhang 3 Abschnitt 1 (Wohnort) PAuswV vom 28.9.2017; Tabelle 11 BSI TR-03123, Version 1.5.1;  Xinneres.Meldeanschrift.Wohnort Version 8; XOEV.Kernkomponente.Anschrift.ort vom 31.01.2020" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001224#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001224#J000022_0> .
+
+:JD000003  rdf:type         owl:DatatypeProperty ;
+        rdfs:comment        "The Helptext for a USer of the output Form."@en ;
+        rdfs:domain         :J000003 ;
+        rdfs:label          "hasHelpTextOutput"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000249#8>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.PostalischeInlandsanschrift.postfach Version 8" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000262#36>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Auslandsanschrift.Anschriftzone.zeile.anschrift Version 8" .
+
+:F60000248  rdf:type  :J000004 ;
+        rdfs:label  "Anschrift Zusatzangaben" ;
+        <http://BPMNbasedOntology#name>
+                "Anschrift Zusatzangaben" ;
+        :JD000002   "Geben Sie Zusatzangaben zur Anschrift an. Beispiele: Hinterhaus, Gartenhaus." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"21\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000248#6> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000248#28> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000248" .
+
+:JP000006  rdf:type        owl:ObjectProperty ;
+        rdfs:domain        :J000021 ;
+        rdfs:label         "hat Zieldatenfeld"@de , "has target datafield"@en ;
+        rdfs:range         :J000004 ;
+        terms:description  "Shows the TargetDatafield of an `Statement`."@en .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000023#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R60000023 ;
+        :JP000008  :F60000232 .
+
+:F60000227  rdf:type  :J000004 ;
+        rdfs:label  "Familienname" ;
+        <http://BPMNbasedOntology#name>
+                "Familienname" ;
+        :JD000002   "Geben Sie den Nachnamen, Familiennamen bzw. Zunamen an." ;
+        :JD000003   "Dieses Feld enthält den Nachnamen, Familiennamen bzw. Zunamen." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"120\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000227#21> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000227#14> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000227" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000463#40>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 1 (2) MuSchG; §§ 3-6 MuSchG; § 2 MuSchEltZV" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000248#28>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Meldeanschrift.zusatzangaben Version 8" .
+
+:G00001408  rdf:type  :J000005 ;
+        rdfs:label  "Kommunikation (Einverständnis E-Mail, Personalangelegenheit)" ;
+        <http://BPMNbasedOntology#name>
+                "Kommunikation (Einverständnis E-Mail, Personalangelegenheit)" ;
+        :JD000002   "Geben Sie mindestens eine Art der Kommunikationsmöglichkeit an." ;
+        :JD000003   "" ;
+        :JP000001   :F60000240 , :F00002408 , :F60000241 , :F00002483 ;
+        :JP000005   :R00001224 , :R00001223 , :R00011223 , :R20001224 ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G00001408" .
+
+:JD000011  rdf:type         owl:DatatypeProperty ;
+        rdfs:comment        "The maximum size of a Media that will be uploaded ."@en ;
+        rdfs:domain         :J000004 ;
+        rdfs:label          "hasMaxSize"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+:J000018  rdf:type       owl:Class ;
+        rdfs:comment     "This is an Upperclass for LogicOperations in `Rules` in `XDatenfeld`. It contains all LogicOperations in these Rules."@en ;
+        rdfs:label       "logic operator"@en , "Logikoperator"@de ;
+        rdfs:subClassOf  :J000009 ;
+        rdfs:subClassOf  [ rdf:type                  owl:Restriction ;
+                           owl:onClass               :J000009 ;
+                           owl:onProperty            :JP000003 ;
+                           owl:qualifiedCardinality  "1"^^xsd:nonNegativeInteger
+                         ] ;
+        rdfs:subClassOf  [ rdf:type                  owl:Restriction ;
+                           owl:onClass               :J000009 ;
+                           owl:onProperty            :JP000002 ;
+                           owl:qualifiedCardinality  "1"^^xsd:nonNegativeInteger
+                         ] .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000020#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000020#J000014_0> .
+
+:       rdf:type           owl:Ontology ;
+        terms:creator      "Maximilian Raupach" ;
+        terms:description  "This Ontology show represents the XDatenfeld Format." ;
+        terms:license      "MIT License\n\nCopyright (c) 2023 Maximilian Raupach\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."@en ;
+        terms:title        "Gerps-Onto FIM Datenfelder"@de ;
+        owl:imports        <https://w3id.org/GerPS-onto/ontology#> , <http://elite.polito.it/ontologies/eupont.owl> ;
+        owl:versionIRI     <https://w3id.org/GerPS-onto/FIMDatenfelder/0.8> ;
+        owl:versionInfo    0.8 .
+
+<https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+        rdf:type  owl:DatatypeProperty .
+
+:R00001165  rdf:type  :J000001 ;
+        rdfs:label  "MindestEineAngabe" ;
+        <http://BPMNbasedOntology#name>
+                "MindestEineAngabe" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001165#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001165#J000007_0> ;
+        :JD000001   " Wenn im Datenfeld F60000240 der Wert \"\" angegeben wurde, dann soll F60000242 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R00001165" .
+
+:F00000462  rdf:type  :J000004 ;
+        rdfs:label  "Status Frau (schwanger, stillend)" ;
+        <http://BPMNbasedOntology#name>
+                "Status Frau (schwanger, stillend)" ;
+        :JD000002   "Geben Sie an, ob der Geburtstermin bevorsteht, also die Person schwanger ist oder ob die Geburt bereits stattgefunden hat." ;
+        :JD000003   "Angabe, ob der Geburtstermin bevorsteht, also die Person schwanger ist oder ob die Geburt bereits stattgefunden hat." ;
+        :JD000004   "select" ;
+        :JD000005   "text" ;
+        :JD000006   "" ;
+        :JD000009   "urn:de:fim:codeliste:statusfrauschwangerstillend" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000462#37> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F00000462" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001166#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R00001166 ;
+        :JP000008  :F00002408 .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G60000087#29>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.PostalischeInlandsanschrift.Postfachanschrift Version 8" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R10001165#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R10001165#J000014_0> .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000020#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000020#J000022_0> .
+
+<http://BPMNbasedOntology#name>
+        rdf:type  owl:DatatypeProperty .
+
+:J000026  rdf:type       owl:Class ;
+        rdfs:comment     "This is a SubClass of `Statement`, that refers that the value of a `Datenfeld` lower than a static Value."@en ;
+        rdfs:label       "lower than"@en , "gleich als"@de ;
+        rdfs:subClassOf  :J000021 .
+
+:J000005  rdf:type       owl:Class ;
+        rdfs:comment     "this is a Groupe of Datafield. It also contains rules that describes the relations between `datafields`."@en ;
+        rdfs:label       "datafieldgroupe"@en , "Datenfeldgruppe"@de ;
+        rdfs:subClassOf  :J000003 ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  :J000003 ;
+                           owl:onProperty     :JP000001
+                         ] .
+
+:R20001224  rdf:type  :J000001 ;
+        rdfs:label  "Einverständnis E-Mail" ;
+        <http://BPMNbasedOntology#name>
+                "Einverständnis E-Mail" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R20001224#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R20001224#J000007_0> ;
+        :JD000001   "Wenn im Datenfeld F00002408 der Wert \"\" angegeben wurde, dann soll F00002483 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R20001224" .
+
+:F60000243  rdf:type  :J000004 ;
+        rdfs:label  "Straße" ;
+        <http://BPMNbasedOntology#name>
+                "Straße" ;
+        :JD000002   "Geben Sie an, wie die Straße heißt." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"55\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000243#24> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000243#2> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000243" .
+
+:R00001223  rdf:type  :J000001 ;
+        rdfs:label  "MindestEineAngabe" ;
+        <http://BPMNbasedOntology#name>
+                "MindestEineAngabe" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001223#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001223#J000007_0> ;
+        :JD000001   "Wenn im Datenfeld F60000240 der Wert \"\" angegeben wurde, dann soll F00002483 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R00001223" .
+
+:JP000001  rdf:type         owl:ObjectProperty ;
+        rdfs:domain         [ rdf:type     owl:Class ;
+                              owl:unionOf  ( :J000002 :J000005 )
+                            ] ;
+        rdfs:label          "enthaelt"@de , "contains"@en ;
+        rdfs:range          :J000003 ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        terms:description   "A property, that connects a `Stammdatenschemata` or `Structure` with a `Structure`."@en .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R10001165#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R10001165#J000022_0> .
+
+:G60000092  rdf:type  :J000005 ;
+        rdfs:label  "Anschriftzone" ;
+        <http://BPMNbasedOntology#name>
+                "Anschriftzone" ;
+        :JD000002   "" ;
+        :JD000003   "" ;
+        :JP000001   :F60000262 ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G60000092#35> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G60000092" .
+
+:JD000006  rdf:type         owl:DatatypeProperty ;
+        rdfs:comment        "Descripes formating rules of the `Datafield`."@en ;
+        rdfs:domain         :J000004 ;
+        rdfs:label          "hasClarification"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+:JP000009  rdf:type   owl:FunctionalProperty , owl:ObjectProperty ;
+        rdfs:comment  "Identifier of a `FIM Rule`."@en ;
+        rdfs:domain   :J000003 ;
+        rdfs:label    "hasIdentificaton"@en ;
+        rdfs:range    :J000028 .
+
+terms:title  rdf:type  owl:AnnotationProperty .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00000042#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00000042#J000014_0> .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G60000083#23>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 (2) PAuswG vom 21.6.2019; Anhang 3 Abschnitt 1 PAuswV vom 28.9.2017;\r\nTabelle 9 BSI TR-03123 Version 1.5.1" .
+
+:J000021  rdf:type       owl:Class ;
+        rdfs:comment     "This is a Statement about `Datenfelder`."@en ;
+        rdfs:label       "statement"@en , "Statement"@de ;
+        rdfs:subClassOf  :J000009 ;
+        rdfs:subClassOf  [ rdf:type                  owl:Restriction ;
+                           owl:onDataRange           xsd:string ;
+                           owl:onProperty            <http://elite.polito.it/ontologies/eupont.owl#value> ;
+                           owl:qualifiedCardinality  "1"^^xsd:nonNegativeInteger
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  :J000004 ;
+                           owl:onProperty     :JP000006
+                         ] .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001224#J000022_0>
+        rdf:type   :J000022 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "\"\"" ;
+        :JP000006  :F00002483 ;
+        :JP000007  :R00001224 .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00000042#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00000042#J000022_0> .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G00000255#20>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 3 MuSchG; § 15 MuSchG; § 27 (1-2) MuSchG" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000227#14>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 (2) Nr. 1 PAuswG vom 21.6.2019; Anhang 3 PAuswV vom 28.9.2017; Tabelle 9 BSI TR-03123 Version 1.5.1; XOEV.Kernkomponente.NameNatuerlichePerson.familienname vom 31.01.2020" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001165#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001165#J000014_0> .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000248#6>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Meldeanschrift.zusatzangaben Version 8" .
+
+:F00000465  rdf:type  :J000004 ;
+        rdfs:label  "Nachtarbeit (Mutterschutz)" ;
+        <http://BPMNbasedOntology#name>
+                "Nachtarbeit (Mutterschutz)" ;
+        :JD000004   "input" ;
+        :JD000005   "bool" ;
+        :JD000006   "" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000465#44> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F00000465" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000462#37>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 3 MuSchG" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001165#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001165#J000022_0> .
+
+:G60000087  rdf:type  :J000005 ;
+        rdfs:label  "Anschrift Inland Postfachanschrift" ;
+        <http://BPMNbasedOntology#name>
+                "Anschrift Inland Postfachanschrift" ;
+        :JD000002   "" ;
+        :JD000003   "" ;
+        :JP000001   :F60000247 , :F60000249 , :F60000246 ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G60000087#29> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G60000087#7> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G60000087" .
+
+:JD000001  rdf:type   owl:DatatypeProperty ;
+        rdfs:comment  "The Description of a FIM Rule"@en ;
+        rdfs:domain   :J000001 ;
+        rdfs:label    "hat Beschreibung"@de , "has description"@en ;
+        rdfs:range    xsd:string .
+
+:G00000255  rdf:type  :J000005 ;
+        rdfs:label  "Persönliche Informationen schwangere stillende Frau Allgemein" ;
+        <http://BPMNbasedOntology#name>
+                "Persönliche Informationen schwangere stillende Frau Allgemein" ;
+        :JD000002   "" ;
+        :JD000003   "" ;
+        :JP000001   :F00000468 , :G60000083 , :F60000227 , :F00000462 , :F00000467 , :G60000093 , :F60000228 ;
+        :JP000005   :R00000044 , :R00000042 ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G00000255#20> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G00000255" .
+
+:J000008  rdf:type         owl:Class ;
+        rdfs:label         "Elementaktion"@de , "Elementaction"@en ;
+        rdfs:subClassOf    <http://elite.polito.it/ontologies/eupont.owl#Action> ;
+        rdfs:subClassOf    [ rdf:type           owl:Restriction ;
+                             owl:allValuesFrom  :J000003 ;
+                             owl:onProperty     :JP000008
+                           ] ;
+        terms:description  "This is a `Action`, that can be performed on a `Structure` from FIM-Datenfeld."@en .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000228#15>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 (2) Nr. 2 PAuswG vom 21.6.2019; Anhang 3 PAuswV vom 28.9.2017; \r\nTabelle 9 BSI TR-03123 Version 1.5.1; XOEV.Kernkomponente.NameNatuerlichePerson.vorname vom 31.08.2020" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G60000092#35>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Auslandsanschrift.Druckbild.anschriftzone Version 8" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000243#24>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Meldeanschrift.strasse Version 8" .
+
+:F60000246  rdf:type  :J000004 ;
+        rdfs:label  "Postleitzahl" ;
+        <http://BPMNbasedOntology#name>
+                "Postleitzahl" ;
+        :JD000002   "Geben Sie die Postleitzahl des Ortes an, Beispiel 10115." ;
+        :JD000003   "Dieses Feld enthält die Postleitzahl des Ortes." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"5\",\"pattern\":\"([0]{1}[1-9]{1}|[1-9]{1}[0-9]{1})[0-9]{3}\",\"maxLength\":\"5\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000246#9> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000246#26> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000246#4> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000246#31> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000246" .
+
+:JP000004  rdf:type        owl:TransitiveProperty , owl:ObjectProperty ;
+        rdfs:domain        :J000008 ;
+        rdfs:label         "hat Folgeaktion"@de , "has next action"@en ;
+        rdfs:range         :J000008 ;
+        terms:description  "A property, that connects a `SequenceAction` with its `Actions`."@en .
+
+:R00011223  rdf:type  :J000001 ;
+        rdfs:label  "MindestEineAngabe" ;
+        <http://BPMNbasedOntology#name>
+                "MindestEineAngabe" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00011223#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00011223#J000007_0> ;
+        :JD000001   "Wenn im Datenfeld F00002483 der Wert \"\" angegeben wurde, dann soll F60000240 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R00011223" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00000044#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00000044#J000014_0> .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00000044#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00000044#J000022_0> .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000229#16>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 (2) Nr. 3 PAuswG vom 21.6.2019; Tabelle 9 BSI TR-03123 Version 1.5.1 (dort als Titel); XMeld.type.NameNatuerlichePerson.doktorgrad Version 2.4.4" .
+
+:F00002408  rdf:type  :J000004 ;
+        rdfs:label  "Einverständnis E-Mail" ;
+        <http://BPMNbasedOntology#name>
+                "Einverständnis E-Mail" ;
+        :JD000004   "input" ;
+        :JD000005   "bool" ;
+        :JD000006   "" ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F00002408" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00011223#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00011223#J000014_0> .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000244#25>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Meldeanschrift.hausnummer Version 8" .
+
+:JD000009  rdf:type         owl:DatatypeProperty ;
+        rdfs:comment        "The Referenz to a `Codeliste`."@en ;
+        rdfs:domain         :J000004 ;
+        rdfs:label          "hasCodelistReference"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+terms:creator  rdf:type  owl:AnnotationProperty .
+
+:J000016  rdf:type         owl:Class ;
+        rdfs:label         "turn visibility on"@en , "Sichtbarkeit anschalten"@de ;
+        rdfs:subClassOf    :J000015 ;
+        terms:description  "This is a `Action`, that can turn off a `Structure` visibility property."@en .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000020#J000022_0>
+        rdf:type   :J000022 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "001" ;
+        :JP000006  :F60000263 ;
+        :JP000007  :R60000020 .
+
+:F60000233  rdf:type  :J000004 ;
+        rdfs:label  "Jahr" ;
+        <http://BPMNbasedOntology#name>
+                "Jahr" ;
+        :JD000004   "input" ;
+        :JD000005   "num_int" ;
+        :JD000006   "{\"minValue\":\"1850\",\"maxValue\":\"2080\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000233" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00011223#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00011223#J000022_0> .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R10001165#J000022_0>
+        rdf:type   :J000022 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "\"\"" ;
+        :JP000006  :F60000242 ;
+        :JP000007  :R10001165 .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000246#9>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Meldeanschrift.postleitzahl Version 8" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001223#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R00001223 ;
+        :JP000008  :F00002483 .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000021#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000021#J000014_0> .
+
+:J000024  rdf:type       owl:Class ;
+        rdfs:comment     "This is a SubClass of `Statement`, that refers that the value of a `Datenfeld` greater than a static Value."@en ;
+        rdfs:label       "größer als Statement"@de , "greater than statement"@en ;
+        rdfs:subClassOf  :J000021 .
+
+:J000003  rdf:type       owl:Class ;
+        rdfs:comment     "This a a Part of a `Stammdatenschemata` in FIM. It can be a `Datenfeld` or a `Datenfeldgruppe`."@en ;
+        rdfs:label       "element"@en , "element"@de ;
+        rdfs:subClassOf  <https://w3id.org/GerPS-onto/ontology#Datenfelder> ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000003
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  :J000028 ;
+                           owl:onProperty     :JP000009
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000002
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     <http://BPMNbasedOntology#name>
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000007
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+                           owl:onProperty     <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                         ] .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000240#11>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "ITU E.123" .
+
+:F60000262  rdf:type  :J000004 ;
+        rdfs:label  "ZeileAnschrift" ;
+        <http://BPMNbasedOntology#name>
+                "ZeileAnschrift" ;
+        :JD000002   "Geben Sie die ausländische Anschrift an" ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"35\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000262#36> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000262" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R20001224#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R20001224 ;
+        :JP000008  :F00002483 .
+
+:F60000241  rdf:type  :J000004 ;
+        rdfs:label  "Telefax" ;
+        <http://BPMNbasedOntology#name>
+                "Telefax" ;
+        :JD000002   "Geben Sie bei Telefaxnummern innerhalb Deutschlands zuerst die Ortsvorwahl bzw. Mobilnetzvorwahl in Klammern, gefolgt von der Rufnummer an, Beispiel (0211) 12345678.\r\nGeben Sie bei Telefaxnummern außerhalb Deutschlands zuerst den Internationalen Ländercode mit vorgestelltem Plus, gefolgt von der Ortsvorwahl bzw. Mobilnetzvorwahl ohne der führenden Null, gefolgt von der Rufnummer an, Beispiel +49 211 123456789." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"23\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000241#12> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000241#18> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000241" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000021#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000021#J000022_0> .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000468#39>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 15 MuSchG" .
+
+:F00000468  rdf:type  :J000004 ;
+        rdfs:label  "Entbindungstermin" ;
+        <http://BPMNbasedOntology#name>
+                "Entbindungstermin" ;
+        :JD000002   "Der Entbindungstermin darf nicht in der Zukunft liegen." ;
+        :JD000004   "input" ;
+        :JD000005   "date" ;
+        :JD000006   "" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000468#39> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F00000468" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000241#12>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "ITU E.123" .
+
+:G00000258  rdf:type  :J000005 ;
+        rdfs:label  "Informationen zur beabsichtigten Beschäftigung der schwangeren oder stillenden Frau Allgemein" ;
+        <http://BPMNbasedOntology#name>
+                "Informationen zur beabsichtigten Beschäftigung der schwangeren oder stillenden Frau Allgemein" ;
+        :JD000002   "" ;
+        :JD000003   "" ;
+        :JP000001   :F00000465 , :F00000464 , :F00000466 ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G00000258#42> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G00000258" .
+
+terms:description  rdf:type  owl:AnnotationProperty .
+
+:JD000004  rdf:type         owl:DatatypeProperty ;
+        rdfs:comment        "Type of a `Datafield`."@en ;
+        rdfs:domain         :J000004 ;
+        rdfs:label          "hasFieldtype"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+:J000011  rdf:type         owl:Class ;
+        rdfs:label         "Requried Action"@en , "Pflichtaktion"@de ;
+        rdfs:subClassOf    :J000008 ;
+        terms:description  "This is a `Action`, that can turn off or on a `Structure` mandatory property."@en .
+
+:F60000249  rdf:type  :J000004 ;
+        rdfs:label  "Postfach" ;
+        <http://BPMNbasedOntology#name>
+                "Postfach" ;
+        :JD000002   "Geben Sie die Nummer oder Zeichenkette des Postfachs an. Das wird manchmal Postfachnummer genannt." ;
+        :JD000003   "Identifikation des Postfachs" ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"21\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000249#30> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000249#8> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000249" .
+
+:F60000228  rdf:type  :J000004 ;
+        rdfs:label  "Vornamen" ;
+        <http://BPMNbasedOntology#name>
+                "Vornamen" ;
+        :JD000002   "Geben Sie die Vornamen so an, wie sie auf den offiziellen Ausweisen angegeben sind, zum Beispiel im Personalausweis." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"80\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000228#22> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000228#15> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000228" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000023#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000023#J000014_0> .
+
+:R00000044  rdf:type  :J000001 ;
+        rdfs:label  "Entbindungstermin" ;
+        <http://BPMNbasedOntology#name>
+                "Entbindungstermin" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00000044#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00000044#J000007_0> ;
+        :JD000001   "Wenn im Datenfeld F00000462 der Wert 002 angegeben wurde, dann soll F00000468 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R00000044" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00000042#J000022_0>
+        rdf:type   :J000022 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "001" ;
+        :JP000006  :F00000462 ;
+        :JP000007  :R00000042 .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000246#4>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Meldeanschrift.postleitzahl Version 8" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000023#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000023#J000023_0> .
+
+:JD000012  rdf:type         owl:FunctionalProperty , owl:DatatypeProperty ;
+        rdfs:comment        "The Version of a `Identification`."@en ;
+        rdfs:domain         :J000028 ;
+        rdfs:label          "hasVersion"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+:J000019  rdf:type       owl:Class ;
+        rdfs:comment     "This is a SubClass of `LogicOperator`, it represents the AND-Operator."@en ;
+        rdfs:label       "und"@de , "and"@en ;
+        rdfs:subClassOf  :J000018 .
+
+:G00001914  rdf:type  :J000005 ;
+        rdfs:label  "Ansprechpartner (ohne Funktion / Einverständnis E-Mail)" ;
+        <http://BPMNbasedOntology#name>
+                "Ansprechpartner (ohne Funktion / Einverständnis E-Mail)" ;
+        :JD000002   "" ;
+        :JD000003   "" ;
+        :JP000001   :G00001399 , :F60000227 , :F60000229 , :F60000228 ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G00001914" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001165#J000022_0>
+        rdf:type   :J000022 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "\"\"" ;
+        :JP000006  :F60000240 ;
+        :JP000007  :R00001165 .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000249#30>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.PostalischeInlandsanschrift.postfach Version 8" .
+
+:R00001166  rdf:type  :J000001 ;
+        rdfs:label  "Einverständnis E-Mail" ;
+        <http://BPMNbasedOntology#name>
+                "Einverständnis E-Mail" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001166#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001166#J000007_0> ;
+        :JD000001   "Wenn im Datenfeld F60000242 nicht der Wert \"\" angegeben wurde, dann soll F00002408 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R00001166" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage>
+        rdf:type  owl:Class .
+
+:F00000463  rdf:type  :J000004 ;
+        rdfs:label  "Beschäftigungsverhältnis Frau" ;
+        <http://BPMNbasedOntology#name>
+                "Beschäftigungsverhältnis Frau" ;
+        :JD000004   "select" ;
+        :JD000005   "text" ;
+        :JD000006   "" ;
+        :JD000009   "urn:de:fim:codeliste:artbeschäftigungsverhältnis" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000463#40> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F00000463" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00000044#J000022_0>
+        rdf:type   :J000022 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "002" ;
+        :JP000006  :F00000462 ;
+        :JP000007  :R00000044 .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001166#J000006_0>
+        rdf:type  :J000006 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001166#J000014_0> .
+
+:J000027  rdf:type       owl:Class ;
+        rdfs:comment     "This is a SubClass of `Statement`, that refers that the value of a `Datenfeld` lower equals a static Value."@en ;
+        rdfs:label       "lower Equals"@en , "kleiner gleich"@de ;
+        rdfs:subClassOf  :J000021 .
+
+:R00000849  rdf:type  :J000001 ;
+        rdfs:label  "Beschäftigungsverhältnis Frau Sonstiges" ;
+        <http://BPMNbasedOntology#name>
+                "Beschäftigungsverhältnis Frau Sonstiges" ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R00000849" .
+
+:G00000253  rdf:type  :J000005 ;
+        rdfs:label  "Arbeitgeber - juristische Person (Anzeige schwangere oder stillende Frau)" ;
+        <http://BPMNbasedOntology#name>
+                "Arbeitgeber - juristische Person (Anzeige schwangere oder stillende Frau)" ;
+        :JD000002   "" ;
+        :JD000003   "" ;
+        :JP000001   :G00001408 , :G00001914 , :F60000319 , :G60000088 ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G00000253#0> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G00000253" .
+
+:J000006  rdf:type       owl:Class ;
+        rdfs:comment     "This is a Subclass of `InstantiatedAction` from EUPOnt. It holds a List of `Action` that should be performed, when the Trigger is `True`."@en ;
+        rdfs:label       "sequence action"@en , "Sequenzeaktion"@de ;
+        rdfs:subClassOf  <http://elite.polito.it/ontologies/eupont.owl#InstantiatedAction> ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  :J000008 ;
+                           owl:onProperty     <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                         ] .
+
+:F60000244  rdf:type  :J000004 ;
+        rdfs:label  "Hausnummer" ;
+        <http://BPMNbasedOntology#name>
+                "Hausnummer" ;
+        :JD000002   "Geben Sie die Ziffern und ggf. Buchstaben der Hausnummer der Anschrift an, Beispiel 124a." ;
+        :JD000003   "Dieses Feld enthält die Ziffern und Buchstaben der Hausnummer der Anschrift." ;
+        :JD000004   "input" ;
+        :JD000005   "text" ;
+        :JD000006   "{\"minLength\":\"1\",\"maxLength\":\"11\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000244#3> , <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000244#25> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000244" .
+
+:R00001224  rdf:type  :J000001 ;
+        rdfs:label  "Einverständnis E-Mail" ;
+        <http://BPMNbasedOntology#name>
+                "Einverständnis E-Mail" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001224#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001224#J000007_0> ;
+        :JD000001   "Wenn im Datenfeld F00002483 der Wert \"\" angegeben wurde, dann soll F00002408 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R00001224" .
+
+:JP000002  rdf:type        owl:ObjectProperty ;
+        rdfs:domain        :J000018 ;
+        rdfs:label         "hat linken Knoten"@de , "has left"@en ;
+        rdfs:range         :J000009 ;
+        terms:description  "Connects a `LogicOperation` with its left `Condition`."@en .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001166#J000007_0>
+        rdf:type  :J000007 ;
+        <http://elite.polito.it/ontologies/eupont.owl#nominalTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R00001166#J000023_0> .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00011223#J000022_0>
+        rdf:type   :J000022 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "\"\"" ;
+        :JP000006  :F00002483 ;
+        :JP000007  :R00011223 .
+
+:G60000093  rdf:type  :J000005 ;
+        rdfs:label  "Anschrift Inland oder Ausland mit Frage" ;
+        <http://BPMNbasedOntology#name>
+                "Anschrift Inland oder Ausland mit Frage" ;
+        :JD000002   "Geben Sie die Anschrift in Deutschland oder im Ausland an." ;
+        :JD000003   "" ;
+        :JP000001   :G60000088 , :G60000091 , :F60000263 ;
+        :JP000005   :R60000021 , :R60000020 ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G60000093" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00002483#13>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "RFC 5322; RFC 5321" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000319#1>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XOEV.Kernkomponente.NameOrganisation.name vom 01.08.2017; XGewerbeanzeige.Betrieb.eingetragenerName Version 2.2; \r\nXUnternehmen.Kerndatenmodell.Eingetragener Name Version 1.0" .
+
+:JD000007  rdf:type         owl:DatatypeProperty ;
+        rdfs:comment        "Translation of a given content for the `Element`."@en ;
+        rdfs:label          "hasContent"@en ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+:J000014  rdf:type         owl:Class ;
+        rdfs:label         "turn required on"@en , "Pflicht einschalten"@de ;
+        rdfs:subClassOf    :J000011 ;
+        terms:description  "This is a `Action`, that can turn on a `Structure` mandatory property."@en .
+
+<https://w3id.org/GerPS-onto/ontology#Datenfelder>
+        rdf:type  owl:Class .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000247#10>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 5 (2) Nr. 9 PAuswG vom 21.6.2019; Anhang 3 Abschnitt 1 (Wohnort) PAuswV vom 28.9.2017; Tabelle 11 BSI TR-03123, Version 1.5.1;  Xinneres.Meldeanschrift.Wohnort Version 8; XOEV.Kernkomponente.Anschrift.ort vom 31.01.2020" .
+
+:F60000231  rdf:type  :J000004 ;
+        rdfs:label  "Tag (ohne Monat und Jahr)" ;
+        <http://BPMNbasedOntology#name>
+                "Tag (ohne Monat und Jahr)" ;
+        :JD000004   "input" ;
+        :JD000005   "num_int" ;
+        :JD000006   "{\"minValue\":\"1\",\"maxValue\":\"31\"}" ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F60000231" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G00000253#0>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "§ 27 (1) - (2) MuSchG" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R60000021#J000022_0>
+        rdf:type   :J000022 ;
+        <http://elite.polito.it/ontologies/eupont.owl#value>
+                "002" ;
+        :JP000006  :F60000263 ;
+        :JP000007  :R60000021 .
+
+:R60000020  rdf:type  :J000001 ;
+        rdfs:label  "Anschrift Inland" ;
+        <http://BPMNbasedOntology#name>
+                "Anschrift Inland" ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasAction>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000020#J000006_0> ;
+        <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                <https://w3id.org/GerPS-onto/FIMDatenfelder/R60000020#J000007_0> ;
+        :JD000001   "Wenn im Datenfeld F60000263 der Wert 001 angegeben wurde, dann soll G60000088 zum Pflichtfeld werden." ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "R60000020" .
+
+:J000022  rdf:type       owl:Class ;
+        rdfs:comment     "This is a SubClass of `Statement`, that refers that the value of a `Datenfeld` equals a static Value."@en ;
+        rdfs:label       "equals"@en , "Gleichheit"@de ;
+        rdfs:subClassOf  :J000021 .
+
+:J000001  rdf:type       owl:Class ;
+        rdfs:comment     "This is a Rule in FIM-Datenfelder. It describes the relation between elements of its Stammdatenschemata."@en ;
+        rdfs:label       "Regel"@de , "FIMRule"@en ;
+        rdfs:subClassOf  <http://elite.polito.it/ontologies/eupont.owl#Rule> ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :JD000001
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  :J000008 ;
+                           owl:onProperty     <http://elite.polito.it/ontologies/eupont.owl#nominalAction>
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  :J000007 ;
+                           owl:onProperty     <http://elite.polito.it/ontologies/eupont.owl#hasTrigger>
+                         ] .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000261#34>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XMeld.type.AnschriftMelderecht.Ausland.staat Version 2.4.4; \r\nCodeliste laut Xmeld und DSMeld: Codeliste Destatis Staat (urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staat)" .
+
+<https://w3id.org/GerPS-onto/FIMDatenfelder/R00001224#J000014_0>
+        rdf:type   :J000014 ;
+        :JP000007  :R00001224 ;
+        :JP000008  :F00002408 .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F60000243#2>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.Meldeanschrift.strasse Version 8" .
+
+:F00000466  rdf:type  :J000004 ;
+        rdfs:label  "Mutterschutz getaktete Arbeit" ;
+        <http://BPMNbasedOntology#name>
+                "Mutterschutz getaktete Arbeit" ;
+        :JD000002   "Geben Sie an, ob beabsichtigt ist, die schwangere oder stillende Person bei getakteter Arbeit einzusetzen.\r\nBei getakteter Arbeit handelt es sich um Akkordarbeit oder um sonstige Arbeiten, bei denen durch ein gesteigertes Arbeitstempo ein höheres Entgelt erzielt werden kann oder um Fließarbeit oder um getaktete Arbeit mit vorgeschriebenem Arbeitstempo." ;
+        :JD000003   "Angabe, ob beabsichtigt ist, die schwangere oder stillende Person bei getakteter Arbeit mit vorgeschriebenem Arbeitstempo einzusetzen." ;
+        :JD000004   "input" ;
+        :JD000005   "bool" ;
+        :JD000006   "" ;
+        <https://w3id.org/GerPS-onto/ontology#basiert_auf>
+                <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_F00000466#45> ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "F00000466" .
+
+<https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage_G60000087#7>
+        rdf:type    <https://w3id.org/GerPS-onto/ontology#Handlungsgrundlage> ;
+        rdfs:label  "XInneres.PostalischeInlandsanschrift.Postfachanschrift Version 8" .
+
+:G60000088  rdf:type  :J000005 ;
+        rdfs:label  "Anschrift Inland" ;
+        <http://BPMNbasedOntology#name>
+                "Anschrift Inland" ;
+        :JD000002   "" ;
+        :JD000003   "" ;
+        :JP000001   :G60000087 , :G60000086 ;
+        <https://w3id.org/GerPS-onto/ontology#hat_datenfeldID>
+                "G60000088" .
+
+:JD000002  rdf:type         owl:FunctionalProperty , owl:DatatypeProperty ;
+        rdfs:comment        "The Helptext for a User of an input Form."@en ;
+        rdfs:domain         :J000003 ;
+        rdfs:label          "hasHelpTextInput"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .

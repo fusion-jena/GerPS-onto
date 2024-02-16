@@ -1,0 +1,659 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/GerPS-onto/ontology#"
+     xml:base="https://w3id.org/GerPS-onto/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="https://w3id.org/GerPS-onto/ontology#">
+        <owl:imports rdf:resource="http://BPMNbasedOntology"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+        <author>Jonas Author</author>
+        <author>Leila Feddoul</author>
+        <author>Maximilian Raupach</author>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#Version -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/GerPS-onto/ontology#Version"/>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#author -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/GerPS-onto/ontology#author"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://BPMNbasedOntology#has_process -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_process"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#has_resource -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_resource"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#has_sourceRef -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_sourceRef">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://BPMNbasedOntology#has_targetRef -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_targetRef"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#is_attachedToRef -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#is_attachedToRef"/>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP001 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP001">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <rdfs:range rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE006"/>
+        <rdfs:comment xml:lang="en">Shows the legal basis of a process step.</rdfs:comment>
+        <rdfs:label xml:lang="en">based on</rdfs:label>
+        <rdfs:label xml:lang="de">basiert auf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP005 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP005">
+        <rdfs:subPropertyOf rdf:resource="http://BPMNbasedOntology#has_process"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE008"/>
+        <rdfs:range rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE010"/>
+        <rdfs:comment xml:lang="en">Show the processes of a service.</rdfs:comment>
+        <rdfs:label xml:lang="en">has process</rdfs:label>
+        <rdfs:label xml:lang="de">hat Prozess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP006 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP006">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE010"/>
+        <rdfs:range rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <rdfs:comment xml:lang="en">Show the connects the process with its process steps.</rdfs:comment>
+        <rdfs:label xml:lang="en">has processstep</rdfs:label>
+        <rdfs:label xml:lang="de">hat Prozessschritt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP008 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP008">
+        <rdfs:subPropertyOf rdf:resource="http://BPMNbasedOntology#has_resource"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <rdfs:range rdf:resource="http://BPMNbasedOntology#Resource"/>
+        <rdfs:comment xml:lang="en">Show the resource a process step should procces.</rdfs:comment>
+        <rdfs:label xml:lang="en">has resource</rdfs:label>
+        <rdfs:label xml:lang="de">hat Ressource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP009 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP009">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <rdfs:range rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE012"/>
+        <rdfs:comment xml:lang="en">Show the type of a process step.</rdfs:comment>
+        <rdfs:label xml:lang="en">has type</rdfs:label>
+        <rdfs:label xml:lang="de">hat Typ</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP012 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP012">
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE017"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://BPMNbasedOntology#id -->
+
+    <owl:DatatypeProperty rdf:about="http://BPMNbasedOntology#id"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://BPMNbasedOntology#name"/>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP010 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP010">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP015"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Submission deadlines are tied to documents and specify a time period in which a document must be submitted</rdfs:comment>
+        <rdfs:label xml:lang="en">has submission deadline</rdfs:label>
+        <rdfs:label xml:lang="de">hat Abgabefrist</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP011 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP011">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP015"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE010"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Deadline of a Service to be processed.</rdfs:comment>
+        <rdfs:label xml:lang="en">has processing deadline</rdfs:label>
+        <rdfs:label xml:lang="de">hat Bearbeitungsfrist</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP012 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP012">
+        <rdfs:subPropertyOf rdf:resource="http://BPMNbasedOntology#id"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP015 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP015">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Processing deadlines are tied to processes and define a period of time in which the execution of a process must be completed.</rdfs:comment>
+        <rdfs:label xml:lang="en">has deadline</rdfs:label>
+        <rdfs:label xml:lang="de">hat Frist</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP016 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP016">
+        <rdfs:subPropertyOf rdf:resource="http://BPMNbasedOntology#id"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE008"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The LeiKaID describes the unique identifier for administrative services defined by the service catalog.</rdfs:comment>
+        <rdfs:label xml:lang="en">has LeiKa-ID</rdfs:label>
+        <rdfs:label xml:lang="de">hat LeiKa-ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://BPMNbasedOntology#Activity -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Activity"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#Agent -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Agent"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#BoundaryEvent -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#BoundaryEvent"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#CallActivity -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#CallActivity"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#DataResource -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#DataResource"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#DocumentResource -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#DocumentResource"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#EndEvent -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#EndEvent"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#ExclusiveGateway -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#ExclusiveGateway"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#ParallelGateway -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#ParallelGateway"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#Process -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Process"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#Resource -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Resource"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#SequenceFlow -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#SequenceFlow"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#StartEvent -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#StartEvent"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#SubProcess -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#SubProcess"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#Task -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Task"/>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#LegalResource -->
+
+    <owl:Class rdf:about="http://data.europa.eu/eli/ontology#LegalResource"/>
+    
+
+
+    <!-- http://data.europa.eu/m8g/Evidence -->
+
+    <owl:Class rdf:about="http://data.europa.eu/m8g/Evidence">
+        <rdfs:comment xml:lang="en">The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can prove that a specific requirement is met.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europa.eu/m8g/PublicOrganisation -->
+
+    <owl:Class rdf:about="http://data.europa.eu/m8g/PublicOrganisation">
+        <rdfs:comment xml:lang="en">An Organization that is defined as being part of the public sector by a legal framework at any level.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/cpsv#PublicService -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/cpsv#PublicService">
+        <rdfs:comment xml:lang="en">A Public Service is a mandatory or discretionary set of activities performed, or able to be performed, by or on behalf of a public organisation, publicly funded and arise from public policy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/cpsv#Rule -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/cpsv#Rule">
+        <rdfs:comment xml:lang="en">The Rule class represents a document that sets out the specific rules, guidelines or procedures that the Public Service follows.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#FormalOrganization -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization">
+        <rdfs:comment xml:lang="en">An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#LegalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#LegalEntity">
+        <rdfs:comment xml:lang="en">A self-empoyed person, company, or organization that has legal rights and obligations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE001 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE001">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#id"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actor is a participant in the administrative process and assumes the role of either the result receiver, the contributor, or the main actor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actor</rdfs:label>
+        <rdfs:label xml:lang="de">Akteur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE004 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE004">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#DocumentResource"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/Evidence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#id"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Documents are exchanged between actors and are the subject of a process step.</rdfs:comment>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+        <rdfs:label xml:lang="de">Dokument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE006 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE006">
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment xml:lang="en">Legal bases are references to already existing laws.</rdfs:comment>
+        <rdfs:label xml:lang="de">Handlungsgrundlage</rdfs:label>
+        <rdfs:label xml:lang="en">Legal basis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE008 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE008">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/cpsv#PublicService"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP005"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP016"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Services describe the actions of public administrations.</rdfs:comment>
+        <rdfs:label xml:lang="de">Leistung</rdfs:label>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE010 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE010">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Activity"/>
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Process"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/cpsv#Rule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP016"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Processes describe administrative procedures that are processed by specific persons in a repetitive sequence under concrete specifications (e.g., legal and administrative regulations) and with the use of aids (e.g., forms).</rdfs:comment>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+        <rdfs:label xml:lang="de">Prozess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE011 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE011">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Task"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP001"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP008"/>
+                <owl:allValuesFrom rdf:resource="http://BPMNbasedOntology#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP009"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#id"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Process steps describe actions or activities of the public administrations or actors.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process step</rdfs:label>
+        <rdfs:label xml:lang="de">Prozessschritt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE012 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE012">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#id"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Reference activity groups can be derived from concrete specifications (e.g., legal and administrative regulations), can bundle thematically related process elements, and reflect the process of service execution.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reference activity group</rdfs:label>
+        <rdfs:label xml:lang="de">Referenzaktivitätengruppe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE017 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE017">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#DataResource"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/Evidence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP012"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Data fields are required components in the construction of forms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data field</rdfs:label>
+        <rdfs:label xml:lang="de">Datenfeld</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE005 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE005">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#LegalEntity"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdfs:comment xml:lang="en">A result receiver is a person or company that benefits from the administrative service.</rdfs:comment>
+        <rdfs:label xml:lang="de">Ergebnissempfänger</rdfs:label>
+        <rdfs:label xml:lang="en">Result receiver</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE007 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE007">
+        <rdf:type rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdfs:comment xml:lang="en">The main actor is a public authority responsible for service delivery.</rdfs:comment>
+        <rdfs:label xml:lang="de">Hauptakteur</rdfs:label>
+        <rdfs:label xml:lang="en">Main actor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE009 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE009">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdfs:comment xml:lang="en">Contributors are external public authorities that are involved in the administrative service.</rdfs:comment>
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <rdfs:label xml:lang="de">Mitwirkender</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP012">
+        <rdfs:comment xml:lang="en">The data field ID describes the unique identifier for data fields.</rdfs:comment>
+        <rdfs:label xml:lang="en">has data field ID</rdfs:label>
+        <rdfs:label xml:lang="de">hat Datenfeld-ID</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

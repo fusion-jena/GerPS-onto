@@ -2,9 +2,10 @@
 
 ## Running the Code
 1. Download the project 
-2. Import the maven project in ecplise
-3. Run `main.java`
-4. The populated ontology will be generated in: `./ontology/gerPS-Onto-populated.owl`
+2. Install Maven
+3. Run `mvn package` in FIM.parser-Folder
+3. Run `Main.java`
+4. The populated ontology will be generated in: `ontology/gerPS-Onto-populated.owl`
 
 ## Configuration
 - The configuration is in `FIM.parser/src/main/resources/config.toml`. 

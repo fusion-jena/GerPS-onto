@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://BPMNbasedOntology#"
+     xml:base="http://BPMNbasedOntology"
+     xmlns:uo="http://purl.obolibrary.org/obo/uo#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://BPMNbasedOntology">
+        <oboInOwl:created_by>Amina ANNNE, Nathalie Aussenac and Mouna Kamel</oboInOwl:created_by>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBO is a business process ontology. The core element of BBO is a formalization of a BPMN 2.0 fragment (namely Chapter 10 of BPMN 2.0 specification). BPMN 2.0 is state-of-the-art meta-model of business processes.
+
+Copyright © 2019 MELODI @ Toulouse Institute of Computer Science Research</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBO</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BPMNbasedOntology</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://BPMNbasedOntology#has_activity -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_activity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://BPMNbasedOntology#Activity"/>
+        <rdfs:comment xml:lang="en">[IRIT]denotes the activity related to the source element</rdfs:comment>
+        <rdfs:label xml:lang="en">has_activity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://BPMNbasedOntology#has_process -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_process">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://BPMNbasedOntology#Process"/>
+        <rdfs:comment xml:lang="en">the process assigned to the resource role</rdfs:comment>
+        <rdfs:label xml:lang="en">has_process</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://BPMNbasedOntology#has_resource -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_resource">
+        <rdfs:range rdf:resource="http://BPMNbasedOntology#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://BPMNbasedOntology#id -->
+
+    <owl:DatatypeProperty rdf:about="http://BPMNbasedOntology#id">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This attribute is used to uniquely identify BPMN elements. The id is REQUIRED if this element is referenced or intended to be referenced by something else. If the element is not currently referenced and is never intended to be referenced, the id MAY be omitted.</rdfs:comment>
+        <rdfs:label xml:lang="en">id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://BPMNbasedOntology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://BPMNbasedOntology#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The descriptive name of the element.</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://BPMNbasedOntology#Activity -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Activity">
+        <rdfs:comment xml:lang="en">Work that a company or organization performs using business processes. An activity can be atomic or non-atomic (compound). The types of activities that are a part of a Process Model are: Process, Sub-Process, and Task.</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://BPMNbasedOntology#Agent -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Agent">
+        <rdfs:comment xml:lang="en">Person or a Software that performs an activity</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://BPMNbasedOntology#DataResource -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#DataResource">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Resource"/>
+        <rdfs:comment xml:lang="en">/</rdfs:comment>
+        <rdfs:label xml:lang="en">DataResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://BPMNbasedOntology#DocumentResource -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#DocumentResource">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#DataResource"/>
+        <rdfs:comment xml:lang="en">/</rdfs:comment>
+        <rdfs:label xml:lang="en">DocumentResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://BPMNbasedOntology#Process -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Process">
+        <rdfs:comment xml:lang="en">A sequence or flow of Activities in an organization with the objective of carrying out work. In BPMN, a Process is depicted as a graph of Flow Elements, which are a set of Activities, Events, Gateways, and Sequence Flow that adhere to a finite execution semantics.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://BPMNbasedOntology#Resource -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Resource">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The Resource class is used to specify resources that can be referenced by Activities. These Resources can be Human Resources as well as any other resource assigned to Activities during Process execution time. The definition of a Resource is “abstract,” because it only defines the Resource, without detailing how e.g., actual user IDs are associated at runtime. Multiple Activities can utilize the same Resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://BPMNbasedOntology#SubProcess -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#SubProcess">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Activity"/>
+        <rdfs:comment xml:lang="en">A Process that is included within another Process.</rdfs:comment>
+        <rdfs:label xml:lang="en">SubProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://BPMNbasedOntology#Task -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Task">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Activity"/>
+        <rdfs:comment xml:lang="en">An atomic activity that is included within a Process. A Task is used when the work in the Process is not broken down to a finer level of Process Model detail. Generally, an end-user, an application, or both will perform the Task. A Task object shares the same shape as the Sub-Process, which is a rectangle that has rounded corners.</rdfs:comment>
+        <rdfs:label xml:lang="en">Task</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,1046 @@
+@prefix :         <https://w3id.org/GerPS-onto/ontology#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+:sqf_99006028261000_9948b60b-088b-4efe-ac2c-71797bee0898
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf20" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_628dc895-624a-40e1-a980-28afbbf2338c ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_9948b60b-088b-4efe-ac2c-71797bee0898" ;
+        <http://BPMNbasedOntology#name>
+                "sqf20" .
+
+:99006028261000_98e69981-24f0-441b-b019-624d14e4b236
+        rdf:type                       <http://BPMNbasedOntology#ExclusiveGateway> ;
+        rdfs:label                     "Exklusives Gateway" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_98e69981-24f0-441b-b019-624d14e4b236" ;
+        <http://BPMNbasedOntology#name>
+                "Exklusives Gateway" .
+
+<http://www.gesetze-im-internet.de/muschg_2018/__29.html>
+        rdf:type    :GERPSE006 ;
+        rdfs:label  "§ 29 MuSchG" , "§ 29 (3) MuSchG" ;
+        <http://BPMNbasedOntology#name>
+                "§ 29 MuSchG" , "§ 29 (3) MuSchG" .
+
+:sqf_99006028261000_da51c9af-2f62-4701-b184-b103e82c627c
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf30" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_685fd62b-f80e-44b6-a220-870297af1a5e ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_da51c9af-2f62-4701-b184-b103e82c627c" ;
+        <http://BPMNbasedOntology#name>
+                "sqf30" .
+
+:sqf_99006028261000_c8a819b5-df37-445f-8162-c31800e3c56f
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf29" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_c8a819b5-df37-445f-8162-c31800e3c56f" ;
+        <http://BPMNbasedOntology#name>
+                "sqf29" .
+
+<http://BPMNbasedOntology#Agent>
+        rdf:type  owl:Class .
+
+<http://BPMNbasedOntology#Resource>
+        rdf:type  owl:Class .
+
+:sqf_99006028261000_bee4a32f-2c14-467e-82f6-6128a2333e1c
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf26" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_61fbccf7-0a32-48e7-94fc-0e538e6050e2 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_bee4a32f-2c14-467e-82f6-6128a2333e1c" ;
+        <http://BPMNbasedOntology#name>
+                "sqf26" .
+
+:sqf_99006028261000_4e61d805-17de-4eb4-bc33-78d39c865eae
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf8" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_4e61d805-17de-4eb4-bc33-78d39c865eae" ;
+        <http://BPMNbasedOntology#name>
+                "sqf8" .
+
+:sqf_99006028261000_977f1376-846c-4881-8b0f-4dfe63dd2e14
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf18" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_977f1376-846c-4881-8b0f-4dfe63dd2e14" ;
+        <http://BPMNbasedOntology#name>
+                "sqf18" .
+
+:GERPSE010  rdf:type     owl:Class ;
+        rdfs:comment     "Processes describe administrative procedures that are processed by specific persons in a repetitive sequence under concrete specifications (e.g., legal and administrative regulations) and with the use of aids (e.g., forms)."@en ;
+        rdfs:label       "Prozess"@de , "Process"@en ;
+        rdfs:subClassOf  <http://BPMNbasedOntology#Process> , <http://purl.org/vocab/cpsv#Rule> , <http://BPMNbasedOntology#Activity> ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      <http://BPMNbasedOntology#id> ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      <http://BPMNbasedOntology#name> ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      :GERPSP006 ;
+                           owl:someValuesFrom  :GERPSE011
+                         ] .
+
+:99006028261000_42b07c19-722d-4b42-8e30-7568b95a03f3
+        rdf:type                       <http://BPMNbasedOntology#EndEvent> ;
+        rdfs:label                     "Geldbuße veranlasst" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_42b07c19-722d-4b42-8e30-7568b95a03f3" ;
+        <http://BPMNbasedOntology#name>
+                "Geldbuße veranlasst" .
+
+:GERPSP011  rdf:type        owl:DatatypeProperty ;
+        rdfs:comment        "Deadline of a Service to be processed."@en ;
+        rdfs:domain         :GERPSE010 ;
+        rdfs:label          "hat Bearbeitungsfrist"@de , "has processing deadline"@en ;
+        rdfs:range          xsd:dateTime ;
+        rdfs:subPropertyOf  :GERPSP015 .
+
+:_4e56a483-ecbe-4104-a63c-3c63cbb55e2d
+        rdfs:label  "Arbeitgeber" ;
+        <http://BPMNbasedOntology#name>
+                "Arbeitgeber" .
+
+:99006028261000_3f0a4c4b-85f4-454c-8414-3637acd91a87
+        rdf:type                       <http://BPMNbasedOntology#EndEvent> ;
+        rdfs:label                     "Anzeige bearbeitet" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_3f0a4c4b-85f4-454c-8414-3637acd91a87" ;
+        <http://BPMNbasedOntology#name>
+                "Anzeige bearbeitet" .
+
+:sqf_99006028261000_3cdf11d1-d134-4d8d-85f5-c1f7d094b6b8
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf6" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_3cdf11d1-d134-4d8d-85f5-c1f7d094b6b8" ;
+        <http://BPMNbasedOntology#name>
+                "sqf6" .
+
+:_acad2737-c516-4d97-8dfd-45605e058d86
+        rdfs:label  "Aufsichtsbehörde / Bundesministerium der Verteidigung" ;
+        <http://BPMNbasedOntology#name>
+                "Aufsichtsbehörde / Bundesministerium der Verteidigung" .
+
+:99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7
+        rdf:type                       <http://BPMNbasedOntology#ParallelGateway> ;
+        rdfs:label                     "Nicht-exklusives Gateway" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7" ;
+        <http://BPMNbasedOntology#name>
+                "Nicht-exklusives Gateway" .
+
+:sqf_99006028261000_0debde50-3ff9-4666-8986-29fafdbd41af
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "Anzeige nicht erforderlich" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_0debde50-3ff9-4666-8986-29fafdbd41af" ;
+        <http://BPMNbasedOntology#name>
+                "Anzeige nicht erforderlich" .
+
+<https://w3id.org/GerPS-onto/ontology#Benachrichtigung über die Beschäftigung einer schwangeren oder stillenden Frau>
+        rdf:type    :GERPSE017 ;
+        :GERPSP012  "Benachrichtigung über die Beschäftigung einer schwangeren oder stillenden Frau" .
+
+:99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881
+        rdf:type                       <http://BPMNbasedOntology#ExclusiveGateway> ;
+        rdfs:label                     "Exklusives Gateway" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881" ;
+        <http://BPMNbasedOntology#name>
+                "Exklusives Gateway" .
+
+<http://BPMNbasedOntology#has_process>
+        rdf:type  owl:ObjectProperty .
+
+:99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa
+        rdf:type                       <http://BPMNbasedOntology#ExclusiveGateway> ;
+        rdfs:label                     "Überwachungsmaßnahmen gemäß § 29 MuSchG notwendig?" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa" ;
+        <http://BPMNbasedOntology#name>
+                "Überwachungsmaßnahmen gemäß § 29 MuSchG notwendig?" .
+
+:       rdf:type         owl:Ontology ;
+        owl:imports      <http://www.w3.org/ns/prov-o-20130430> , <http://BPMNbasedOntology> ;
+        owl:versionInfo  2.0 ;
+        :author          "Jonas Author" , "Leila Feddoul" , "Maximilian Raupach" .
+
+:sqf_99006028261000_a15d8e43-ace5-4d48-a047-2999bc72daed
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "Für Überwachungsaufgabe weitere Informationen benötigt" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_a15d8e43-ace5-4d48-a047-2999bc72daed" ;
+        <http://BPMNbasedOntology#name>
+                "Für Überwachungsaufgabe weitere Informationen benötigt" .
+
+:GERPSE005  rdf:type  prov:Role , <http://www.w3.org/ns/org#LegalEntity> , owl:NamedIndividual ;
+        rdfs:comment  "A result receiver is a person or company that benefits from the administrative service."@en ;
+        rdfs:label    "Result receiver"@en , "Ergebnissempfänger"@de .
+
+:sqf_99006028261000_4fcee70b-9e5a-453a-a034-3dabcf6ec270
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "nein" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_4fcee70b-9e5a-453a-a034-3dabcf6ec270" ;
+        <http://BPMNbasedOntology#name>
+                "nein" .
+
+<http://BPMNbasedOntology#Task>
+        rdf:type  owl:Class .
+
+:sqf_99006028261000_4fd81e2e-061d-4a81-94da-d6eb94c7bdf9
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf10" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_4fd81e2e-061d-4a81-94da-d6eb94c7bdf9" ;
+        <http://BPMNbasedOntology#name>
+                "sqf10" .
+
+:99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1
+        rdf:type                       <http://BPMNbasedOntology#ExclusiveGateway> ;
+        rdfs:label                     "Formelle Fehler?" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1" ;
+        <http://BPMNbasedOntology#name>
+                "Formelle Fehler?" .
+
+:GERPSP006  rdf:type        owl:ObjectProperty ;
+        rdfs:comment        "Show the connects the process with its process steps."@en ;
+        rdfs:domain         :GERPSE010 ;
+        rdfs:label          "hat Prozessschritt"@de , "has processstep"@en ;
+        rdfs:range          :GERPSE011 ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+<https://www.gesetze-im-internet.de/arbschg/__5.html>
+        rdf:type    :GERPSE006 ;
+        rdfs:label  "§ 5 ArbSchG" ;
+        <http://BPMNbasedOntology#name>
+                "§ 5 ArbSchG" .
+
+<https://www.gesetze-im-internet.de/vwvfg/__3.html>
+        rdf:type    :GERPSE006 ;
+        rdfs:label  "§ 3 VwVfG" ;
+        <http://BPMNbasedOntology#name>
+                "§ 3 VwVfG" .
+
+:QA99006028261000_4e56a483-ecbe-4104-a63c-3c63cbb55e2d
+        rdf:type      prov:Association ;
+        prov:agent    :_4e56a483-ecbe-4104-a63c-3c63cbb55e2d ;
+        prov:hadRole  :GERPSE005 .
+
+:QA99006028261000_acad2737-c516-4d97-8dfd-45605e058d86
+        rdf:type      prov:Association ;
+        prov:agent    :_acad2737-c516-4d97-8dfd-45605e058d86 ;
+        prov:hadRole  :GERPSE009 .
+
+:RAG1   <http://BPMNbasedOntology#id>  "1" .
+
+<http://BPMNbasedOntology#Process>
+        rdf:type  owl:Class .
+
+:sqf_99006028261000_8cdd8bc4-2210-4952-bda9-964de820e387
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf16" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_42b07c19-722d-4b42-8e30-7568b95a03f3 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_8cdd8bc4-2210-4952-bda9-964de820e387" ;
+        <http://BPMNbasedOntology#name>
+                "sqf16" .
+
+<http://BPMNbasedOntology#Activity>
+        rdf:type  owl:Class .
+
+:process_99006028261000_8eafac98-90cd-3c6d-9734-be1f7148df28
+        rdf:type                       :GERPSE010 ;
+        rdfs:label                     "Anzeige zur Beschäftigung einer schwangeren oder stillenden Frau bearbeiten" ;
+        <http://BPMNbasedOntology#id>  "99006028261000" ;
+        <http://BPMNbasedOntology#name>
+                "Anzeige zur Beschäftigung einer schwangeren oder stillenden Frau bearbeiten" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 , :QA99006028261000_acad2737-c516-4d97-8dfd-45605e058d86 , :QA99006028261000_4e56a483-ecbe-4104-a63c-3c63cbb55e2d ;
+        :GERPSP006                     :99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330 , :99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36 , :99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a , :99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c , :99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161 , :99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38 , :99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9 , :99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2 , :99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884 , :99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c , :99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b , :99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a .
+
+:sqf_99006028261000_99301e47-b1c8-459e-8de2-a4edcc04efc7
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf19" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_5ae9eab2-488d-4cd8-8af4-c1578739cf87 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_99301e47-b1c8-459e-8de2-a4edcc04efc7" ;
+        <http://BPMNbasedOntology#name>
+                "sqf19" .
+
+:99006028261000_685fd62b-f80e-44b6-a220-870297af1a5e
+        rdf:type                       <http://BPMNbasedOntology#EndEvent> ;
+        rdfs:label                     "Behörde ist nicht zuständig" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_685fd62b-f80e-44b6-a220-870297af1a5e" ;
+        <http://BPMNbasedOntology#name>
+                "Behörde ist nicht zuständig" .
+
+<http://BPMNbasedOntology#has_targetRef>
+        rdf:type  owl:ObjectProperty .
+
+:99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14
+        rdf:type                       <http://BPMNbasedOntology#ExclusiveGateway> ;
+        rdfs:label                     "Exklusives Gateway" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14" ;
+        <http://BPMNbasedOntology#name>
+                "Exklusives Gateway" .
+
+<http://BPMNbasedOntology#CallActivity>
+        rdf:type  owl:Class .
+
+<http://www.w3.org/ns/org#FormalOrganization>
+        rdf:type      owl:Class ;
+        rdfs:comment  "An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities"@en .
+
+:99006028261000_3974acd9-d88f-4232-b4df-a1e372ec88f8
+        rdf:type                       <http://BPMNbasedOntology#StartEvent> ;
+        rdfs:label                     "Anzeige eingegangen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_3974acd9-d88f-4232-b4df-a1e372ec88f8" ;
+        <http://BPMNbasedOntology#name>
+                "Anzeige eingegangen" .
+
+:GERPSP001  rdf:type        owl:ObjectProperty ;
+        rdfs:comment        "Shows the legal basis of a process step."@en ;
+        rdfs:domain         :GERPSE011 ;
+        rdfs:label          "basiert auf"@de , "based on"@en ;
+        rdfs:range          :GERPSE006 ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+:sqf_99006028261000_c5e3f23e-3300-4824-8dc5-fb3242cda82a
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf27" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_bf420489-7735-4178-bd52-e7a5c4001646 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_c5e3f23e-3300-4824-8dc5-fb3242cda82a" ;
+        <http://BPMNbasedOntology#name>
+                "sqf27" .
+
+:sqf_99006028261000_718b5709-84cb-4c98-bbce-c93438e0ad75
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf11" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_98e69981-24f0-441b-b019-624d14e4b236 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_718b5709-84cb-4c98-bbce-c93438e0ad75" ;
+        <http://BPMNbasedOntology#name>
+                "sqf11" .
+
+<http://BPMNbasedOntology#BoundaryEvent>
+        rdf:type  owl:Class .
+
+:GERPSE008  rdf:type     owl:Class ;
+        rdfs:comment     "Services describe the actions of public administrations."@en ;
+        rdfs:label       "Service"@en , "Leistung"@de ;
+        rdfs:subClassOf  <http://purl.org/vocab/cpsv#PublicService> ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      :GERPSP016 ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      <http://BPMNbasedOntology#name> ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      :GERPSP005 ;
+                           owl:someValuesFrom  :GERPSE010
+                         ] .
+
+:GERPSP009  rdf:type        owl:ObjectProperty ;
+        rdfs:comment        "Show the type of a process step."@en ;
+        rdfs:domain         :GERPSE011 ;
+        rdfs:label          "hat Typ"@de , "has type"@en ;
+        rdfs:range          :GERPSE012 ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+:99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c
+        rdf:type                       <http://BPMNbasedOntology#SubProcess> , :GERPSE011 ;
+        rdfs:label                     "Über Erhebung einer Geldbuße entscheiden" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c" ;
+        <http://BPMNbasedOntology#name>
+                "Über Erhebung einer Geldbuße entscheiden" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <http://www.gesetze-im-internet.de/muschg_2018/__32.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG5 .
+
+:author  rdf:type  owl:AnnotationProperty .
+
+:RAG4   <http://BPMNbasedOntology#id>  "4" .
+
+:sqf_99006028261000_29ada928-1ad4-4fdf-bbc9-f108d4246ac8
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf4" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_29ada928-1ad4-4fdf-bbc9-f108d4246ac8" ;
+        <http://BPMNbasedOntology#name>
+                "sqf4" .
+
+:sqf_99006028261000_07a9d504-0cca-4704-a241-c726703d8c0a
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "ja" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_07a9d504-0cca-4704-a241-c726703d8c0a" ;
+        <http://BPMNbasedOntology#name>
+                "ja" .
+
+:99006028261000_b8ef8c75-ef39-413e-86b5-221eafe22861
+        rdf:type                       <http://BPMNbasedOntology#CallActivity> ;
+        rdfs:label                     "Geldbuße erheben (OWi-Verfahren)" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_b8ef8c75-ef39-413e-86b5-221eafe22861" ;
+        <http://BPMNbasedOntology#name>
+                "Geldbuße erheben (OWi-Verfahren)" ;
+        prov:qualifiedAssociation      :QA99006028261000_acad2737-c516-4d97-8dfd-45605e058d86 .
+
+<http://www.w3.org/ns/org#LegalEntity>
+        rdf:type      owl:Class ;
+        rdfs:comment  "A self-empoyed person, company, or organization that has legal rights and obligations."@en .
+
+:sqf_99006028261000_9724f1e6-9671-4939-9c5c-f1590c78cf2b
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "ja" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_9724f1e6-9671-4939-9c5c-f1590c78cf2b" ;
+        <http://BPMNbasedOntology#name>
+                "ja" .
+
+<http://BPMNbasedOntology#DocumentResource>
+        rdf:type  owl:Class .
+
+:S00000094  rdf:type  :GERPSE017 .
+
+:99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c
+        rdf:type                       <http://BPMNbasedOntology#SubProcess> , :GERPSE011 ;
+        rdfs:label                     "Notwendigkeit von Überwachungsmaßnahmen prüfen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c" ;
+        <http://BPMNbasedOntology#name>
+                "Notwendigkeit von Überwachungsmaßnahmen prüfen" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <http://www.gesetze-im-internet.de/muschg_2018/__29.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG4 .
+
+:99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88
+        rdf:type                       <http://BPMNbasedOntology#ExclusiveGateway> ;
+        rdfs:label                     "Exklusives Gateway" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88" ;
+        <http://BPMNbasedOntology#name>
+                "Exklusives Gateway" .
+
+<https://www.gesetze-im-internet.de/vwvfg/__25.html>
+        rdf:type    :GERPSE006 ;
+        rdfs:label  "§ 25 VwVfG" ;
+        <http://BPMNbasedOntology#name>
+                "§ 25 VwVfG" .
+
+:99006028261000_61fbccf7-0a32-48e7-94fc-0e538e6050e2
+        rdf:type                       <http://BPMNbasedOntology#BoundaryEvent> ;
+        rdfs:label                     "nicht rechtzeitig richtig oder nicht vollständig" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_61fbccf7-0a32-48e7-94fc-0e538e6050e2" ;
+        <http://BPMNbasedOntology#is_attachedToRef>
+                :99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a ;
+        <http://BPMNbasedOntology#name>
+                "nicht rechtzeitig richtig oder nicht vollständig" .
+
+:GERPSE011  rdf:type     owl:Class ;
+        rdfs:comment     "Process steps describe actions or activities of the public administrations or actors."@en ;
+        rdfs:label       "Process step"@en , "Prozessschritt"@de ;
+        rdfs:subClassOf  <http://BPMNbasedOntology#Task> , prov:Activity ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  :GERPSE006 ;
+                           owl:onProperty     :GERPSP001
+                         ] ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      <http://BPMNbasedOntology#name> ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  <http://BPMNbasedOntology#Resource> ;
+                           owl:onProperty     :GERPSP008
+                         ] ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      <http://BPMNbasedOntology#id> ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ rdf:type           owl:Restriction ;
+                           owl:allValuesFrom  :GERPSE012 ;
+                           owl:onProperty     :GERPSP009
+                         ] .
+
+:GERPSP012  rdf:type        owl:DatatypeProperty , owl:ObjectProperty ;
+        rdfs:comment        "The data field ID describes the unique identifier for data fields."@en ;
+        rdfs:domain         :GERPSE017 ;
+        rdfs:label          "hat Datenfeld-ID"@de , "has data field ID"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  <http://BPMNbasedOntology#id> .
+
+<http://BPMNbasedOntology#name>
+        rdf:type  owl:DatatypeProperty .
+
+<http://BPMNbasedOntology#ExclusiveGateway>
+        rdf:type  owl:Class .
+
+:99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2
+        rdf:type                       <http://BPMNbasedOntology#SubProcess> , :GERPSE011 ;
+        rdfs:label                     "Überwachungsmaßnahmen einleiten" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2" ;
+        <http://BPMNbasedOntology#name>
+                "Überwachungsmaßnahmen einleiten" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <http://www.gesetze-im-internet.de/muschg_2018/__29.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG2 .
+
+:RAG7   <http://BPMNbasedOntology#id>  "7" .
+
+<http://www.gesetze-im-internet.de/muschg_2018/__27.html>
+        rdf:type    :GERPSE006 ;
+        rdfs:label  "§ 27 (1) MuSchG " , "§ 27 MuSchG" , "§ 27 (1) MuSchG" , "§ 27 (1) - (4) MuSchG" , "§ 27 (2) MuSchG" , "§ 27 (2) - (4) MuSchG" ;
+        <http://BPMNbasedOntology#name>
+                "§ 27 MuSchG" , "§ 27 (2) - (4) MuSchG" , "§ 27 (1) - (4) MuSchG" , "§ 27 (2) MuSchG" , "§ 27 (1) MuSchG" , "§ 27 (1) MuSchG " .
+
+:sqf_99006028261000_bc719e58-3301-4f2e-850d-549ec3773a70
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf24" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_bc719e58-3301-4f2e-850d-549ec3773a70" ;
+        <http://BPMNbasedOntology#name>
+                "sqf24" .
+
+<http://BPMNbasedOntology#SubProcess>
+        rdf:type  owl:Class .
+
+:99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330
+        rdf:type                       <http://BPMNbasedOntology#SubProcess> , :GERPSE011 ;
+        rdfs:label                     "Erhebung der Geldbuße veranlassen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330" ;
+        <http://BPMNbasedOntology#name>
+                "Erhebung der Geldbuße veranlassen" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <http://www.gesetze-im-internet.de/muschg_2018/__32.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG2 .
+
+:GERPSE006  rdf:type     owl:Class ;
+        rdfs:comment     "Legal bases are references to already existing laws."@en ;
+        rdfs:label       "Legal basis"@en , "Handlungsgrundlage"@de ;
+        rdfs:subClassOf  <http://data.europa.eu/eli/ontology#LegalResource> .
+
+:sqf_99006028261000_3ff10eff-9c0e-42aa-88ab-5356fda98b90
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf7" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_3f0a4c4b-85f4-454c-8414-3637acd91a87 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_3ff10eff-9c0e-42aa-88ab-5356fda98b90" ;
+        <http://BPMNbasedOntology#name>
+                "sqf7" .
+
+:99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e
+        rdf:type                       <http://BPMNbasedOntology#ExclusiveGateway> ;
+        rdfs:label                     "Ergebnis?" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e" ;
+        <http://BPMNbasedOntology#name>
+                "Ergebnis?" .
+
+:99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b
+        rdf:type                       <http://BPMNbasedOntology#SubProcess> , :GERPSE011 ;
+        rdfs:label                     "Anzeige formell prüfen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b" ;
+        <http://BPMNbasedOntology#name>
+                "Anzeige formell prüfen" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <http://www.gesetze-im-internet.de/muschg_2018/__27.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG3 .
+
+:99006028261000_c41df7c7-e31c-46a3-a43b-f294f495378f
+        rdf:type                       <http://BPMNbasedOntology#CallActivity> ;
+        rdfs:label                     "Überwachungsmaßnahmen durchführen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_c41df7c7-e31c-46a3-a43b-f294f495378f" ;
+        <http://BPMNbasedOntology#name>
+                "Überwachungsmaßnahmen durchführen" ;
+        prov:qualifiedAssociation      :QA99006028261000_acad2737-c516-4d97-8dfd-45605e058d86 .
+
+:sqf_99006028261000_20ebd7ac-cef2-4e24-9b27-0c608264d08b
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf3" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_98e69981-24f0-441b-b019-624d14e4b236 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_20ebd7ac-cef2-4e24-9b27-0c608264d08b" ;
+        <http://BPMNbasedOntology#name>
+                "sqf3" .
+
+:99006028261000_628dc895-624a-40e1-a980-28afbbf2338c
+        rdf:type                       <http://BPMNbasedOntology#BoundaryEvent> ;
+        rdfs:label                     "nicht rechtzeitig richtig oder nicht vollständig" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_628dc895-624a-40e1-a980-28afbbf2338c" ;
+        <http://BPMNbasedOntology#is_attachedToRef>
+                :99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38 ;
+        <http://BPMNbasedOntology#name>
+                "nicht rechtzeitig richtig oder nicht vollständig" .
+
+<http://data.europa.eu/m8g/Evidence>
+        rdf:type      owl:Class ;
+        rdfs:comment  "The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can prove that a specific requirement is met."@en .
+
+:RAG2   <http://BPMNbasedOntology#id>  "2" .
+
+<http://data.europa.eu/eli/ontology#LegalResource>
+        rdf:type  owl:Class .
+
+:GERPSP015  rdf:type        owl:DatatypeProperty ;
+        rdfs:comment        "Processing deadlines are tied to processes and define a period of time in which the execution of a process must be completed."@en ;
+        rdfs:label          "hat Frist"@de , "has deadline"@en ;
+        rdfs:range          xsd:dateTime ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+:99006028261000  rdf:type  :GERPSE008 ;
+        rdfs:label  "Anzeige zur Beschäftigung einer schwangeren oder stillenden Frau bearbeiten" ;
+        <http://BPMNbasedOntology#name>
+                "Anzeige zur Beschäftigung einer schwangeren oder stillenden Frau bearbeiten" ;
+        :GERPSP005  :process_99006028261000_8eafac98-90cd-3c6d-9734-be1f7148df28 ;
+        :GERPSP016  "99006028261000" .
+
+:sqf_99006028261000_a714268d-afe6-4aae-aa33-0609dbecc77a
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "nein" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_bf420489-7735-4178-bd52-e7a5c4001646 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_0c440109-07dd-4227-834a-eafee1e7d591 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_a714268d-afe6-4aae-aa33-0609dbecc77a" ;
+        <http://BPMNbasedOntology#name>
+                "nein" .
+
+<http://data.europa.eu/m8g/PublicOrganisation>
+        rdf:type      owl:Class ;
+        rdfs:comment  "An Organization that is defined as being part of the public sector by a legal framework at any level."@en .
+
+:GERPSE001  rdf:type     owl:Class ;
+        rdfs:comment     "An actor is a participant in the administrative process and assumes the role of either the result receiver, the contributor, or the main actor."@en ;
+        rdfs:label       "Akteur"@de , "Actor"@en ;
+        rdfs:subClassOf  prov:Agent , <http://BPMNbasedOntology#Agent> ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      <http://BPMNbasedOntology#name> ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      <http://BPMNbasedOntology#id> ;
+                           owl:someValuesFrom  xsd:string
+                         ] .
+
+:99006028261000_bf420489-7735-4178-bd52-e7a5c4001646
+        rdf:type                       <http://BPMNbasedOntology#ExclusiveGateway> ;
+        rdfs:label                     "Geldbuße veranlassen?" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_bf420489-7735-4178-bd52-e7a5c4001646" ;
+        <http://BPMNbasedOntology#name>
+                "Geldbuße veranlassen?" .
+
+<http://BPMNbasedOntology#id>
+        rdf:type  owl:DatatypeProperty .
+
+<http://BPMNbasedOntology#is_attachedToRef>
+        rdf:type  owl:ObjectProperty .
+
+:99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77
+        rdf:type                       <http://BPMNbasedOntology#ExclusiveGateway> ;
+        rdfs:label                     "Exklusives Gateway" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77" ;
+        <http://BPMNbasedOntology#name>
+                "Exklusives Gateway" .
+
+<http://purl.org/vocab/cpsv#PublicService>
+        rdf:type      owl:Class ;
+        rdfs:comment  "A Public Service is a mandatory or discretionary set of activities performed, or able to be performed, by or on behalf of a public organisation, publicly funded and arise from public policy."@en .
+
+:sqf_99006028261000_7f4d7726-ae70-40d6-bcc3-b4be6037ffc2
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf14" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_7f4d7726-ae70-40d6-bcc3-b4be6037ffc2" ;
+        <http://BPMNbasedOntology#name>
+                "sqf14" .
+
+:99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a
+        rdf:type                       <http://BPMNbasedOntology#SubProcess> , :GERPSE011 ;
+        rdfs:label                     "Auf zuständige Behörde hinweisen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a" ;
+        <http://BPMNbasedOntology#name>
+                "Auf zuständige Behörde hinweisen" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <https://www.gesetze-im-internet.de/vwvfg/__25.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG2 .
+
+:sqf_99006028261000_2df58225-09f5-4eee-9e5d-839bb9d06f3c
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "nein" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_2df58225-09f5-4eee-9e5d-839bb9d06f3c" ;
+        <http://BPMNbasedOntology#name>
+                "nein" .
+
+:GERPSE009  rdf:type  prov:Role , <http://www.w3.org/ns/org#FormalOrganization> , owl:NamedIndividual ;
+        rdfs:comment  "Contributors are external public authorities that are involved in the administrative service."@en ;
+        rdfs:label    "Mitwirkender"@de , "Contributor"@en .
+
+:99006028261000_5ae9eab2-488d-4cd8-8af4-c1578739cf87
+        rdf:type                       <http://BPMNbasedOntology#EndEvent> ;
+        rdfs:label                     "Anzeige zurückgewiesen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_5ae9eab2-488d-4cd8-8af4-c1578739cf87" ;
+        <http://BPMNbasedOntology#name>
+                "Anzeige zurückgewiesen" .
+
+:GERPSP010  rdf:type        owl:DatatypeProperty ;
+        rdfs:comment        "Submission deadlines are tied to documents and specify a time period in which a document must be submitted"@en ;
+        rdfs:domain         :GERPSE004 ;
+        rdfs:label          "hat Abgabefrist"@de , "has submission deadline"@en ;
+        rdfs:range          xsd:dateTime ;
+        rdfs:subPropertyOf  :GERPSP015 .
+
+:99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36
+        rdf:type                       :GERPSE011 , <http://BPMNbasedOntology#SubProcess> ;
+        rdfs:label                     "Anzeige fachlich prüfen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36" ;
+        <http://BPMNbasedOntology#name>
+                "Anzeige fachlich prüfen" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <http://www.gesetze-im-internet.de/muschg_2018/__29.html> , <http://www.gesetze-im-internet.de/muschg_2018/__27.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG4 .
+
+<http://BPMNbasedOntology#DataResource>
+        rdf:type  owl:Class .
+
+<http://www.gesetze-im-internet.de/muschg_2018/__32.html>
+        rdf:type    :GERPSE006 ;
+        rdfs:label  "§ 32 MuSchG" ;
+        <http://BPMNbasedOntology#name>
+                "§ 32 MuSchG" .
+
+<http://BPMNbasedOntology#StartEvent>
+        rdf:type  owl:Class .
+
+:RAG5   <http://BPMNbasedOntology#id>  "5" .
+
+:GERPSE017  rdf:type     owl:Class ;
+        rdfs:comment     "Data fields are required components in the construction of forms."@en ;
+        rdfs:label       "Datenfeld"@de , "Data field"@en ;
+        rdfs:subClassOf  <http://data.europa.eu/m8g/Evidence> , <http://BPMNbasedOntology#DataResource> ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      :GERPSP012 ;
+                           owl:someValuesFrom  xsd:string
+                         ] .
+
+<http://BPMNbasedOntology#SequenceFlow>
+        rdf:type  owl:Class .
+
+<http://BPMNbasedOntology#has_sourceRef>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+:99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a
+        rdf:type                       <http://BPMNbasedOntology#SubProcess> , :GERPSE011 ;
+        rdfs:label                     "Zusätzliche Informationen einholen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a" ;
+        <http://BPMNbasedOntology#name>
+                "Zusätzliche Informationen einholen" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <http://www.gesetze-im-internet.de/muschg_2018/__29.html> , <https://www.gesetze-im-internet.de/arbschg/__5.html> , <http://www.gesetze-im-internet.de/muschg_2018/__27.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG7 .
+
+<http://purl.org/vocab/cpsv#Rule>
+        rdf:type      owl:Class ;
+        rdfs:comment  "The Rule class represents a document that sets out the specific rules, guidelines or procedures that the Public Service follows."@en .
+
+<http://BPMNbasedOntology#EndEvent>
+        rdf:type  owl:Class .
+
+:GERPSE004  rdf:type     owl:Class ;
+        rdfs:comment     "Documents are exchanged between actors and are the subject of a process step."@en ;
+        rdfs:label       "Dokument"@de , "Document"@en ;
+        rdfs:subClassOf  <http://data.europa.eu/m8g/Evidence> , <http://BPMNbasedOntology#DocumentResource> ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      <http://BPMNbasedOntology#id> ;
+                           owl:someValuesFrom  xsd:string
+                         ] .
+
+:sqf_99006028261000_7a0a9c86-25d3-4a23-a876-af3f5fd64565
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf12" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_7a0a9c86-25d3-4a23-a876-af3f5fd64565" ;
+        <http://BPMNbasedOntology#name>
+                "sqf12" .
+
+:sqf_99006028261000_f2329681-78df-41b5-9f83-2f0facff8117
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "nein" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_f2329681-78df-41b5-9f83-2f0facff8117" ;
+        <http://BPMNbasedOntology#name>
+                "nein" .
+
+<http://BPMNbasedOntology#has_resource>
+        rdf:type  owl:ObjectProperty .
+
+:GERPSP005  rdf:type        owl:ObjectProperty ;
+        rdfs:comment        "Show the processes of a service."@en ;
+        rdfs:domain         :GERPSE008 ;
+        rdfs:label          "hat Prozess"@de , "has process"@en ;
+        rdfs:range          :GERPSE010 ;
+        rdfs:subPropertyOf  <http://BPMNbasedOntology#has_process> .
+
+:sqf_99006028261000_0454ae15-95ba-428a-a57b-6ac7b3558cdc
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "fachlich in Ordnung" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_98e69981-24f0-441b-b019-624d14e4b236 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_0454ae15-95ba-428a-a57b-6ac7b3558cdc" ;
+        <http://BPMNbasedOntology#name>
+                "fachlich in Ordnung" .
+
+:sqf_99006028261000_ef6a6496-1e52-4080-acd1-7cdab21ba7bd
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf31" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_ef6a6496-1e52-4080-acd1-7cdab21ba7bd" ;
+        <http://BPMNbasedOntology#name>
+                "sqf31" .
+
+:GERPSE012  rdf:type     owl:Class ;
+        rdfs:comment     "Reference activity groups can be derived from concrete specifications (e.g., legal and administrative regulations), can bundle thematically related process elements, and reflect the process of service execution."@en ;
+        rdfs:label       "Referenzaktivitätengruppe"@de , "Reference activity group"@en ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      <http://BPMNbasedOntology#name> ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ rdf:type            owl:Restriction ;
+                           owl:onProperty      <http://BPMNbasedOntology#id> ;
+                           owl:someValuesFrom  xsd:string
+                         ] .
+
+:99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b
+        rdf:type                       <http://BPMNbasedOntology#ExclusiveGateway> ;
+        rdfs:label                     "Zuständigkeit liegt vor?" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b" ;
+        <http://BPMNbasedOntology#name>
+                "Zuständigkeit liegt vor?" .
+
+:99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884
+        rdf:type                       <http://BPMNbasedOntology#SubProcess> , :GERPSE011 ;
+        rdfs:label                     "Anzeige zurückweisen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884" ;
+        <http://BPMNbasedOntology#name>
+                "Anzeige zurückweisen" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <http://www.gesetze-im-internet.de/muschg_2018/__27.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG2 .
+
+:sqf_99006028261000_c74f5636-7169-4517-86f1-4a811eb851a9
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf28" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_c74f5636-7169-4517-86f1-4a811eb851a9" ;
+        <http://BPMNbasedOntology#name>
+                "sqf28" .
+
+:_39239818-2743-4f19-9e03-89d271189b85
+        rdfs:label  "Aufsichtsbehörde / Bundesministerium der Verteidigung" ;
+        <http://BPMNbasedOntology#name>
+                "Aufsichtsbehörde / Bundesministerium der Verteidigung" .
+
+:99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161
+        rdf:type                       :GERPSE011 , <http://BPMNbasedOntology#SubProcess> ;
+        rdfs:label                     "Anzeige empfangen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161" ;
+        <http://BPMNbasedOntology#name>
+                "Anzeige empfangen" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <http://www.gesetze-im-internet.de/muschg_2018/__27.html> ;
+        :GERPSP008                     <https://w3id.org/GerPS-onto/ontology#Benachrichtigung über die Beschäftigung einer schwangeren oder stillenden Frau> , :S00000094 ;
+        :GERPSP009                     :RAG1 .
+
+:Version  rdf:type  owl:AnnotationProperty .
+
+:sqf_99006028261000_ba097d1b-e834-4945-87b3-46216110bd37
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "ja" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_bf420489-7735-4178-bd52-e7a5c4001646 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_ba097d1b-e834-4945-87b3-46216110bd37" ;
+        <http://BPMNbasedOntology#name>
+                "ja" .
+
+:sqf_99006028261000_7f396148-7542-48b6-9793-d0531a649d67
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "ja" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_7f396148-7542-48b6-9793-d0531a649d67" ;
+        <http://BPMNbasedOntology#name>
+                "ja" .
+
+:sqf_99006028261000_8bf02cdd-fc4a-4e7f-a05a-ef60bdd3303f
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf15" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_3974acd9-d88f-4232-b4df-a1e372ec88f8 ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_8bf02cdd-fc4a-4e7f-a05a-ef60bdd3303f" ;
+        <http://BPMNbasedOntology#name>
+                "sqf15" .
+
+:99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9
+        rdf:type                       <http://BPMNbasedOntology#SubProcess> , :GERPSE011 ;
+        rdfs:label                     "Zuständigkeit prüfen" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9" ;
+        <http://BPMNbasedOntology#name>
+                "Zuständigkeit prüfen" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <https://www.gesetze-im-internet.de/vwvfg/__3.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG3 .
+
+:GERPSE007  rdf:type  prov:Role , <http://data.europa.eu/m8g/PublicOrganisation> , owl:NamedIndividual ;
+        rdfs:comment  "The main actor is a public authority responsible for service delivery."@en ;
+        rdfs:label    "Main actor"@en , "Hauptakteur"@de .
+
+:GERPSP008  rdf:type        owl:ObjectProperty ;
+        rdfs:comment        "Show the resource a process step should procces."@en ;
+        rdfs:domain         :GERPSE011 ;
+        rdfs:label          "hat Ressource"@de , "has resource"@en ;
+        rdfs:range          <http://BPMNbasedOntology#Resource> ;
+        rdfs:subPropertyOf  <http://BPMNbasedOntology#has_resource> .
+
+:sqf_99006028261000_bd0904bf-9f31-4762-beba-bc110b746e6d
+        rdf:type                       <http://BPMNbasedOntology#SequenceFlow> ;
+        rdfs:label                     "sqf25" ;
+        <http://BPMNbasedOntology#has_sourceRef>
+                :99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b ;
+        <http://BPMNbasedOntology#has_targetRef>
+                :99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1 ;
+        <http://BPMNbasedOntology#id>  "sqf_99006028261000_bd0904bf-9f31-4762-beba-bc110b746e6d" ;
+        <http://BPMNbasedOntology#name>
+                "sqf25" .
+
+:RAG3   <http://BPMNbasedOntology#id>  "3" .
+
+<http://BPMNbasedOntology#ParallelGateway>
+        rdf:type  owl:Class .
+
+:GERPSP016  rdf:type        owl:DatatypeProperty ;
+        rdfs:comment        "The LeiKaID describes the unique identifier for administrative services defined by the service catalog."@en ;
+        rdfs:domain         :GERPSE008 ;
+        rdfs:label          "hat LeiKa-ID"@de , "has LeiKa-ID"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  <http://BPMNbasedOntology#id> .
+
+:99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38
+        rdf:type                       <http://BPMNbasedOntology#SubProcess> , :GERPSE011 ;
+        rdfs:label                     "Korrektur anfordern" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38" ;
+        <http://BPMNbasedOntology#name>
+                "Korrektur anfordern" ;
+        prov:qualifiedAssociation      :QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 ;
+        :GERPSP001                     <http://www.gesetze-im-internet.de/muschg_2018/__27.html> ;
+        :GERPSP008                     :S00000094 ;
+        :GERPSP009                     :RAG7 .
+
+:99006028261000_0c440109-07dd-4227-834a-eafee1e7d591
+        rdf:type                       <http://BPMNbasedOntology#EndEvent> ;
+        rdfs:label                     "Geldbuße nicht veranlasst" ;
+        <http://BPMNbasedOntology#id>  "99006028261000_0c440109-07dd-4227-834a-eafee1e7d591" ;
+        <http://BPMNbasedOntology#name>
+                "Geldbuße nicht veranlasst" .
+
+:QA99006028261000_39239818-2743-4f19-9e03-89d271189b85
+        rdf:type      prov:Association ;
+        prov:agent    :_39239818-2743-4f19-9e03-89d271189b85 ;
+        prov:hadRole  :GERPSE007 .

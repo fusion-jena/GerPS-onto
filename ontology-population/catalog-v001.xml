@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://BPMNbasedOntology" uri="BPMNbasedOntologyV1_2.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1707400143740" name="duplicate:http://BPMNbasedOntology" uri="BBO.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1707400143740" name="duplicate:http://BPMNbasedOntology" uri="BPMNbasedOntologyV1_2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1707400143740" name="http://www.semanticweb.org/raupach/ontologies/2024/1/untitled-ontology-9" uri="gerPS-Onto-populated-interferred.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1707400143740" name="https://w3id.org/GerPS-onto/ontology" uri="gerPS-Onto-populated.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1707400143740" name="shadowed:http://BPMNbasedOntology" uri="ontology/BBO.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1707400143740" name="shadowed:https://w3id.org/GerPS-onto/ontology" uri="ontology/gerPS-Onto.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1707400143740" name="shadowed:https://w3id.org/GerPS-onto/ontology" uri="FIM.parser/target/test-classes/ontology/gerPS-Onto.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1707400143740" name="shadowed:https://w3id.org/GerPS-onto/ontology" uri="FIM.parser/target/classes/ontology/gerPS-Onto.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1707400143740" name="shadowed:https://w3id.org/GerPS-onto/ontology" uri="FIM.parser/src/main/resources/ontology/gerPS-Onto.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1707400143740" name="shadowed:https://w3id.org/GerPS-onto/ontology" uri="FIM.parser/src/test/resources/ontology/gerPS-Onto.rdf"/>
+    </group>
+</catalog>

@@ -1,0 +1,1743 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/GerPS-onto/ontology#"
+     xml:base="https://w3id.org/GerPS-onto/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:BPMNbasedOntology="http://BPMNbasedOntology#">
+    <owl:Ontology rdf:about="https://w3id.org/GerPS-onto/ontology#">
+        <owl:imports rdf:resource="http://BPMNbasedOntology"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</owl:versionInfo>
+        <author>Maximilian Raupach</author>
+        <author>Leila Feddoul</author>
+        <author>Jonas Author</author>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#Version -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/GerPS-onto/ontology#Version"/>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#author -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/GerPS-onto/ontology#author"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://BPMNbasedOntology#has_process -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_process"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#has_resource -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_resource"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#has_sourceRef -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_sourceRef">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://BPMNbasedOntology#has_targetRef -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#has_targetRef"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#is_attachedToRef -->
+
+    <owl:ObjectProperty rdf:about="http://BPMNbasedOntology#is_attachedToRef"/>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP001 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP001">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <rdfs:range rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE006"/>
+        <rdfs:comment xml:lang="en">Shows the legal basis of a process step.</rdfs:comment>
+        <rdfs:label xml:lang="en">based on</rdfs:label>
+        <rdfs:label xml:lang="de">basiert auf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP005 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP005">
+        <rdfs:subPropertyOf rdf:resource="http://BPMNbasedOntology#has_process"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE008"/>
+        <rdfs:range rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE010"/>
+        <rdfs:comment xml:lang="en">Show the processes of a service.</rdfs:comment>
+        <rdfs:label xml:lang="en">has process</rdfs:label>
+        <rdfs:label xml:lang="de">hat Prozess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP006 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP006">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE010"/>
+        <rdfs:range rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <rdfs:comment xml:lang="en">Show the connects the process with its process steps.</rdfs:comment>
+        <rdfs:label xml:lang="en">has processstep</rdfs:label>
+        <rdfs:label xml:lang="de">hat Prozessschritt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP008 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP008">
+        <rdfs:subPropertyOf rdf:resource="http://BPMNbasedOntology#has_resource"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <rdfs:range rdf:resource="http://BPMNbasedOntology#Resource"/>
+        <rdfs:comment xml:lang="en">Show the resource a process step should procces.</rdfs:comment>
+        <rdfs:label xml:lang="en">has resource</rdfs:label>
+        <rdfs:label xml:lang="de">hat Ressource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP009 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP009">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <rdfs:range rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE012"/>
+        <rdfs:comment xml:lang="en">Show the type of a process step.</rdfs:comment>
+        <rdfs:label xml:lang="en">has type</rdfs:label>
+        <rdfs:label xml:lang="de">hat Typ</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP012 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP012">
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE017"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://BPMNbasedOntology#id -->
+
+    <owl:DatatypeProperty rdf:about="http://BPMNbasedOntology#id"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://BPMNbasedOntology#name"/>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP010 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP010">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP015"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE004"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Submission deadlines are tied to documents and specify a time period in which a document must be submitted</rdfs:comment>
+        <rdfs:label xml:lang="en">has submission deadline</rdfs:label>
+        <rdfs:label xml:lang="de">hat Abgabefrist</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP011 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP011">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP015"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE010"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Deadline of a Service to be processed.</rdfs:comment>
+        <rdfs:label xml:lang="en">has processing deadline</rdfs:label>
+        <rdfs:label xml:lang="de">hat Bearbeitungsfrist</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP012 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP012">
+        <rdfs:subPropertyOf rdf:resource="http://BPMNbasedOntology#id"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP015 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP015">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Processing deadlines are tied to processes and define a period of time in which the execution of a process must be completed.</rdfs:comment>
+        <rdfs:label xml:lang="en">has deadline</rdfs:label>
+        <rdfs:label xml:lang="de">hat Frist</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP016 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP016">
+        <rdfs:subPropertyOf rdf:resource="http://BPMNbasedOntology#id"/>
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE008"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The LeiKaID describes the unique identifier for administrative services defined by the service catalog.</rdfs:comment>
+        <rdfs:label xml:lang="en">has LeiKa-ID</rdfs:label>
+        <rdfs:label xml:lang="de">hat LeiKa-ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://BPMNbasedOntology#Activity -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Activity"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#Agent -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Agent"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#BoundaryEvent -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#BoundaryEvent"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#CallActivity -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#CallActivity"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#DataResource -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#DataResource"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#DocumentResource -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#DocumentResource"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#EndEvent -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#EndEvent"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#ExclusiveGateway -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#ExclusiveGateway"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#ParallelGateway -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#ParallelGateway"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#Process -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Process"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#Resource -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Resource"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#SequenceFlow -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#SequenceFlow"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#StartEvent -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#StartEvent"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#SubProcess -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#SubProcess"/>
+    
+
+
+    <!-- http://BPMNbasedOntology#Task -->
+
+    <owl:Class rdf:about="http://BPMNbasedOntology#Task"/>
+    
+
+
+    <!-- http://data.europa.eu/eli/ontology#LegalResource -->
+
+    <owl:Class rdf:about="http://data.europa.eu/eli/ontology#LegalResource"/>
+    
+
+
+    <!-- http://data.europa.eu/m8g/Evidence -->
+
+    <owl:Class rdf:about="http://data.europa.eu/m8g/Evidence">
+        <rdfs:comment xml:lang="en">The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can prove that a specific requirement is met.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.europa.eu/m8g/PublicOrganisation -->
+
+    <owl:Class rdf:about="http://data.europa.eu/m8g/PublicOrganisation">
+        <rdfs:comment xml:lang="en">An Organization that is defined as being part of the public sector by a legal framework at any level.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/cpsv#PublicService -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/cpsv#PublicService">
+        <rdfs:comment xml:lang="en">A Public Service is a mandatory or discretionary set of activities performed, or able to be performed, by or on behalf of a public organisation, publicly funded and arise from public policy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/cpsv#Rule -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/cpsv#Rule">
+        <rdfs:comment xml:lang="en">The Rule class represents a document that sets out the specific rules, guidelines or procedures that the Public Service follows.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#FormalOrganization -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization">
+        <rdfs:comment xml:lang="en">An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#LegalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#LegalEntity">
+        <rdfs:comment xml:lang="en">A self-empoyed person, company, or organization that has legal rights and obligations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE001 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE001">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#id"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An actor is a participant in the administrative process and assumes the role of either the result receiver, the contributor, or the main actor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actor</rdfs:label>
+        <rdfs:label xml:lang="de">Akteur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE004 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE004">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#DocumentResource"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/Evidence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#id"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Documents are exchanged between actors and are the subject of a process step.</rdfs:comment>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+        <rdfs:label xml:lang="de">Dokument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE006 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE006">
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:comment xml:lang="en">Legal bases are references to already existing laws.</rdfs:comment>
+        <rdfs:label xml:lang="de">Handlungsgrundlage</rdfs:label>
+        <rdfs:label xml:lang="en">Legal basis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE008 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE008">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/cpsv#PublicService"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP005"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP016"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Services describe the actions of public administrations.</rdfs:comment>
+        <rdfs:label xml:lang="de">Leistung</rdfs:label>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE010 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE010">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Activity"/>
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Process"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/cpsv#Rule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#id"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Processes describe administrative procedures that are processed by specific persons in a repetitive sequence under concrete specifications (e.g., legal and administrative regulations) and with the use of aids (e.g., forms).</rdfs:comment>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+        <rdfs:label xml:lang="de">Prozess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE011 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE011">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#Task"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP001"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP008"/>
+                <owl:allValuesFrom rdf:resource="http://BPMNbasedOntology#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP009"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#id"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Process steps describe actions or activities of the public administrations or actors.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process step</rdfs:label>
+        <rdfs:label xml:lang="de">Prozessschritt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE012 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE012">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#id"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://BPMNbasedOntology#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Reference activity groups can be derived from concrete specifications (e.g., legal and administrative regulations), can bundle thematically related process elements, and reflect the process of service execution.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reference activity group</rdfs:label>
+        <rdfs:label xml:lang="de">Referenzaktivitätengruppe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE017 -->
+
+    <owl:Class rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE017">
+        <rdfs:subClassOf rdf:resource="http://BPMNbasedOntology#DataResource"/>
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/m8g/Evidence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSP012"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Data fields are required components in the construction of forms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data field</rdfs:label>
+        <rdfs:label xml:lang="de">Datenfeld</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gesetze-im-internet.de/muschg_2018/__27.html -->
+
+    <owl:NamedIndividual rdf:about="http://www.gesetze-im-internet.de/muschg_2018/__27.html">
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE006"/>
+        <BPMNbasedOntology:name>§ 27 (1) - (4) MuSchG</BPMNbasedOntology:name>
+        <BPMNbasedOntology:name>§ 27 (1) MuSchG</BPMNbasedOntology:name>
+        <BPMNbasedOntology:name>§ 27 (1) MuSchG </BPMNbasedOntology:name>
+        <BPMNbasedOntology:name>§ 27 (2) - (4) MuSchG</BPMNbasedOntology:name>
+        <BPMNbasedOntology:name>§ 27 (2) MuSchG</BPMNbasedOntology:name>
+        <BPMNbasedOntology:name>§ 27 MuSchG</BPMNbasedOntology:name>
+        <rdfs:label>§ 27 (1) - (4) MuSchG</rdfs:label>
+        <rdfs:label>§ 27 (1) MuSchG</rdfs:label>
+        <rdfs:label>§ 27 (1) MuSchG </rdfs:label>
+        <rdfs:label>§ 27 (2) - (4) MuSchG</rdfs:label>
+        <rdfs:label>§ 27 (2) MuSchG</rdfs:label>
+        <rdfs:label>§ 27 MuSchG</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gesetze-im-internet.de/muschg_2018/__29.html -->
+
+    <owl:NamedIndividual rdf:about="http://www.gesetze-im-internet.de/muschg_2018/__29.html">
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE006"/>
+        <BPMNbasedOntology:name>§ 29 (3) MuSchG</BPMNbasedOntology:name>
+        <BPMNbasedOntology:name>§ 29 MuSchG</BPMNbasedOntology:name>
+        <rdfs:label>§ 29 (3) MuSchG</rdfs:label>
+        <rdfs:label>§ 29 MuSchG</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gesetze-im-internet.de/muschg_2018/__32.html -->
+
+    <owl:NamedIndividual rdf:about="http://www.gesetze-im-internet.de/muschg_2018/__32.html">
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE006"/>
+        <BPMNbasedOntology:name>§ 32 MuSchG</BPMNbasedOntology:name>
+        <rdfs:label>§ 32 MuSchG</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE005 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE005">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#LegalEntity"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdfs:comment xml:lang="en">A result receiver is a person or company that benefits from the administrative service.</rdfs:comment>
+        <rdfs:label xml:lang="de">Ergebnissempfänger</rdfs:label>
+        <rdfs:label xml:lang="en">Result receiver</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE007 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE007">
+        <rdf:type rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdfs:comment xml:lang="en">The main actor is a public authority responsible for service delivery.</rdfs:comment>
+        <rdfs:label xml:lang="de">Hauptakteur</rdfs:label>
+        <rdfs:label xml:lang="en">Main actor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSE009 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSE009">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Role"/>
+        <rdfs:comment xml:lang="en">Contributors are external public authorities that are involved in the administrative service.</rdfs:comment>
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <rdfs:label xml:lang="de">Mitwirkender</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
+        <prov:agent rdf:resource="https://w3id.org/GerPS-onto/ontology#_39239818-2743-4f19-9e03-89d271189b85"/>
+        <prov:hadRole rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE007"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#QA99006028261000_4e56a483-ecbe-4104-a63c-3c63cbb55e2d -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#QA99006028261000_4e56a483-ecbe-4104-a63c-3c63cbb55e2d">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
+        <prov:agent rdf:resource="https://w3id.org/GerPS-onto/ontology#_4e56a483-ecbe-4104-a63c-3c63cbb55e2d"/>
+        <prov:hadRole rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE005"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#QA99006028261000_acad2737-c516-4d97-8dfd-45605e058d86 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#QA99006028261000_acad2737-c516-4d97-8dfd-45605e058d86">
+        <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
+        <prov:agent rdf:resource="https://w3id.org/GerPS-onto/ontology#_acad2737-c516-4d97-8dfd-45605e058d86"/>
+        <prov:hadRole rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE009"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#RAG1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#RAG1">
+        <BPMNbasedOntology:id>1</BPMNbasedOntology:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#RAG2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#RAG2">
+        <BPMNbasedOntology:id>2</BPMNbasedOntology:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#RAG3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#RAG3">
+        <BPMNbasedOntology:id>3</BPMNbasedOntology:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#RAG4 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#RAG4">
+        <BPMNbasedOntology:id>4</BPMNbasedOntology:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#RAG5 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#RAG5">
+        <BPMNbasedOntology:id>5</BPMNbasedOntology:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#RAG7 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#RAG7">
+        <BPMNbasedOntology:id>7</BPMNbasedOntology:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#S00000094 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#S00000094">
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE017"/>
+        <GERPSP012>S00000094</GERPSP012>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#_39239818-2743-4f19-9e03-89d271189b85 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#_39239818-2743-4f19-9e03-89d271189b85">
+        <BPMNbasedOntology:name>Aufsichtsbehörde / Bundesministerium der Verteidigung</BPMNbasedOntology:name>
+        <rdfs:label>Aufsichtsbehörde / Bundesministerium der Verteidigung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#_4e56a483-ecbe-4104-a63c-3c63cbb55e2d -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#_4e56a483-ecbe-4104-a63c-3c63cbb55e2d">
+        <BPMNbasedOntology:name>Arbeitgeber</BPMNbasedOntology:name>
+        <rdfs:label>Arbeitgeber</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#_acad2737-c516-4d97-8dfd-45605e058d86 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#_acad2737-c516-4d97-8dfd-45605e058d86">
+        <BPMNbasedOntology:name>Aufsichtsbehörde / Bundesministerium der Verteidigung</BPMNbasedOntology:name>
+        <rdfs:label>Aufsichtsbehörde / Bundesministerium der Verteidigung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#process_99006028261000_8eafac98-90cd-3c6d-9734-be1f7148df28 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#process_99006028261000_8eafac98-90cd-3c6d-9734-be1f7148df28">
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE010"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_4e56a483-ecbe-4104-a63c-3c63cbb55e2d"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_acad2737-c516-4d97-8dfd-45605e058d86"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161"/>
+        <GERPSP006 rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b"/>
+        <BPMNbasedOntology:id>99006028261000</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Anzeige zur Beschäftigung einer schwangeren oder stillenden Frau bearbeiten</BPMNbasedOntology:name>
+        <rdfs:label>Anzeige zur Beschäftigung einer schwangeren oder stillenden Frau bearbeiten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_0454ae15-95ba-428a-a57b-6ac7b3558cdc -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_0454ae15-95ba-428a-a57b-6ac7b3558cdc">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_98e69981-24f0-441b-b019-624d14e4b236"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_0454ae15-95ba-428a-a57b-6ac7b3558cdc</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>fachlich in Ordnung</BPMNbasedOntology:name>
+        <rdfs:label>fachlich in Ordnung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_07a9d504-0cca-4704-a241-c726703d8c0a -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_07a9d504-0cca-4704-a241-c726703d8c0a">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_07a9d504-0cca-4704-a241-c726703d8c0a</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>ja</BPMNbasedOntology:name>
+        <rdfs:label>ja</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_0debde50-3ff9-4666-8986-29fafdbd41af -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_0debde50-3ff9-4666-8986-29fafdbd41af">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_0debde50-3ff9-4666-8986-29fafdbd41af</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Anzeige nicht erforderlich</BPMNbasedOntology:name>
+        <rdfs:label>Anzeige nicht erforderlich</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_20ebd7ac-cef2-4e24-9b27-0c608264d08b -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_20ebd7ac-cef2-4e24-9b27-0c608264d08b">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_98e69981-24f0-441b-b019-624d14e4b236"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_20ebd7ac-cef2-4e24-9b27-0c608264d08b</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf3</BPMNbasedOntology:name>
+        <rdfs:label>sqf3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_29ada928-1ad4-4fdf-bbc9-f108d4246ac8 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_29ada928-1ad4-4fdf-bbc9-f108d4246ac8">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_29ada928-1ad4-4fdf-bbc9-f108d4246ac8</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf4</BPMNbasedOntology:name>
+        <rdfs:label>sqf4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_2df58225-09f5-4eee-9e5d-839bb9d06f3c -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_2df58225-09f5-4eee-9e5d-839bb9d06f3c">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_2df58225-09f5-4eee-9e5d-839bb9d06f3c</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>nein</BPMNbasedOntology:name>
+        <rdfs:label>nein</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_3cdf11d1-d134-4d8d-85f5-c1f7d094b6b8 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_3cdf11d1-d134-4d8d-85f5-c1f7d094b6b8">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_3cdf11d1-d134-4d8d-85f5-c1f7d094b6b8</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf6</BPMNbasedOntology:name>
+        <rdfs:label>sqf6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_3ff10eff-9c0e-42aa-88ab-5356fda98b90 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_3ff10eff-9c0e-42aa-88ab-5356fda98b90">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_3f0a4c4b-85f4-454c-8414-3637acd91a87"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_3ff10eff-9c0e-42aa-88ab-5356fda98b90</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf7</BPMNbasedOntology:name>
+        <rdfs:label>sqf7</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_4e61d805-17de-4eb4-bc33-78d39c865eae -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_4e61d805-17de-4eb4-bc33-78d39c865eae">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_4e61d805-17de-4eb4-bc33-78d39c865eae</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf8</BPMNbasedOntology:name>
+        <rdfs:label>sqf8</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_4fcee70b-9e5a-453a-a034-3dabcf6ec270 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_4fcee70b-9e5a-453a-a034-3dabcf6ec270">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_4fcee70b-9e5a-453a-a034-3dabcf6ec270</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>nein</BPMNbasedOntology:name>
+        <rdfs:label>nein</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_4fd81e2e-061d-4a81-94da-d6eb94c7bdf9 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_4fd81e2e-061d-4a81-94da-d6eb94c7bdf9">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_4fd81e2e-061d-4a81-94da-d6eb94c7bdf9</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf10</BPMNbasedOntology:name>
+        <rdfs:label>sqf10</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_718b5709-84cb-4c98-bbce-c93438e0ad75 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_718b5709-84cb-4c98-bbce-c93438e0ad75">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_98e69981-24f0-441b-b019-624d14e4b236"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_718b5709-84cb-4c98-bbce-c93438e0ad75</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf11</BPMNbasedOntology:name>
+        <rdfs:label>sqf11</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_7a0a9c86-25d3-4a23-a876-af3f5fd64565 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_7a0a9c86-25d3-4a23-a876-af3f5fd64565">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_7a0a9c86-25d3-4a23-a876-af3f5fd64565</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf12</BPMNbasedOntology:name>
+        <rdfs:label>sqf12</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_7f396148-7542-48b6-9793-d0531a649d67 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_7f396148-7542-48b6-9793-d0531a649d67">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_7f396148-7542-48b6-9793-d0531a649d67</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>ja</BPMNbasedOntology:name>
+        <rdfs:label>ja</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_7f4d7726-ae70-40d6-bcc3-b4be6037ffc2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_7f4d7726-ae70-40d6-bcc3-b4be6037ffc2">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_7f4d7726-ae70-40d6-bcc3-b4be6037ffc2</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf14</BPMNbasedOntology:name>
+        <rdfs:label>sqf14</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_8bf02cdd-fc4a-4e7f-a05a-ef60bdd3303f -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_8bf02cdd-fc4a-4e7f-a05a-ef60bdd3303f">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_3974acd9-d88f-4232-b4df-a1e372ec88f8"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_8bf02cdd-fc4a-4e7f-a05a-ef60bdd3303f</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf15</BPMNbasedOntology:name>
+        <rdfs:label>sqf15</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_8cdd8bc4-2210-4952-bda9-964de820e387 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_8cdd8bc4-2210-4952-bda9-964de820e387">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_42b07c19-722d-4b42-8e30-7568b95a03f3"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_8cdd8bc4-2210-4952-bda9-964de820e387</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf16</BPMNbasedOntology:name>
+        <rdfs:label>sqf16</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_9724f1e6-9671-4939-9c5c-f1590c78cf2b -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_9724f1e6-9671-4939-9c5c-f1590c78cf2b">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_9724f1e6-9671-4939-9c5c-f1590c78cf2b</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>ja</BPMNbasedOntology:name>
+        <rdfs:label>ja</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_977f1376-846c-4881-8b0f-4dfe63dd2e14 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_977f1376-846c-4881-8b0f-4dfe63dd2e14">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_977f1376-846c-4881-8b0f-4dfe63dd2e14</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf18</BPMNbasedOntology:name>
+        <rdfs:label>sqf18</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_99301e47-b1c8-459e-8de2-a4edcc04efc7 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_99301e47-b1c8-459e-8de2-a4edcc04efc7">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_5ae9eab2-488d-4cd8-8af4-c1578739cf87"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_99301e47-b1c8-459e-8de2-a4edcc04efc7</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf19</BPMNbasedOntology:name>
+        <rdfs:label>sqf19</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_9948b60b-088b-4efe-ac2c-71797bee0898 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_9948b60b-088b-4efe-ac2c-71797bee0898">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_628dc895-624a-40e1-a980-28afbbf2338c"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_9948b60b-088b-4efe-ac2c-71797bee0898</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf20</BPMNbasedOntology:name>
+        <rdfs:label>sqf20</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_a15d8e43-ace5-4d48-a047-2999bc72daed -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_a15d8e43-ace5-4d48-a047-2999bc72daed">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_a15d8e43-ace5-4d48-a047-2999bc72daed</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Für Überwachungsaufgabe weitere Informationen benötigt</BPMNbasedOntology:name>
+        <rdfs:label>Für Überwachungsaufgabe weitere Informationen benötigt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_a714268d-afe6-4aae-aa33-0609dbecc77a -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_a714268d-afe6-4aae-aa33-0609dbecc77a">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_bf420489-7735-4178-bd52-e7a5c4001646"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_0c440109-07dd-4227-834a-eafee1e7d591"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_a714268d-afe6-4aae-aa33-0609dbecc77a</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>nein</BPMNbasedOntology:name>
+        <rdfs:label>nein</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_ba097d1b-e834-4945-87b3-46216110bd37 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_ba097d1b-e834-4945-87b3-46216110bd37">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_bf420489-7735-4178-bd52-e7a5c4001646"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_ba097d1b-e834-4945-87b3-46216110bd37</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>ja</BPMNbasedOntology:name>
+        <rdfs:label>ja</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_bc719e58-3301-4f2e-850d-549ec3773a70 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_bc719e58-3301-4f2e-850d-549ec3773a70">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_bc719e58-3301-4f2e-850d-549ec3773a70</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf24</BPMNbasedOntology:name>
+        <rdfs:label>sqf24</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_bd0904bf-9f31-4762-beba-bc110b746e6d -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_bd0904bf-9f31-4762-beba-bc110b746e6d">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_bd0904bf-9f31-4762-beba-bc110b746e6d</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf25</BPMNbasedOntology:name>
+        <rdfs:label>sqf25</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_bee4a32f-2c14-467e-82f6-6128a2333e1c -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_bee4a32f-2c14-467e-82f6-6128a2333e1c">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_61fbccf7-0a32-48e7-94fc-0e538e6050e2"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_bee4a32f-2c14-467e-82f6-6128a2333e1c</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf26</BPMNbasedOntology:name>
+        <rdfs:label>sqf26</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_c5e3f23e-3300-4824-8dc5-fb3242cda82a -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_c5e3f23e-3300-4824-8dc5-fb3242cda82a">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_bf420489-7735-4178-bd52-e7a5c4001646"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_c5e3f23e-3300-4824-8dc5-fb3242cda82a</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf27</BPMNbasedOntology:name>
+        <rdfs:label>sqf27</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_c74f5636-7169-4517-86f1-4a811eb851a9 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_c74f5636-7169-4517-86f1-4a811eb851a9">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_c74f5636-7169-4517-86f1-4a811eb851a9</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf28</BPMNbasedOntology:name>
+        <rdfs:label>sqf28</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_c8a819b5-df37-445f-8162-c31800e3c56f -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_c8a819b5-df37-445f-8162-c31800e3c56f">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_c8a819b5-df37-445f-8162-c31800e3c56f</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf29</BPMNbasedOntology:name>
+        <rdfs:label>sqf29</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_da51c9af-2f62-4701-b184-b103e82c627c -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_da51c9af-2f62-4701-b184-b103e82c627c">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_685fd62b-f80e-44b6-a220-870297af1a5e"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_da51c9af-2f62-4701-b184-b103e82c627c</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf30</BPMNbasedOntology:name>
+        <rdfs:label>sqf30</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_ef6a6496-1e52-4080-acd1-7cdab21ba7bd -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_ef6a6496-1e52-4080-acd1-7cdab21ba7bd">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_ef6a6496-1e52-4080-acd1-7cdab21ba7bd</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>sqf31</BPMNbasedOntology:name>
+        <rdfs:label>sqf31</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_f2329681-78df-41b5-9f83-2f0facff8117 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#sqf_99006028261000_f2329681-78df-41b5-9f83-2f0facff8117">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SequenceFlow"/>
+        <BPMNbasedOntology:has_sourceRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1"/>
+        <BPMNbasedOntology:has_targetRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14"/>
+        <BPMNbasedOntology:id>sqf_99006028261000_f2329681-78df-41b5-9f83-2f0facff8117</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>nein</BPMNbasedOntology:name>
+        <rdfs:label>nein</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000">
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE008"/>
+        <GERPSP005 rdf:resource="https://w3id.org/GerPS-onto/ontology#process_99006028261000_8eafac98-90cd-3c6d-9734-be1f7148df28"/>
+        <BPMNbasedOntology:name>Anzeige zur Beschäftigung einer schwangeren oder stillenden Frau bearbeiten</BPMNbasedOntology:name>
+        <GERPSP016>99006028261000</GERPSP016>
+        <rdfs:label>Anzeige zur Beschäftigung einer schwangeren oder stillenden Frau bearbeiten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_0c440109-07dd-4227-834a-eafee1e7d591 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_0c440109-07dd-4227-834a-eafee1e7d591">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#EndEvent"/>
+        <BPMNbasedOntology:id>99006028261000_0c440109-07dd-4227-834a-eafee1e7d591</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Geldbuße nicht veranlasst</BPMNbasedOntology:name>
+        <rdfs:label>Geldbuße nicht veranlasst</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__29.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG2"/>
+        <BPMNbasedOntology:id>99006028261000_0facbbd5-88a0-4989-aaf4-d38437a69ba2</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Überwachungsmaßnahmen einleiten</BPMNbasedOntology:name>
+        <rdfs:label>Überwachungsmaßnahmen einleiten</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__29.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG4"/>
+        <BPMNbasedOntology:id>99006028261000_1169fb06-dae2-43c5-83fd-8e9a241f5a3c</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Notwendigkeit von Überwachungsmaßnahmen prüfen</BPMNbasedOntology:name>
+        <rdfs:label>Notwendigkeit von Überwachungsmaßnahmen prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="https://www.gesetze-im-internet.de/vwvfg/__3.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG3"/>
+        <BPMNbasedOntology:id>99006028261000_28441394-6afd-4633-8f4f-6cce9cd4ffc9</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Zuständigkeit prüfen</BPMNbasedOntology:name>
+        <rdfs:label>Zuständigkeit prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_3974acd9-d88f-4232-b4df-a1e372ec88f8 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_3974acd9-d88f-4232-b4df-a1e372ec88f8">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#StartEvent"/>
+        <BPMNbasedOntology:id>99006028261000_3974acd9-d88f-4232-b4df-a1e372ec88f8</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Anzeige eingegangen</BPMNbasedOntology:name>
+        <rdfs:label>Anzeige eingegangen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__27.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG7"/>
+        <BPMNbasedOntology:id>99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Korrektur anfordern</BPMNbasedOntology:name>
+        <rdfs:label>Korrektur anfordern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_3f0a4c4b-85f4-454c-8414-3637acd91a87 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_3f0a4c4b-85f4-454c-8414-3637acd91a87">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#EndEvent"/>
+        <BPMNbasedOntology:id>99006028261000_3f0a4c4b-85f4-454c-8414-3637acd91a87</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Anzeige bearbeitet</BPMNbasedOntology:name>
+        <rdfs:label>Anzeige bearbeitet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ExclusiveGateway"/>
+        <BPMNbasedOntology:id>99006028261000_3f68672f-0372-40f6-8ae8-5e5e4aacd0aa</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Überwachungsmaßnahmen gemäß § 29 MuSchG notwendig?</BPMNbasedOntology:name>
+        <rdfs:label>Überwachungsmaßnahmen gemäß § 29 MuSchG notwendig?</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_42b07c19-722d-4b42-8e30-7568b95a03f3 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_42b07c19-722d-4b42-8e30-7568b95a03f3">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#EndEvent"/>
+        <BPMNbasedOntology:id>99006028261000_42b07c19-722d-4b42-8e30-7568b95a03f3</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Geldbuße veranlasst</BPMNbasedOntology:name>
+        <rdfs:label>Geldbuße veranlasst</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="https://www.gesetze-im-internet.de/vwvfg/__25.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG2"/>
+        <BPMNbasedOntology:id>99006028261000_4476807b-2e49-4a15-ad62-9f3fee43b40a</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Auf zuständige Behörde hinweisen</BPMNbasedOntology:name>
+        <rdfs:label>Auf zuständige Behörde hinweisen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_5ae9eab2-488d-4cd8-8af4-c1578739cf87 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_5ae9eab2-488d-4cd8-8af4-c1578739cf87">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#EndEvent"/>
+        <BPMNbasedOntology:id>99006028261000_5ae9eab2-488d-4cd8-8af4-c1578739cf87</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Anzeige zurückgewiesen</BPMNbasedOntology:name>
+        <rdfs:label>Anzeige zurückgewiesen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_61fbccf7-0a32-48e7-94fc-0e538e6050e2 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_61fbccf7-0a32-48e7-94fc-0e538e6050e2">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#BoundaryEvent"/>
+        <BPMNbasedOntology:is_attachedToRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a"/>
+        <BPMNbasedOntology:id>99006028261000_61fbccf7-0a32-48e7-94fc-0e538e6050e2</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>nicht rechtzeitig richtig oder nicht vollständig</BPMNbasedOntology:name>
+        <rdfs:label>nicht rechtzeitig richtig oder nicht vollständig</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_628dc895-624a-40e1-a980-28afbbf2338c -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_628dc895-624a-40e1-a980-28afbbf2338c">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#BoundaryEvent"/>
+        <BPMNbasedOntology:is_attachedToRef rdf:resource="https://w3id.org/GerPS-onto/ontology#99006028261000_3a5bc1b5-61f4-4d4c-af7f-b1728f919b38"/>
+        <BPMNbasedOntology:id>99006028261000_628dc895-624a-40e1-a980-28afbbf2338c</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>nicht rechtzeitig richtig oder nicht vollständig</BPMNbasedOntology:name>
+        <rdfs:label>nicht rechtzeitig richtig oder nicht vollständig</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_685fd62b-f80e-44b6-a220-870297af1a5e -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_685fd62b-f80e-44b6-a220-870297af1a5e">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#EndEvent"/>
+        <BPMNbasedOntology:id>99006028261000_685fd62b-f80e-44b6-a220-870297af1a5e</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Behörde ist nicht zuständig</BPMNbasedOntology:name>
+        <rdfs:label>Behörde ist nicht zuständig</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ExclusiveGateway"/>
+        <BPMNbasedOntology:id>99006028261000_8801150f-fdc1-4287-a1d2-7bd64ce5ab77</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Exklusives Gateway</BPMNbasedOntology:name>
+        <rdfs:label>Exklusives Gateway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__27.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG2"/>
+        <BPMNbasedOntology:id>99006028261000_89fe1dcd-0a22-4d4e-8def-7a0b24e87884</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Anzeige zurückweisen</BPMNbasedOntology:name>
+        <rdfs:label>Anzeige zurückweisen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__32.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG2"/>
+        <BPMNbasedOntology:id>99006028261000_8d7df6f8-49b7-4ae0-997c-022d68640330</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Erhebung der Geldbuße veranlassen</BPMNbasedOntology:name>
+        <rdfs:label>Erhebung der Geldbuße veranlassen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__27.html"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__29.html"/>
+        <GERPSP001 rdf:resource="https://www.gesetze-im-internet.de/arbschg/__5.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG7"/>
+        <BPMNbasedOntology:id>99006028261000_8e994dc4-84d6-4089-9eeb-260268e6fb8a</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Zusätzliche Informationen einholen</BPMNbasedOntology:name>
+        <rdfs:label>Zusätzliche Informationen einholen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__32.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG5"/>
+        <BPMNbasedOntology:id>99006028261000_94d87600-bd90-41e3-95c9-9c8e5bea706c</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Über Erhebung einer Geldbuße entscheiden</BPMNbasedOntology:name>
+        <rdfs:label>Über Erhebung einer Geldbuße entscheiden</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_98e69981-24f0-441b-b019-624d14e4b236 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_98e69981-24f0-441b-b019-624d14e4b236">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ExclusiveGateway"/>
+        <BPMNbasedOntology:id>99006028261000_98e69981-24f0-441b-b019-624d14e4b236</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Exklusives Gateway</BPMNbasedOntology:name>
+        <rdfs:label>Exklusives Gateway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ExclusiveGateway"/>
+        <BPMNbasedOntology:id>99006028261000_ab2abb15-e12c-42c1-9649-d60e242dba14</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Exklusives Gateway</BPMNbasedOntology:name>
+        <rdfs:label>Exklusives Gateway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ParallelGateway"/>
+        <BPMNbasedOntology:id>99006028261000_ad33e74b-fad6-4b18-8eac-282f019d8ca7</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Nicht-exklusives Gateway</BPMNbasedOntology:name>
+        <rdfs:label>Nicht-exklusives Gateway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ExclusiveGateway"/>
+        <BPMNbasedOntology:id>99006028261000_b60bf44a-0630-49a3-b4d3-f610c0e32c88</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Exklusives Gateway</BPMNbasedOntology:name>
+        <rdfs:label>Exklusives Gateway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ExclusiveGateway"/>
+        <BPMNbasedOntology:id>99006028261000_b80fbe21-9b4e-48c6-b8bd-071beb5cd881</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Exklusives Gateway</BPMNbasedOntology:name>
+        <rdfs:label>Exklusives Gateway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_b8ef8c75-ef39-413e-86b5-221eafe22861 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_b8ef8c75-ef39-413e-86b5-221eafe22861">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#CallActivity"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_acad2737-c516-4d97-8dfd-45605e058d86"/>
+        <BPMNbasedOntology:id>99006028261000_b8ef8c75-ef39-413e-86b5-221eafe22861</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Geldbuße erheben (OWi-Verfahren)</BPMNbasedOntology:name>
+        <rdfs:label>Geldbuße erheben (OWi-Verfahren)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_bf420489-7735-4178-bd52-e7a5c4001646 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_bf420489-7735-4178-bd52-e7a5c4001646">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ExclusiveGateway"/>
+        <BPMNbasedOntology:id>99006028261000_bf420489-7735-4178-bd52-e7a5c4001646</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Geldbuße veranlassen?</BPMNbasedOntology:name>
+        <rdfs:label>Geldbuße veranlassen?</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__27.html"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__29.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG4"/>
+        <BPMNbasedOntology:id>99006028261000_c15dd7d3-7d90-45f5-997d-0fee2128ca36</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Anzeige fachlich prüfen</BPMNbasedOntology:name>
+        <rdfs:label>Anzeige fachlich prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_c41df7c7-e31c-46a3-a43b-f294f495378f -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_c41df7c7-e31c-46a3-a43b-f294f495378f">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#CallActivity"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_acad2737-c516-4d97-8dfd-45605e058d86"/>
+        <BPMNbasedOntology:id>99006028261000_c41df7c7-e31c-46a3-a43b-f294f495378f</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Überwachungsmaßnahmen durchführen</BPMNbasedOntology:name>
+        <rdfs:label>Überwachungsmaßnahmen durchführen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__27.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG1"/>
+        <BPMNbasedOntology:id>99006028261000_c44a10cf-0b69-481b-b36c-69a0f7641161</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Anzeige empfangen</BPMNbasedOntology:name>
+        <rdfs:label>Anzeige empfangen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ExclusiveGateway"/>
+        <BPMNbasedOntology:id>99006028261000_dd3bc0b6-c587-4188-aad4-d5e233b7c2a1</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Formelle Fehler?</BPMNbasedOntology:name>
+        <rdfs:label>Formelle Fehler?</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ExclusiveGateway"/>
+        <BPMNbasedOntology:id>99006028261000_dfda440c-42b5-416e-8625-ef9e2844e62e</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Ergebnis?</BPMNbasedOntology:name>
+        <rdfs:label>Ergebnis?</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#ExclusiveGateway"/>
+        <BPMNbasedOntology:id>99006028261000_eb84e87e-4413-4638-8164-fe25e03e8a1b</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Zuständigkeit liegt vor?</BPMNbasedOntology:name>
+        <rdfs:label>Zuständigkeit liegt vor?</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/GerPS-onto/ontology#99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b">
+        <rdf:type rdf:resource="http://BPMNbasedOntology#SubProcess"/>
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE011"/>
+        <prov:qualifiedAssociation rdf:resource="https://w3id.org/GerPS-onto/ontology#QA99006028261000_39239818-2743-4f19-9e03-89d271189b85"/>
+        <GERPSP001 rdf:resource="http://www.gesetze-im-internet.de/muschg_2018/__27.html"/>
+        <GERPSP008 rdf:resource="https://w3id.org/GerPS-onto/ontology#S00000094"/>
+        <GERPSP009 rdf:resource="https://w3id.org/GerPS-onto/ontology#RAG3"/>
+        <BPMNbasedOntology:id>99006028261000_f8b43c65-cc8a-4064-ab39-b77e8db5cd4b</BPMNbasedOntology:id>
+        <BPMNbasedOntology:name>Anzeige formell prüfen</BPMNbasedOntology:name>
+        <rdfs:label>Anzeige formell prüfen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gesetze-im-internet.de/arbschg/__5.html -->
+
+    <owl:NamedIndividual rdf:about="https://www.gesetze-im-internet.de/arbschg/__5.html">
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE006"/>
+        <BPMNbasedOntology:name>§ 5 ArbSchG</BPMNbasedOntology:name>
+        <rdfs:label>§ 5 ArbSchG</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gesetze-im-internet.de/vwvfg/__25.html -->
+
+    <owl:NamedIndividual rdf:about="https://www.gesetze-im-internet.de/vwvfg/__25.html">
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE006"/>
+        <BPMNbasedOntology:name>§ 25 VwVfG</BPMNbasedOntology:name>
+        <rdfs:label>§ 25 VwVfG</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gesetze-im-internet.de/vwvfg/__3.html -->
+
+    <owl:NamedIndividual rdf:about="https://www.gesetze-im-internet.de/vwvfg/__3.html">
+        <rdf:type rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE006"/>
+        <BPMNbasedOntology:name>§ 3 VwVfG</BPMNbasedOntology:name>
+        <rdfs:label>§ 3 VwVfG</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP012">
+        <rdfs:comment xml:lang="en">The data field ID describes the unique identifier for data fields.</rdfs:comment>
+        <rdfs:label xml:lang="en">has data field ID</rdfs:label>
+        <rdfs:label xml:lang="de">hat Datenfeld-ID</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

@@ -33,7 +33,7 @@ public class CodelistCollumnSet {
 		return result;
 	}
 	
-	public Collection<String> getAllValuesByID(String ID) {
+	public ArrayList<String> getAllValuesByID(String ID) {
 		ArrayList<String> values = new ArrayList<>();
 		
 		for (CodeListRow row : rows) {

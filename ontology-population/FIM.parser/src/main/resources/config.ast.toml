@@ -1,0 +1,48 @@
+[GerPS_Datenfelder]
+#classes
+baseURL 		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#"
+Datafield		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000004"
+Datafieldgroupe		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000005"
+Stammdatenschemata	=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000002"
+Structure		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000003"
+fimRule			= 	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000001"
+komplexTrigger		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000007"
+SequenceAction		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000006"
+Condition		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000009"
+LogicOperator		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000018"
+AND			=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000019"
+OR			=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000020"
+Statement		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000021"
+Equals			=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000022"
+notEquals		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000023"
+StructureAction		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000008"
+mandatoryAction		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000011"
+turnMadatoryOff		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000012"
+turnMadatoryOn		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000014"
+visibilityAction	=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000015"
+turnVisibilityOff	=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000016"
+turnVisibilityOn	=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000017"
+StrukturHead		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#J000028"
+
+# properties
+contains		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#JP000001"
+hasLeft			=	"https://w3id.org/GerPS-onto/FIMDatenfelder#JP000002"
+hasNextAction		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#JP000004"
+hasRight		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#JP000003"
+hasRule			=	"https://w3id.org/GerPS-onto/FIMDatenfelder#JP000005"
+hasTargetDatafield	=	"https://w3id.org/GerPS-onto/FIMDatenfelder#JP000006"
+partOfRule		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#JP000007"
+hasTargetStructure	=	"https://w3id.org/GerPS-onto/FIMDatenfelder#JP000008"
+nominalAction		=	"http://elite.polito.it/ontologies/eupont.owl#nominalAction"
+nominalTrigger		=	"http://elite.polito.it/ontologies/eupont.owl#nominalTrigger"
+hasTrigger		=	"http://elite.polito.it/ontologies/eupont.owl#hasTrigger"
+hasAction		=	"http://elite.polito.it/ontologies/eupont.owl#hasAction"
+connectVersion		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#JP000009"
+
+# Dataproperties
+hasDescription		=	"https://w3id.org/GerPS-onto/FIMDatenfelder#JD000001"
+value			=	"http://elite.polito.it/ontologies/eupont.owl#value"
+
+[Downloader]
+URL			=	"http://localhost:3030"
+SparqlEndPoint		=	"/FimRule/sparql"
