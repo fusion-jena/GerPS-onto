@@ -5,7 +5,7 @@
 
 - :books: [Documentation](https://w3id.org/GerPS-onto/ontology/)
 - :hourglass_flowing_sand: [Download latest](https://zenodo.org/doi/10.5281/zenodo.7845887)
-- :page_facing_up: [SPARQL Queries]([https://github.com/fusion-jena/GerPS-onto/tree/main/docs/latest/SPARQL-queries.md](https://github.com/fusion-jena/GerPS-onto/blob/main/docs/SPARQL-queries/latest/SPARQL-queries.md))
+- :page_facing_up: [SPARQL Queries]([https://github.com/fusion-jena/GerPS-onto/tree/main/docs/latest/SPARQL-queries.md](https://github.com/fusion-jena/GerPS-onto/blob/main/docs/SPARQL-queries/latest/SPARQL-queries.md)
 - :globe_with_meridians: [SPARQL Endpoint](https://fuseki.simplex.fmi.uni-jena.de/#/dataset/GerPS-Onto_V2.0/query)
 - :repeat: [Change Log](https://github.com/fusion-jena/GerPS-onto/tree/main/docs/change-log.md)
 
