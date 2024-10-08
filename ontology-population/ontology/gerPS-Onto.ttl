@@ -12,9 +12,9 @@
                                          owl:imports <http://BPMNbasedOntology> ,
                                                      <http://www.w3.org/ns/prov-o-20130430> ;
                                          owl:versionInfo 2.0 ;
-                                         :author "Maximilian Raupach" ,
+                                         :author "Jonas Author" ,
                                                  "Leila Feddoul" ,
-                                                 "Jonas Author".
+                                                 "Maximilian Raupach" .
 
 #################################################################
 #    Annotation properties
@@ -97,7 +97,7 @@
 :GERPSP009 rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:domain :GERPSE011 ;
-           rdfs:range :GERPSE012 ;
+           rdfs:range :GERPSE023 ;
            rdfs:comment "Show the type of a process step."@en ;
            rdfs:label "has type"@en ,
                       "hat Typ"@de .
@@ -106,6 +106,66 @@
 ###  https://w3id.org/GerPS-onto/ontology#GERPSP012
 :GERPSP012 rdf:type owl:ObjectProperty ;
            rdfs:domain :GERPSE017 .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSP017
+:GERPSP017 rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :GERPSE023 ;
+           rdfs:range :GERPSE020 ;
+           rdfs:label "has attribute"@en ,
+                      "hat Attribute"@de ,
+                      "Shows that a type has a specific attribute." .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSP018
+:GERPSP018 rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :GERPSE024 ;
+           rdfs:range :GERPSE018 ;
+           rdfs:label "Shows that a standard activity group has a task collection."@en ,
+                      "has task collection"@en ,
+                      "hat Aufgabensammlung"@de .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSP019
+:GERPSP019 rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :GERPSE018 ;
+           rdfs:range <http://BPMNbasedOntology#Task> ;
+           rdfs:comment "Connects a task collection with its specific tasks."@en ;
+           rdfs:label "has process task"@en ,
+                      "hat Prozessaufgabe"@de .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSP020
+:GERPSP020 rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :GERPSE023 ;
+           rdfs:range :GERPSE010 ;
+           rdfs:comment "Connects a typ of a process step with its process."@en ;
+           rdfs:label "Prozessreferenzierung"@de ,
+                      "process reference"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSP021
+:GERPSP021 rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :GERPSE018 ;
+           rdfs:range :GERPSE011 ;
+           rdfs:label "Prozessschrittreferenzierung"@de ,
+                      "Referenz from a Task collection to its process step."@en ,
+                      "process step reference"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSP023
+:GERPSP023 rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :GERPSE019 ;
+           rdfs:range :GERPSE027 ;
+           rdfs:comment "Connets a decision model with an engine where it can be executed."@en ;
+           rdfs:label "is executed of"@en ,
+                      "wird ausgeführt von"@de .
 
 
 #################################################################
@@ -226,7 +286,8 @@
 
 
 ###  http://BPMNbasedOntology#Task
-<http://BPMNbasedOntology#Task> rdf:type owl:Class .
+<http://BPMNbasedOntology#Task> rdf:type owl:Class ;
+                                rdfs:subClassOf :GERPSE023 .
 
 
 ###  http://data.europa.eu/eli/ontology#LegalResource
@@ -357,7 +418,7 @@
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :GERPSP009 ;
-                             owl:allValuesFrom :GERPSE012
+                             owl:allValuesFrom :GERPSE023
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty <http://BPMNbasedOntology#id> ;
@@ -374,14 +435,7 @@
 
 ###  https://w3id.org/GerPS-onto/ontology#GERPSE012
 :GERPSE012 rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty <http://BPMNbasedOntology#id> ;
-                             owl:someValuesFrom xsd:string
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty <http://BPMNbasedOntology#name> ;
-                             owl:someValuesFrom xsd:string
-                           ] ;
+           rdfs:subClassOf :GERPSE023 ;
            rdfs:comment "Reference activity groups can be derived from concrete specifications (e.g., legal and administrative regulations), can bundle thematically related process elements, and reflect the process of service execution."@en ;
            rdfs:label "Reference activity group"@en ,
                       "Referenzaktivitätengruppe"@de .
@@ -398,6 +452,89 @@
            rdfs:comment "Data fields are required components in the construction of forms."@en ;
            rdfs:label "Data field"@en ,
                       "Datenfeld"@de .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSE018
+:GERPSE018 rdf:type owl:Class ;
+           rdfs:comment "Is  a collection of process specific tasks."@en ;
+           rdfs:label "Aufgabensammlung"@de ,
+                      "task collection"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSE019
+:GERPSE019 rdf:type owl:Class ;
+           rdfs:subClassOf :GERPSE020 ;
+           rdfs:comment "Is a Way to specify, how a decision can be accomplished."@en ;
+           rdfs:label "Entscheidungsmodell"@de ,
+                      "decision model"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSE020
+:GERPSE020 rdf:type owl:Class ;
+           rdfs:comment "Is a Attribute of a specific typ. It can be specified or not."@en ;
+           rdfs:label "Attribut"@de ,
+                      "attribute"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSE021
+:GERPSE021 rdf:type owl:Class ;
+           rdfs:subClassOf :GERPSE023 ;
+           rdfs:comment "Is a typ where are all attributes specified."@en ;
+           rdfs:label "Aktivitätengruppe"@de ,
+                      "activity group"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSE022
+:GERPSE022 rdf:type owl:Class ;
+           rdfs:comment "Is a task, that is executed in a process."@en ;
+           rdfs:label "Prozessaufgabe"@de ,
+                      "process task"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSE023
+:GERPSE023 rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://BPMNbasedOntology#id> ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://BPMNbasedOntology#name> ;
+                             owl:someValuesFrom xsd:string
+                           ] ;
+           rdfs:label "Is a Type of a process step, that specifies what to do."@en ,
+                      "Typ"@de ,
+                      "type"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSE024
+:GERPSE024 rdf:type owl:Class ;
+           rdfs:subClassOf :GERPSE023 ;
+           rdfs:comment "Is a Typ with some specified attributes."@en ;
+           rdfs:label "Standardaktivitätengruppe"@de ,
+                      "standard activity group"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSE025
+:GERPSE025 rdf:type owl:Class ;
+           rdfs:subClassOf :GERPSE019 ;
+           rdfs:comment "Decision modelling notation is a way to specify how decision can be accomplished."@en ;
+           rdfs:label "DMN"@de ,
+                      "DMN"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSE026
+:GERPSE026 rdf:type owl:Class ;
+           rdfs:subClassOf :GERPSE019 ;
+           rdfs:comment "Rulemaps are ways to specify how decision are accomplished."@en ;
+           rdfs:label "RuleMap"@de ,
+                      "RuleMap"@en .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSE027
+:GERPSE027 rdf:type owl:Class ;
+           rdfs:comment "An egnine that executs an a decision, using and decision model."@en ;
+           rdfs:label "Ausführungsumgebung"@de ,
+                      "Execution engine"@en .
 
 
 #################################################################

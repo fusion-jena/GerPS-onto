@@ -29,7 +29,7 @@
   "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE012"
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP009"
@@ -56,7 +56,7 @@
   "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://BPMNbasedOntology#id"
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP012"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -65,7 +65,7 @@
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://BPMNbasedOntology#name"
+    "@id" : "http://BPMNbasedOntology#id"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -74,7 +74,7 @@
   "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP012"
+    "@id" : "http://BPMNbasedOntology#name"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -195,7 +195,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://BPMNbasedOntology#Task",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
+  } ]
 }, {
   "@id" : "http://BPMNbasedOntology#has_process",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
@@ -481,9 +484,7 @@
     "@value" : "Referenzaktivitätengruppe"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid15"
-  }, {
-    "@id" : "_:genid16"
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
   } ]
 }, {
   "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE017",
@@ -504,7 +505,166 @@
   }, {
     "@id" : "http://data.europa.eu/m8g/Evidence"
   }, {
+    "@id" : "_:genid15"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Is  a collection of process specific tasks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Aufgabensammlung"
+  }, {
+    "@language" : "en",
+    "@value" : "task collection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Is a Way to specify, how a decision can be accomplished."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Entscheidungsmodell"
+  }, {
+    "@language" : "en",
+    "@value" : "decision model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE020"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Is a Attribute of a specific typ. It can be specified or not."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Attribut"
+  }, {
+    "@language" : "en",
+    "@value" : "attribute"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Is a typ where are all attributes specified."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Aktivitätengruppe"
+  }, {
+    "@language" : "en",
+    "@value" : "activity group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Is a task, that is executed in a process."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Prozessaufgabe"
+  }, {
+    "@language" : "en",
+    "@value" : "process task"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is a Type of a process step, that specifies what to do."
+  }, {
+    "@language" : "de",
+    "@value" : "Typ"
+  }, {
+    "@language" : "en",
+    "@value" : "type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid16"
+  }, {
     "@id" : "_:genid17"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE024",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Is a Typ with some specified attributes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Standardaktivitätengruppe"
+  }, {
+    "@language" : "en",
+    "@value" : "standard activity group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE025",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Decision modelling notation is a way to specify how decision can be accomplished."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "DMN"
+  }, {
+    "@language" : "en",
+    "@value" : "DMN"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE019"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE026",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Rulemaps are ways to specify how decision are accomplished."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "RuleMap"
+  }, {
+    "@language" : "en",
+    "@value" : "RuleMap"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE019"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE027",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An egnine that executs an a decision, using and decision model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ausführungsumgebung"
+  }, {
+    "@language" : "en",
+    "@value" : "Execution engine"
   } ]
 }, {
   "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP001",
@@ -616,7 +776,7 @@
     "@value" : "hat Typ"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE012"
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
@@ -732,6 +892,140 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://BPMNbasedOntology#id"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has attribute"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Attribute"
+  }, {
+    "@value" : "Shows that a type has a specific attribute."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE024"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shows that a standard activity group has a task collection."
+  }, {
+    "@language" : "en",
+    "@value" : "has task collection"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Aufgabensammlung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects a task collection with its specific tasks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has process task"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Prozessaufgabe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://BPMNbasedOntology#Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connects a typ of a process step with its process."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Prozessreferenzierung"
+  }, {
+    "@language" : "en",
+    "@value" : "process reference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE010"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Prozessschrittreferenzierung"
+  }, {
+    "@language" : "en",
+    "@value" : "Referenz from a Task collection to its process step."
+  }, {
+    "@language" : "en",
+    "@value" : "process step reference"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP023",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Connets a decision model with an engine where it can be executed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is executed of"
+  }, {
+    "@language" : "de",
+    "@value" : "wird ausgeführt von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE027"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
   "@id" : "https://w3id.org/GerPS-onto/ontology#Version",

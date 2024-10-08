@@ -15,6 +15,14 @@
 | https://w3id.org/GerPS-onto/ontology#hat_elementtyp | https://w3id.org/GerPS-onto/ontology#GERPSP014 | hat Elementtyp | has element type | | |
 | https://w3id.org/GerPS-onto/ontology#hat_frist | https://w3id.org/GerPS-onto/ontology#GERPSP015 | hat Frist | has deadline | | |
 | https://w3id.org/GerPS-onto/ontology#hat_leikaID | https://w3id.org/GerPS-onto/ontology#GERPSP016 | hat LeiKa-ID| has LeiKa-ID | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSP017 | hat Attribute| has attribute | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSP018 | hat Aufgabensammlung| has task collection | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSP019 | hat Prozessaufgabe| has process task | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSP020 | Prozessreferenzierung | process reference | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSP021 | Prozessschrittreferenzierung | process step reference | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSP023 | wird ausgeführt von | is executed of | | |
+
+
 | https://w3id.org/GerPS-onto/ontology#Agent | https://w3id.org/GerPS-onto/ontology#GERPSE001 | Akteur | Actor | | |
 | https://w3id.org/GerPS-onto/ontology#Datenfeld | https://w3id.org/GerPS-onto/ontology#GERPSE002 | Datenfeld | Data field | | |
 | https://w3id.org/GerPS-onto/ontology#Dokument | https://w3id.org/GerPS-onto/ontology#GERPSE004 | Dokument | Document | | |
@@ -27,3 +35,14 @@
 | https://w3id.org/GerPS-onto/ontology#Prozessschritt | https://w3id.org/GerPS-onto/ontology#GERPSE011 | Prozessschritt | Process step | | |
 | https://w3id.org/GerPS-onto/ontology#RAG | https://w3id.org/GerPS-onto/ontology#GERPSE012 | Referenzaktivitätengruppe | Reference activity group | | |
 | https://w3id.org/GerPS-onto/ontology#Datenfelder | https://w3id.org/GerPS-onto/ontology#GERPSE017 | Datenfeld | Data field | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSE018 | Aufgabensammlung | task collection | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSE019 | Entscheidungsmodell | decision model | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSE020 | Attribut | attribute | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSE021 | Aktivitätengruppe | activity group | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSE022 | Prozessaufgabe | process task | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSE023 | Typ | Type | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSE024 | Standardaktivitätengruppe | standard activity group | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSE025 | DMN | DMN | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSE026 | RuleMap | RuleMap | | |
+| --- | https://w3id.org/GerPS-onto/ontology#GERPSE027 | Ausführungsumgebung | Execution engine | | |
+
