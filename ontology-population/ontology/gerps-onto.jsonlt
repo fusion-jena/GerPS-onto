@@ -900,13 +900,13 @@
     "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Shows that a type has a specific attribute."
+  }, {
     "@language" : "en",
     "@value" : "has attribute"
   }, {
     "@language" : "de",
     "@value" : "hat Attribute"
-  }, {
-    "@value" : "Shows that a type has a specific attribute."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE020"
@@ -1026,6 +1026,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSP024",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Is a referenz from a type to the type is derived from"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "abgeleitet von"
+  }, {
+    "@language" : "en",
+    "@value" : "derived from"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/GerPS-onto/ontology#GERPSE023"
   } ]
 }, {
   "@id" : "https://w3id.org/GerPS-onto/ontology#Version",

@@ -164,9 +164,9 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE023"/>
         <rdfs:range rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE020"/>
+        <rdfs:label>Shows that a type has a specific attribute.</rdfs:label>
         <rdfs:label xml:lang="en">has attribute</rdfs:label>
         <rdfs:label xml:lang="de">hat Attribute</rdfs:label>
-        <rdfs:label>Shows that a type has a specific attribute.</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -232,6 +232,18 @@
         <rdfs:comment xml:lang="en">Connets a decision model with an engine where it can be executed.</rdfs:comment>
         <rdfs:label xml:lang="en">is executed of</rdfs:label>
         <rdfs:label xml:lang="de">wird ausgeführt von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/GerPS-onto/ontology#GERPSP024 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/GerPS-onto/ontology#GERPSP024">
+        <rdfs:domain rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE023"/>
+        <rdfs:range rdf:resource="https://w3id.org/GerPS-onto/ontology#GERPSE023"/>
+        <rdfs:comment xml:lang="en">Is a referenz from a type to the type is derived from</rdfs:comment>
+        <rdfs:label xml:lang="de">abgeleitet von</rdfs:label>
+        <rdfs:label xml:lang="en">derived from</rdfs:label>
     </owl:ObjectProperty>
     
 

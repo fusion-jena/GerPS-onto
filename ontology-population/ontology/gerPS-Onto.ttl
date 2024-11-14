@@ -113,9 +113,9 @@
            rdfs:subPropertyOf owl:topObjectProperty ;
            rdfs:domain :GERPSE023 ;
            rdfs:range :GERPSE020 ;
-           rdfs:label "has attribute"@en ,
-                      "hat Attribute"@de ,
-                      "Shows that a type has a specific attribute." .
+           rdfs:label "Shows that a type has a specific attribute." ,
+                      "has attribute"@en ,
+                      "hat Attribute"@de .
 
 
 ###  https://w3id.org/GerPS-onto/ontology#GERPSP018
@@ -166,6 +166,15 @@
            rdfs:comment "Connets a decision model with an engine where it can be executed."@en ;
            rdfs:label "is executed of"@en ,
                       "wird ausgeführt von"@de .
+
+
+###  https://w3id.org/GerPS-onto/ontology#GERPSP024
+:GERPSP024 rdf:type owl:ObjectProperty ;
+           rdfs:domain :GERPSE023 ;
+           rdfs:range :GERPSE023 ;
+           rdfs:comment "Is a referenz from a type to the type is derived from"@en ;
+           rdfs:label "abgeleitet von"@de ,
+                      "derived from"@en .
 
 
 #################################################################
