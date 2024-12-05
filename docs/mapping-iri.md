@@ -21,8 +21,6 @@
 | --- | https://w3id.org/GerPS-onto/ontology#GERPSP020 | Prozessreferenzierung | process reference | | |
 | --- | https://w3id.org/GerPS-onto/ontology#GERPSP021 | Prozessschrittreferenzierung | process step reference | | |
 | --- | https://w3id.org/GerPS-onto/ontology#GERPSP023 | wird ausgeführt von | is executed of | | |
-
-
 | https://w3id.org/GerPS-onto/ontology#Agent | https://w3id.org/GerPS-onto/ontology#GERPSE001 | Akteur | Actor | | |
 | https://w3id.org/GerPS-onto/ontology#Datenfeld | https://w3id.org/GerPS-onto/ontology#GERPSE002 | Datenfeld | Data field | | |
 | https://w3id.org/GerPS-onto/ontology#Dokument | https://w3id.org/GerPS-onto/ontology#GERPSE004 | Dokument | Document | | |
